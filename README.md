@@ -1,7 +1,7 @@
 # Individuellt projekt grudat26
 ### Del 1: Tisdag 28/4 kl 19:00, Del 2: Fredag 15/5 kl 19:00
 
-Se [projektinstruktionerna](https://github.com/isakemma/grudat/blob/master/ovn7.md)!
+Se [projektinstruktionerna](https://github.com/isakemma/grudat26/blob/master/ovn7.md)!
 
 
 ### Inlämning av API och dokumentation
