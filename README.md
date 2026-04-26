@@ -26,6 +26,7 @@ Then include the project in your C# solution.
 ## Example
 ```csharp
 using QuantumWaves;
+using CMath;
 
 ComplexF z = 2f + ComplexF.I * 3f;
 
