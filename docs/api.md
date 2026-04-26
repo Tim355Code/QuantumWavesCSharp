@@ -11,7 +11,7 @@ ComplexF w = 2f + ComplexF.I * 5f;
 ```
 #### Constructors
 ```csharp
-public ComplexF(float real, float imaginary)
+public ComplexF(float real, float imaginary);
 ```
 Creates a complex number: ```real + i * imaginary```.
 
@@ -38,15 +38,15 @@ public ComplexF Normalized { get; }
 ```
 Returns the complex number divided by its own magnitude. Returns NaN if magnitude is zero.
 ```csharp
-public override string ToString()
+public override string ToString();
 ```
 Returns a string representation of the complex number: ```"a + bi"```
 ```csharp
-public override bool Equals(object? obj)
+public override bool Equals(object? obj);
 ```
 Determines whether two object instances are equal.
 ```csharp
-public override int GetHashCode()
+public override int GetHashCode();
 ```
 A hash code for the current object.
 ```csharp
@@ -70,23 +70,23 @@ Common complex constants.
 
 #### Operators
 ```csharp
-public static implicit operator ComplexF(float value)
+public static implicit operator ComplexF(float value);
 ```
 Implicitly converts a real number to a complex number: ```value + 0*i```
 ```csharp
-public static ComplexF operator +(ComplexF a, ComplexF b)
-public static ComplexF operator -(ComplexF a, ComplexF b)
-public static ComplexF operator *(ComplexF a, ComplexF b)
-public static ComplexF operator /(ComplexF a, ComplexF b)
+public static ComplexF operator +(ComplexF a, ComplexF b);
+public static ComplexF operator -(ComplexF a, ComplexF b);
+public static ComplexF operator *(ComplexF a, ComplexF b);
+public static ComplexF operator /(ComplexF a, ComplexF b);
 ```
 Standard complex arithmetic.
 ```csharp
-public static ComplexF operator -(ComplexF z)
+public static ComplexF operator -(ComplexF z);
 ```
 Unary negation.
 ```csharp
-public static bool operator ==(ComplexF a, ComplexF b)
-public static bool operator !=(ComplexF a, ComplexF b)
+public static bool operator ==(ComplexF a, ComplexF b);
+public static bool operator !=(ComplexF a, ComplexF b);
 ```
 Exact component-wise equality.
 
@@ -138,7 +138,6 @@ Computes ```e^z```.
 #### Pow
 ```csharp
 public static ComplexF Pow(ComplexF baseValue, ComplexF exponent)
-public static ComplexF Pow(ComplexF baseValue, float exponent)
 ```
 Computes complex exponentiation.
 
