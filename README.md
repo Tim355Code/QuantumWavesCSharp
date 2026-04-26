@@ -1,15 +1,42 @@
-# Individuellt projekt grudat26
-### Del 1: Tisdag 28/4 kl 19:00, Del 2: Fredag 15/5 kl 19:00
+# QuantumWavesCSharp ![.NET Standard](https://img.shields.io/badge/.NET-Standard%202.1-blue)
 
-Se [projektinstruktionerna](https://github.com/isakemma/grudat26/blob/master/ovn7.md)!
+A small C# library for working with complex numbers and simple quantum wave functions.
+The library is designed to be lightweight, easy to use. It can be used for simulations, numerical experiments, or as a tool for visualization.
 
+## Features
+- ```ComplexF``` - a float based complex number type.
+- ```MathC``` - provides mathematical operations on complex numbers
+- Wave function abstractions (1D)
+- Built-in solutions such as infinite potential well
+- Support for superposition of states (if time leftover)
+- Wave function abstractions (3D) (if time leftover)
+- Usage example for visualization (if time leftover)
 
-### Inlämning av API och dokumentation
+## Installation
 
-En första version av API och övrig dokumentation ska vara klar till övning 5 och har deadline
-tisdag 28/4 kl&nbsp;19:00. På övningen kommer du att få presentera ditt projekt för övriga medlemmar i gruppen.
+Clone the repository:
+```bash
+git clone https://gits-15.sys.kth.se/grudat26/merko-ovn7.git
+```
+Then include the project in your C# solution.
 
-### Slutlig inlämning
+## Documentation
+[API Reference](docs/api.md)
 
-Feedback kommer inom en vecka. Du har sedan tre veckor på dig att slutföra projektet, men det återstår också en övning under dessa veckor.
-**Version 1.0** ska vara incheckat på ditt githubkonto fredag 15/5, kl.&nbsp;19:00.
+## Example
+```csharp
+using QuantumWaves;
+
+ComplexF z = 2f + ComplexF.I * 3f;
+
+float magnitude = MathC.Abs(z);
+ComplexF conjugate = z.Conjugate;
+
+// Example wave function (conceptual)
+var psi = new WaveFunction1D(1, (x, t) =>
+{
+    return MathC.Exp(ComplexF.I * x);
+}, FloatRange.Infinite, ComplexF.One);
+
+float probability = psi.ProbabilityDensity(1.0f, 0.0f);
+```
