@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="QuantumLibrary.Tests/QuantumLibrary.Tests.csproj" />
+  <Project Path="QuantumLibrary/QuantumLibrary.csproj" />
+</Solution>
