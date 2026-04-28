@@ -335,7 +335,6 @@ Approximates the probability of finding a particle in \[min, max\].
 
 #### SamplePositions
 ```csharp
-public static float[] SamplePositions(WaveFunction1D wave, float t, FloatRange range
-, int count, int resolution, Random? rng = null);
+public static float[] SamplePositions(WaveFunction1D wave, float t, FloatRange range, int count, int resolution, Random? rng = null);
 ```
 Samples positions according to ```|ψ(x,t)|^2```
