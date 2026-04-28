@@ -24,7 +24,7 @@ Returns the real and imaginary components.
 ```csharp
 public float Magnitude { get; }
 ```
-Returns the magnitude of ```z```: ```Abs(a + bi) = sqrt(a^2 + b^2)
+Returns the magnitude of ```z```: ```Abs(a + bi) = sqrt(a^2 + b^2)```
 ```csharp
 public float MagnitudeSqr { get; }
 ```
@@ -64,7 +64,10 @@ public static readonly ComplexF Zero;
 public static readonly ComplexF One;
 public static readonly ComplexF I;
 public static readonly ComplexF NaN;
-public static readonly ComplexF Infinity;
+public static readonly ComplexF PositiveRealInfinity;
+public static readonly ComplexF NegativeRealInfinity;
+public static readonly ComplexF PositiveImaginaryInfinity;
+public static readonly ComplexF NegativeImaginaryInfinity;
 ```
 Common complex constants.
 
@@ -109,13 +112,13 @@ Returns the magnitude squared.
 ```csharp
 public static bool Approximately(ComplexF a, ComplexF b, float tolerance = 1e-5f)
 ```
-Compares two complex numvers and returns true if they are similar. Tolerance marks the maximal allowed magnitude in deviation. If either has ```NaN``` or ```Infinity``` components, returns ```false```.
+Compares two complex numbers and returns true if they are similar. Tolerance marks the maximal allowed magnitude in deviation. If either has ```NaN``` or ```Infinity``` components, returns ```false```.
 
 #### Arg
 ```csharp
 public static float Arg(ComplexF z)
 ```
-Returns the angle of ```z``` in the complex plane in range [-π, π]. ```arg(0)``` return ```NaN```.
+Returns the angle of ```z``` in the complex plane in range [-π, π].  ```arg(0)``` returns ```NaN```.
 
 #### ToPolar
 ```csharp
@@ -143,7 +146,7 @@ Computes complex exponentiation.
 
 #### Sqrt
 ```csharp
-public static ComplexF Sqrt(ComplexF baseValue)
+public static ComplexF Sqrt(ComplexF z)
 ```
 Computes complex square root.
 
@@ -155,9 +158,9 @@ Computes complex natural logarithm. ```Ln(0)``` returns ```(-Infinity, NaN)```.
 
 #### Log
 ```csharp
-public static ComplexF Log(ComplexF z, float base)
+public static ComplexF Log(ComplexF z, ComplexF baseValue)
 ```
-Computes complex logarithm in the base b: ```log_b(z) = ln(z)/ln(b)```
+Computes complex logarithm in the base b: ```log_b(z) = ln(z)/ln(baseValue)```
 
 #### Sin
 ```csharp
@@ -212,25 +215,29 @@ Represents a one dimensional domain.
 
 ### WaveFunction1D
 ```csharp
-public class WaveFunction1D
+public abstract class WaveFunction1D
 {
-    private readonly Func<float, float, ComplexF> _evaluateRaw;
+    public ComplexF Amplitude { get; set; }
+    public FloatRange Domain { get; protected set; }
 
-    public WaveFunction1D(Func<float, float, ComplexF> wave, FloatRange domain, ComplexF normalizationConstant);
-    
-    public FloatRange Domain { get; }
-    public ComplexF NormalizationConstant { get; set; }
-
-    /// <summary>
-    /// Evaluates the wave function ψ(x, t)
-    /// </summary>
-    public ComplexF Evaluate(float x, float t) => Domain.Contains(x) ?
-        (NormalizationConstant * _evaluateRaw(x, t)) : 0;
+    public WaveFunction1D(FloatRange domain, ComplexF amplitude)
+    {
+        Domain = domain;
+        Amplitude = amplitude;
+    }
 
     /// <summary>
     /// Returns |ψ(x,t)|^2
     /// </summary>
-    public float ProbabilityDensity(float x, float t);
+    public float ProbabilityDensity(float x, float t) => MathC.AbsSqr(Evaluate(x, t));
+    
+    /// <summary>
+    /// Evaluates the wave function ψ(x, t)
+    /// </summary>
+    public ComplexF Evaluate(float x, float t) => Domain.Contains(x) ?
+        (Amplitude * EvaluateRaw(x, t)) : 0;
+
+    protected abstract ComplexF EvaluateRaw(float x, float t);
 }
 ```
 
@@ -238,14 +245,15 @@ public class WaveFunction1D
 ``` csharp
 public sealed class SeparableWaveFunction1D : WaveFunction1D
 {
-    public SeparableWaveFunction1D(
-        FloatRange domain,
-        Func<float, ComplexF> spacePart,
-        Func<float, ComplexF> timePart
-    );
-
     public Func<float, ComplexF> SpacePart { get; }
     public Func<float, ComplexF> TimePart { get; }
+    
+    public SeparableWaveFunction1D(
+        FloatRange domain,
+        ComplexF amplitude,
+        Func<float, ComplexF> spacePart,
+        Func<float, ComplexF> timePart
+    ) : base(domain, amplitude);
 
     protected override ComplexF EvaluateRaw(float x, float t) => SpacePart(x) * TimePart(t);
 }
@@ -254,12 +262,25 @@ Represents ```ψ(x,t) = φ(x) · T(t)```
 
 ### WeightedWaveFunction1D
 ```csharp
-public readonly struct WeightedWaveFunction1D
+public sealed class WeightedWaveFunction1D : WaveFunction1D
 {
-    public ComplexF Coefficient { get; }
-    public WaveFunction1D WaveFunction { get; }
+    public List<ComplexF> Coefficients { get; }
+    public List<WaveFunction1D> WaveFunctions { get; }
 
-    public WeightedWaveFunction1D(ComplexF coefficient, WaveFunction1D waveFunction);
+    public WeightedWaveFunction1D(ComplexF[] coefficients, WaveFunction1D[] waveFunctions) 
+        : base(FloatRange.Infinite, ComplexF.One);
+
+    public void Add(ComplexF coefficient, WaveFunction1D waveFunction)
+
+    protected override ComplexF EvaluateRaw(float x, float t)
+    {
+        ComplexF total = ComplexF.Zero;
+        for(int i = 0; i < Coefficients.Count; i++)
+        {
+            total += WaveFunctions[i].Evaluate(x, t) * Coefficients[i];
+        }
+        return total;
+    }
 }
 ```
 Used for superpositions.
@@ -302,7 +323,7 @@ public static class HarmonicOscillator
 
 #### Superpose
 ```csharp
-public static WaveFunction1D Superpose(params WeightedWaveFunction1D[] terms);
+public static WaveFunction1D Superpose(params (ComplexF coefficient, WaveFunction1D wave)[] terms);
 ```
 Creates a superposition of wave functions. Note: assumed shared domain. If this is not the case, the functions may not be normalized.
 
@@ -314,6 +335,7 @@ Approximates the probability of finding a particle in \[min, max\].
 
 #### SamplePositions
 ```csharp
-public static float[] SamplePositions(WaveFunction1D wave, float t, int count, int resolution, Random? rng = null);
+public static float[] SamplePositions(WaveFunction1D wave, float t, FloatRange range
+, int count, int resolution, Random? rng = null);
 ```
 Samples positions according to ```|ψ(x,t)|^2```
