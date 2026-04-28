@@ -10,7 +10,7 @@ The library is designed to be lightweight, easy to use. It can be used for simul
 - Built-in solutions such as infinite potential well
 - Support for superposition of states (if time leftover)
 - Wave function abstractions (3D) (if time leftover)
-- Usage example for visualization (if time leftover)
+- Usage example for visualization in Unity (if time leftover)
 
 ## Installation
 
