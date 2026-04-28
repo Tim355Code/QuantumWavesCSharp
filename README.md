@@ -33,8 +33,8 @@ ComplexF z = 2f + ComplexF.I * 3f;
 float magnitude = MathC.Abs(z);
 ComplexF conjugate = z.Conjugate;
 
-// Example wave function (conceptual)
-var psi = new WaveFunction1D(1, (x, t) =>
+// Example wave function
+var psi = new SimpleWaveFunction1D((x, t) =>
 {
     return MathC.Exp(ComplexF.I * x);
 }, FloatRange.Infinite, ComplexF.One);

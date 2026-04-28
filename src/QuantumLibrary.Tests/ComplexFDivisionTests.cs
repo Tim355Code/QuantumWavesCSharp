@@ -9,10 +9,7 @@ public class ComplexFDivisionTests
     [InlineData(3f, 4f, 1f, 0f, 3f, 4f)]
     [InlineData(6f, 8f, 2f, 0f, 3f, 4f)]
     [InlineData(3f, 4f, 0f, 1f, 4f, -3f)]
-    public void Division_Works(
-        float ar, float ai,
-        float br, float bi,
-        float er, float ei)
+    public void Division_Works(float ar, float ai, float br, float bi, float er, float ei)
     {
         var result = new ComplexF(ar, ai) / new ComplexF(br, bi);
 
