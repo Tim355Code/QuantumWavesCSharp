@@ -37,6 +37,7 @@
       "modern"
     ],
     "globalMetadata": {
+      "_appBasePath": "/QuantumWavesCSharp",
       "_appName": "QuantumLibraryCSharp",
       "_appTitle": "QuantumLibraryCSharp",
       "_enableSearch": true,

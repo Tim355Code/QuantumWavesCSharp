@@ -23,7 +23,7 @@ Then include the project in your C# solution.
 ## Documentation
 - [Getting started](https://tim355code.github.io/QuantumWavesCSharp/index.html)
 - [Core concepts](https://tim355code.github.io/QuantumWavesCSharp/concepts.html)
-- [Examples](https://tim355code.github.io/QuantumWavesCSharp/examples/index.html/)
+- [Examples](https://tim355code.github.io/QuantumWavesCSharp/examples)
 - [API Reference](https://tim355code.github.io/QuantumWavesCSharp/api/QuantumWaves.html)
 
 ## Example
