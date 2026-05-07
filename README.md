@@ -16,7 +16,7 @@ The library is designed to be lightweight, easy to use. It can be used for simul
 
 Clone the repository:
 ```bash
-git clone https://gits-15.sys.kth.se/grudat26/merko-ovn7.git
+TODO
 ```
 Then include the project in your C# solution.
 
