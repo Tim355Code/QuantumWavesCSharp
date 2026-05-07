@@ -24,7 +24,7 @@ Then include the project in your C# solution.
 - [Getting started](docs/index.md)
 - [Core concepts](docs/concepts.md)
 - [Examples](docs/examples/index.md)
-- [API Reference](api/QuantumWaves.yml)
+- [API Reference](https://tim355code.github.io/QuantumWavesCSharp/)
 
 ## Example
 ```csharp

@@ -16,7 +16,8 @@
     "content": [
       {
         "files": [
-          "**/*.{md,yml}"
+          "docs/**/*.{md,yml}",
+          "api/**/*.{md,yml}"
         ],
         "exclude": [
           "_site/**"
