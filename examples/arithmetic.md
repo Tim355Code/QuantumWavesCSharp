@@ -54,4 +54,4 @@ Console.WriteLine(MathC.Lerp(a, b, 0.5f)); // 0.5 + i
 ## See also
 - [Core concepts](../concepts.md)
 - [Wave function examples](waves.md)
-- [API reference](../../api/QuantumWaves.yml)
+- [API reference](../api/QuantumWaves.yml)

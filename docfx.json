@@ -16,11 +16,11 @@
     "content": [
       {
         "files": [
-          "docs/**/*.{md,yml}",
-          "api/**/*.{md,yml}"
+          "**/*.{md,yml}"
         ],
         "exclude": [
-          "_site/**"
+          "_site/**",
+          "src/**"
         ]
       }
     ],

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started | QuantumLibraryCSharp </title>
+      <title>Built-in solutions | QuantumLibraryCSharp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started | QuantumLibraryCSharp ">
+      <meta name="title" content="Built-in solutions | QuantumLibraryCSharp ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/examples/built-in.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,54 +85,72 @@
         </div>
 
         <article data-uid="">
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="built-in-solutions">Built-in solutions</h1>
 
-<p>QuantumWavesCSharp is a small educational library which provides utilities for complex arithmetic and simple one dimensional quantum wave function calculations in C#.</p>
-<p>This guide shows how to install the project, create complex numbers, define a normalized 1D wave function, and verify that its total probability is approximately 1.</p>
-<h2 id="installation">Installation</h2>
-<p>Clone the repository:</p>
-<pre><code class="lang-bash">git clone https://github.com/Tim355Code/QuantumWavesCSharp.git
-</code></pre>
-<p>Then include the project in your C# solution.</p>
-<h2 id="complex-arithmetic">Complex arithmetic</h2>
-<pre><code class="lang-csharp">using CMath;
-
-ComplexF z = new ComplexF(2f, 5f);
-ComplexF w = 2f + ComplexF.I * 5f;
-
-float magnitude = MathC.Abs(z);
-ComplexF conjugate = z.Conjugate;
-
-Console.WriteLine(conjugate); // 2 - 5i
-</code></pre>
-<h2 id="create-a-wave-function">Create a wave function</h2>
-<p>A <code>WaveFunction1D</code> represents a complex valued function over a one dimensional domain.
-The wave function is automatically normalized so that the total probability over its domain is approximately <code>1</code>.</p>
-<pre><code class="lang-csharp">using CMath;
-using QuantumWaves;
-
-WaveFunction1D wave = new SeparableWaveFunction1D
-(
-    spacePart: x =&gt; x,
-    timePart: t =&gt; MathC.Exp(ComplexF.I * t),
-    domain: new FloatRange(0f, 4f)
-);
-Console.WriteLine(wave.Amplitude); // ~ 0.2165 + 0i = 1 / sqrt(64 / 3)
-
-float total = wave.ProbabilityInRange(t: 0f, domain: new FloatRange(0f, 4f));
-Console.WriteLine(total); // ~1
-</code></pre>
-<h2 id="next-steps">Next steps</h2>
+<p><code>QuantumWaves.Solutions</code> contains several analytical solutions to common one dimensional quantum systems.</p>
+<p>Solutions include:</p>
 <ul>
-<li><a href="concepts.html">Read the core concepts</a></li>
-<li><a href="examples/index.html">See more examples</a></li>
-<li><a href="../api/QuantumWaves.html">Browse the API reference</a></li>
+<li>Infinite well,</li>
+<li>Harmonic Oscillator,</li>
+<li>Free particle plane waves,</li>
+<li>and the Gaussian packet.</li>
+</ul>
+<h2 id="infinite-well">Infinite well</h2>
+<p>The infinite potential well is one of the simplest analytical solutions of the Schrödinger equation. The eigenstates are discrete standing waves.</p>
+<pre><code class="lang-csharp">using QuantumWaves;
+using QuantumWaves.Solutions;
+
+SeparableWaveFunction1D wave = InfiniteWell1D.State(n: 2, length: 1f, mass: 1f);
+Console.WriteLine(wave.Amplitude); // approx sqrt(2) + 0i
+
+float energy = InfiniteWell1D.Energy(n: 1, length: MathF.PI, mass: 1, hBar: 2);
+Console.WriteLine(energy); // 2
+</code></pre>
+<h2 id="harmonic-oscillator">Harmonic Oscillator</h2>
+<p>The harmonic oscillator is a fundamental quantum system with evenly spaced energy levels and Hermite polynomial eigenstates.</p>
+<pre><code class="lang-csharp">using QuantumWaves;
+using QuantumWaves.Solutions;
+
+SeparableWaveFunction1D wave = HarmonicOscillator1D.State(n: 1, mass: MathF.PI, omega: 1);
+Console.WriteLine(wave.Amplitude); // approx 1 / sqrt(2) + 0i
+
+float energy = HarmonicOscillator1D.Energy(n: 5, omega: 2, hBar: 1);
+Console.WriteLine(energy); // 11
+</code></pre>
+<h2 id="gaussian-packet">Gaussian packet</h2>
+<p>The Gaussian packet is approximated numerically using a weighted superposition of momentum eigenstates.</p>
+<pre><code class="lang-csharp">using QuantumWaves;
+using QuantumWaves.Solutions;
+
+WeightedWaveFunction1D wave = FreeParticle1D.GaussianWavePacket(
+    x0: 0,
+    sigma: 1f / MathF.Sqrt(2 * MathF.PI),
+    k0: 1,
+    mass: 1,
+    hBar: 1,
+    termCount: 199
+);
+
+Console.WriteLine(wave.ProbabilityDensity(1, 0)); // approx e^-π
+
+// This takes a while to run!!
+if(wave.Sample(sampleCount: 10000, out float[] samples, t: 0, rng: new Random(Seed: 42), pointCount: 1500,
+    tolerance: 1e-2f, segmentIntervals: 8))
+{
+    Console.WriteLine(&quot;Average: &quot; + samples.Average()); // approx 0
+}
+</code></pre>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="../concepts.html">Core concepts</a></li>
+<li><a href="waves.html">Wave function examples</a></li>
+<li><a href="../api/QuantumWaves.html">API reference</a></li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/examples/built-in.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

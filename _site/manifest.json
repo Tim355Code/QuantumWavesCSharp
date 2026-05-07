@@ -259,73 +259,63 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/concepts.md",
+      "source_relative_path": "concepts.md",
       "output": {
         ".html": {
-          "relative_path": "docs/concepts.html"
+          "relative_path": "concepts.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/examples/arithmetic.md",
+      "source_relative_path": "examples/arithmetic.md",
       "output": {
         ".html": {
-          "relative_path": "docs/examples/arithmetic.html"
+          "relative_path": "examples/arithmetic.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/examples/built-in.md",
+      "source_relative_path": "examples/built-in.md",
       "output": {
         ".html": {
-          "relative_path": "docs/examples/built-in.html"
+          "relative_path": "examples/built-in.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/examples/index.md",
+      "source_relative_path": "examples/index.md",
       "output": {
         ".html": {
-          "relative_path": "docs/examples/index.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/examples/waves.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/examples/waves.html"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "docs/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "docs/index.html"
+          "relative_path": "examples/index.html"
         }
       },
       "version": ""
     },
     {
       "type": "Toc",
-      "source_relative_path": "docs/toc.yml",
+      "source_relative_path": "examples/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "docs/toc.html"
+          "relative_path": "examples/toc.html"
         },
         ".json": {
-          "relative_path": "docs/toc.json"
+          "relative_path": "examples/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/waves.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/waves.html"
         }
       },
       "version": ""

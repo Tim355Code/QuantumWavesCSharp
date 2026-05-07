@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Examples | QuantumLibraryCSharp </title>
+      <title>Complex Arithmetic and Math Utilities | QuantumLibraryCSharp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Examples | QuantumLibraryCSharp ">
+      <meta name="title" content="Complex Arithmetic and Math Utilities | QuantumLibraryCSharp ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/examples/arithmetic.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,34 +85,64 @@
         </div>
 
         <article data-uid="">
-<h1 id="examples">Examples</h1>
+<h1 id="complex-arithmetic-and-math-utilities">Complex Arithmetic and Math Utilities</h1>
 
-<h2 id="complex-arithmetic">Complex arithmetic</h2>
+<p><code>MathC</code> provides utility functions for working with complex numbers and floating point mathematics commonly used in quantum simulations.</p>
+<p>This includes:</p>
+<ul>
+<li>exponential functions,</li>
+<li>logarithms,</li>
+<li>polar conversion,</li>
+<li>trigonometric operations,</li>
+<li>and other complex-valued arithmetic helpers.</li>
+</ul>
+<h2 id="basic-arithmetic">Basic arithmetic</h2>
 <pre><code class="lang-csharp">using CMath;
 
-ComplexF z = 2f + ComplexF.I * 3f;
+ComplexF a = new ComplexF(2, 1);
+ComplexF b = new ComplexF(1, 3);
 
-float magnitude = MathC.Abs(z);
-float angle = MathC.Arg(z);
-ComplexF unit = z.Normalized;
+Console.WriteLine(a * b); // 7i - 1
+Console.WriteLine(a / b); // 0.5 - 0.5i
+
+ComplexF c = a + b;
+
+Console.WriteLine(MathC.AbsSqr(c)); // 25
+Console.WriteLine(MathC.Sqrt(c)); // 2 + i
+Console.WriteLine(MathC.Pow(c, 2)); // 24i - 7
 </code></pre>
-<h2 id="creating-a-wave-function">Creating a wave function</h2>
+<h2 id="polar-and-exponential-forms">Polar and Exponential Forms</h2>
+<p>Polar representations are useful for rotations, phase calculations, and exponential forms of complex numbers.</p>
 <pre><code class="lang-csharp">using CMath;
-using QuantumWaves;
 
-var psi = new SeparableWaveFunction1D(
-    FloatRange.Infinite,
-    ComplexF.One,
-    x =&gt; MathC.Exp(ComplexF.I * x),
-    t =&gt; MathC.Exp(-ComplexF.I * t)
-);
+ComplexF z = new ComplexF(1, 1);
 
-float density = psi.ProbabilityDensity(1.0f, 0.0f);
+Console.WriteLine(MathC.Arg(z)); // approx π/4
+Console.WriteLine(MathC.ToPolar(z)); // approx (√2, π/4)
+
+Console.WriteLine(MathC.Cis(MathF.PI/2)); // approx i
+Console.WriteLine(MathC.FromPolar(2, MathF.PI)); // approx -2
 </code></pre>
+<h2 id="interpolation">Interpolation</h2>
+<p>Interpolation utilities are helpful for smoothly transitioning between amplitudes, phases, or sampled states, especially in visualization.</p>
+<pre><code class="lang-csharp">using CMath;
+
+ComplexF a = ComplexF.Zero;
+ComplexF b = new ComplexF(1, 2);
+
+Console.WriteLine(MathC.Lerp(a, b, 0.5f)); // 0.5 + i
+</code></pre>
+<h2 id="see-also">See also</h2>
+<ul>
+<li><a href="../concepts.html">Core concepts</a></li>
+<li><a href="waves.html">Wave function examples</a></li>
+<li><a href="../api/QuantumWaves.html">API reference</a></li>
+</ul>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/examples/arithmetic.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

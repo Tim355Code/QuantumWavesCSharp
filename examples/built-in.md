@@ -61,4 +61,4 @@ if(wave.Sample(sampleCount: 10000, out float[] samples, t: 0, rng: new Random(Se
 ## See also
 - [Core concepts](../concepts.md)
 - [Wave function examples](waves.md)
-- [API reference](../../api/QuantumWaves.yml)
+- [API reference](../api/QuantumWaves.yml)

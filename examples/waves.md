@@ -73,4 +73,4 @@ for(int i = 0; i < 10; i++)
 ## See also
 - [Core concepts](../concepts.md)
 - [Built-in solutions examples](built-in.md)
-- [API reference](../../api/QuantumWaves.yml)
+- [API reference](../api/QuantumWaves.yml)
