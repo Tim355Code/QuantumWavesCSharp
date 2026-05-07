@@ -53,7 +53,7 @@ items:
   assemblies:
   - QuantumLibrary
   namespace: CMath
-  summary: Represents a mutable complex number using floating-point components.
+  summary: Represents an immutable complex number using float components.
   example: []
   syntax:
     content: 'public struct ComplexF : IEquatable<ComplexF>'
@@ -317,14 +317,14 @@ items:
   assemblies:
   - QuantumLibrary
   namespace: CMath
-  summary: Gets or sets the real component.
+  summary: Gets the real component.
   example: []
   syntax:
-    content: public float Real { readonly get; set; }
+    content: public readonly float Real { get; }
     parameters: []
     return:
       type: System.Single
-    content.vb: Public Property Real As Single
+    content.vb: Public ReadOnly Property Real As Single
   overload: CMath.ComplexF.Real*
 - uid: CMath.ComplexF.Imaginary
   commentId: P:CMath.ComplexF.Imaginary
@@ -348,14 +348,14 @@ items:
   assemblies:
   - QuantumLibrary
   namespace: CMath
-  summary: Gets or sets the imaginary component.
+  summary: Gets the imaginary component.
   example: []
   syntax:
-    content: public float Imaginary { readonly get; set; }
+    content: public readonly float Imaginary { get; }
     parameters: []
     return:
       type: System.Single
-    content.vb: Public Property Imaginary As Single
+    content.vb: Public ReadOnly Property Imaginary As Single
   overload: CMath.ComplexF.Imaginary*
 - uid: CMath.ComplexF.IsNaN
   commentId: P:CMath.ComplexF.IsNaN
@@ -776,7 +776,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_Implicit
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 130
+    startLine: 128
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -812,7 +812,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_Addition
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 134
+    startLine: 132
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -850,7 +850,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_Subtraction
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 137
+    startLine: 135
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -888,7 +888,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_Multiply
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 140
+    startLine: 138
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -926,7 +926,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_Division
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 147
+    startLine: 145
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -965,7 +965,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_UnaryNegation
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 164
+    startLine: 162
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -1001,7 +1001,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_Equality
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 172
+    startLine: 170
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -1043,7 +1043,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: op_Inequality
     path: src/QuantumLibrary/Core/ComplexF.cs
-    startLine: 179
+    startLine: 177
   assemblies:
   - QuantumLibrary
   namespace: CMath

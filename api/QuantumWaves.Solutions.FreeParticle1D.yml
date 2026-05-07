@@ -65,7 +65,7 @@ items:
   summary: Creates a plane wave solution for a free particle.
   example: []
   syntax:
-    content: public static WaveFunction1D PlaneWave(float k, float mass, float h_bar)
+    content: public static SeparableWaveFunction1D PlaneWave(float k, float mass, float h_bar)
     parameters:
     - id: k
       type: System.Single
@@ -77,9 +77,9 @@ items:
       type: System.Single
       description: Reduced Planck constant (must be greater than zero).
     return:
-      type: QuantumWaves.WaveFunction1D
+      type: QuantumWaves.SeparableWaveFunction1D
       description: A separable wave function representing the plane wave.
-    content.vb: Public Shared Function PlaneWave(k As Single, mass As Single, h_bar As Single) As WaveFunction1D
+    content.vb: Public Shared Function PlaneWave(k As Single, mass As Single, h_bar As Single) As SeparableWaveFunction1D
   overload: QuantumWaves.Solutions.FreeParticle1D.PlaneWave*
   exceptions:
   - type: System.ArgumentOutOfRangeException
@@ -420,13 +420,13 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
-- uid: QuantumWaves.WaveFunction1D
-  commentId: T:QuantumWaves.WaveFunction1D
+- uid: QuantumWaves.SeparableWaveFunction1D
+  commentId: T:QuantumWaves.SeparableWaveFunction1D
   parent: QuantumWaves
-  href: QuantumWaves.WaveFunction1D.html
-  name: WaveFunction1D
-  nameWithType: WaveFunction1D
-  fullName: QuantumWaves.WaveFunction1D
+  href: QuantumWaves.SeparableWaveFunction1D.html
+  name: SeparableWaveFunction1D
+  nameWithType: SeparableWaveFunction1D
+  fullName: QuantumWaves.SeparableWaveFunction1D
 - uid: QuantumWaves
   commentId: N:QuantumWaves
   href: QuantumWaves.html

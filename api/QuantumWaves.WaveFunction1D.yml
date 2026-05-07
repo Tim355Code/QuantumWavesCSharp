@@ -362,7 +362,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: TryNormalize
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 165
+    startLine: 173
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -376,16 +376,13 @@ items:
       description: Time at which normalization is evaluated.
     - id: tolerance
       type: System.Single
-      description: Relative convergence tolerance for infinite domains.
+      description: Relative convergence tolerance for infinite domain expansion.
     - id: max_allowed
       type: System.Single
       description: Maximum allowed integral value.
     - id: max_count
       type: System.Int32
-      description: >-
-        Maximum number of domain expansion iterations allowed for infinite-domain
-
-        normalization.
+      description: Maximum number of expansion iterations.
     return:
       type: System.Boolean
       description: True if normalization was successfull, otherwise false.
@@ -412,33 +409,60 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Sample
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 179
+    startLine: 211
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
+  summary: Generates random position samples of the wave.
+  example: []
   syntax:
-    content: public bool Sample(int sampleCount, out float[] samples, float t = 0, int pointCount = 1000, Random? rng = null, float tolerance = 0.0001, float max_allowed = 1000000, int max_count = 10000)
+    content: public bool Sample(int sampleCount, out float[] samples, float t = 0, int pointCount = 1000, Random? rng = null, float tolerance = 0.0001, float maxAllowed = 1000000, int maxCount = 10000)
     parameters:
     - id: sampleCount
       type: System.Int32
+      description: The number of samples to generate. Must be greater than zero.
     - id: samples
       type: System.Single[]
+      description: Contains the samples if successful, otherwise an empty array.
     - id: t
       type: System.Single
+      description: The time at which the wave function is sampled.
     - id: pointCount
       type: System.Int32
+      description: >-
+        The number of discrete points used to approximate the cumulative distribution.
+
+        Must be greater than one.
     - id: rng
       type: System.Random
+      description: The random number generator used for sampling.
     - id: tolerance
       type: System.Single
-    - id: max_allowed
+      description: Relative convergence tolerance for infinite domain expansion. Must be greater than zero.
+    - id: maxAllowed
       type: System.Single
-    - id: max_count
+      description: Maximum allowed integral value. Must be greater than zero.
+    - id: maxCount
       type: System.Int32
+      description: Maximum number of expansion iterations. Must be greater than zero.
     return:
       type: System.Boolean
-    content.vb: Public Function Sample(sampleCount As Integer, samples As Single(), t As Single = 0, pointCount As Integer = 1000, rng As Random = Nothing, tolerance As Single = 0.0001, max_allowed As Single = 1000000, max_count As Integer = 10000) As Boolean
+      description: True if sampling succeeded, otherwise false.
+    content.vb: Public Function Sample(sampleCount As Integer, samples As Single(), t As Single = 0, pointCount As Integer = 1000, rng As Random = Nothing, tolerance As Single = 0.0001, maxAllowed As Single = 1000000, maxCount As Integer = 10000) As Boolean
   overload: QuantumWaves.WaveFunction1D.Sample*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      Thrown if <code class="paramref">sampleCount</code> is less than or equal to zero,
+
+      <code class="paramref">pointCount</code> is less than or equal to one,
+
+      <code class="paramref">tolerance</code> is less than or equal to zero,
+
+      <code class="paramref">maxAllowed</code> is less than or equal to zero,
+
+      or <code class="paramref">maxCount</code> is less than or equal to zero.
   nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
   fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, System.Random, Single, Single, Integer)
   name.vb: Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
@@ -795,6 +819,13 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
 - uid: QuantumWaves.WaveFunction1D.Sample*
   commentId: Overload:QuantumWaves.WaveFunction1D.Sample
   href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_

@@ -118,7 +118,7 @@ items:
       description: The integration range.
     - id: intervals
       type: System.Int32
-      description: The number of subintervals (must be positive and even).
+      description: The number of intervals.
     return:
       type: System.Single
       description: The approximate integral value.
@@ -130,10 +130,10 @@ items:
     description: Thrown if f is null.
   - type: System.ArgumentOutOfRangeException
     commentId: T:System.ArgumentOutOfRangeException
-    description: Thrown if subintervals is not positive.
+    description: Thrown if intervals is not positive.
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Thrown if subintervals is not even or domain is invalid.
+    description: Thrown if intervals is not even or domain is invalid.
   nameWithType.vb: MathEx.Simpson(Func(Of Single, Single), FloatRange, Integer)
   fullName.vb: QuantumWaves.Utils.MathEx.Simpson(System.Func(Of Single, Single), FloatRange, Integer)
   name.vb: Simpson(Func(Of Single, Single), FloatRange, Integer)
@@ -172,7 +172,7 @@ items:
       description: The integration range.
     - id: intervals
       type: System.Int32
-      description: The number of subintervals (must be positive and even).
+      description: The number of intervals.
     return:
       type: CMath.ComplexF
       description: The approximate complex integral value.
@@ -184,10 +184,10 @@ items:
     description: Thrown if f is null.
   - type: System.ArgumentOutOfRangeException
     commentId: T:System.ArgumentOutOfRangeException
-    description: Thrown if subintervals is not positive.
+    description: Thrown if intervals is not positive.
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Thrown if subintervals is not even or domain is invalid.
+    description: Thrown if intervals is not even or domain is invalid.
   nameWithType.vb: MathEx.SimpsonComplex(Func(Of Single, ComplexF), FloatRange, Integer)
   fullName.vb: QuantumWaves.Utils.MathEx.SimpsonComplex(System.Func(Of Single, CMath.ComplexF), FloatRange, Integer)
   name.vb: SimpsonComplex(Func(Of Single, ComplexF), FloatRange, Integer)

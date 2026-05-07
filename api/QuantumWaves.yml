@@ -20,6 +20,7 @@ items:
 references:
 - uid: QuantumWaves.SeparableWaveFunction1D
   commentId: T:QuantumWaves.SeparableWaveFunction1D
+  parent: QuantumWaves
   href: QuantumWaves.SeparableWaveFunction1D.html
   name: SeparableWaveFunction1D
   nameWithType: SeparableWaveFunction1D

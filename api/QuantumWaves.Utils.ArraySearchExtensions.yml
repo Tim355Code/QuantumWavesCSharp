@@ -62,7 +62,7 @@ items:
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves.Utils
-  summary: Returns the index of the first value greater than or equal to the target.
+  summary: Returns the index of the first value greater than or equal to the <code class="paramref">target</code>.
   example: []
   syntax:
     content: public static int LowerBound(this float[] values, float target)
@@ -72,13 +72,13 @@ items:
       description: The sorted array to search.
     - id: target
       type: System.Single
-      description: The value to compare against.
+      description: The value to compare to.
     return:
       type: System.Int32
       description: >-
         The index of the first element greater than or equal to <code class="paramref">target</code>.
 
-        Returns <code>values.Length</code> if no matching position exists.
+        Returns <code>values.Length</code> if no match is found.
     content.vb: Public Shared Function LowerBound(values As Single(), target As Single) As Integer
   overload: QuantumWaves.Utils.ArraySearchExtensions.LowerBound*
   nameWithType.vb: ArraySearchExtensions.LowerBound(Single(), Single)

@@ -473,37 +473,48 @@ Class WaveFunction1D
   
   </h3>
 
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Generates random position samples of the wave.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Sample(int sampleCount, out float[] samples, float t = 0, int pointCount = 1000, Random? rng = null, float tolerance = 0.0001, float max_allowed = 1000000, int max_count = 10000)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Sample(int sampleCount, out float[] samples, float t = 0, int pointCount = 1000, Random? rng = null, float tolerance = 0.0001, float maxAllowed = 1000000, int maxCount = 10000)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>sampleCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The number of samples to generate. Must be greater than zero.</p>
+</dd>
     <dt><code>samples</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>[]</dt>
-    <dd></dd>
+    <dd><p>Contains the samples if successful, otherwise an empty array.</p>
+</dd>
     <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The time at which the wave function is sampled.</p>
+</dd>
     <dt><code>pointCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The number of discrete points used to approximate the cumulative distribution.
+Must be greater than one.</p>
+</dd>
     <dt><code>rng</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.random">Random</a></dt>
-    <dd></dd>
+    <dd><p>The random number generator used for sampling.</p>
+</dd>
     <dt><code>tolerance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>max_allowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
-    <dt><code>max_count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>Relative convergence tolerance for infinite domain expansion. Must be greater than zero.</p>
+</dd>
+    <dt><code>maxAllowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Maximum allowed integral value. Must be greater than zero.</p>
+</dd>
+    <dt><code>maxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Maximum number of expansion iterations. Must be greater than zero.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
+    <dd><p>True if sampling succeeded, otherwise false.</p>
+</dd>
   </dl>
 
 
@@ -513,6 +524,16 @@ Class WaveFunction1D
 
 
 
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">sampleCount</code> is less than or equal to zero,
+<code class="paramref">pointCount</code> is less than or equal to one,
+<code class="paramref">tolerance</code> is less than or equal to zero,
+<code class="paramref">maxAllowed</code> is less than or equal to zero,
+or <code class="paramref">maxCount</code> is less than or equal to zero.</p>
+</dd>
+  </dl>
 
 
 
@@ -537,14 +558,13 @@ Class WaveFunction1D
     <dd><p>Time at which normalization is evaluated.</p>
 </dd>
     <dt><code>tolerance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>Relative convergence tolerance for infinite domains.</p>
+    <dd><p>Relative convergence tolerance for infinite domain expansion.</p>
 </dd>
     <dt><code>max_allowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Maximum allowed integral value.</p>
 </dd>
     <dt><code>max_count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>Maximum number of domain expansion iterations allowed for infinite-domain
-normalization.</p>
+    <dd><p>Maximum number of expansion iterations.</p>
 </dd>
   </dl>
 

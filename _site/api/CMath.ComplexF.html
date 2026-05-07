@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="title" content="Struct ComplexF | QuantumLibraryCSharp ">
       
-      <meta name="description" content="Represents a mutable complex number using floating-point components.">
+      <meta name="description" content="Represents an immutable complex number using float components.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -97,7 +97,7 @@ Struct ComplexF
   <dl><dt>Assembly</dt><dd>QuantumLibrary.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Represents a mutable complex number using floating-point components.</p>
+  <div class="markdown summary"><p>Represents an immutable complex number using float components.</p>
 </div>
   <div class="markdown conceptual"></div>
 
@@ -471,12 +471,12 @@ Struct ComplexF
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the imaginary component.</p>
+  <div class="markdown level1 summary"><p>Gets the imaginary component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Imaginary { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly float Imaginary { get; }</code></pre>
   </div>
 
 
@@ -699,12 +699,12 @@ Struct ComplexF
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Gets or sets the real component.</p>
+  <div class="markdown level1 summary"><p>Gets the real component.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public float Real { readonly get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly float Real { get; }</code></pre>
   </div>
 
 

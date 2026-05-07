@@ -32,7 +32,7 @@
       "Uid": null,
       "IsMRef": true,
       "Title": "CMath.ComplexF",
-      "Summary": "<p sourcefile=\"api/CMath.ComplexF.yml\" sourcestartlinenumber=\"1\">Represents a mutable complex number using floating-point components.</p>\n"
+      "Summary": "<p sourcefile=\"api/CMath.ComplexF.yml\" sourcestartlinenumber=\"1\">Represents an immutable complex number using float components.</p>\n"
     },
     {
       "type": "ManagedReference",

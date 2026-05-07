@@ -65,7 +65,7 @@ items:
   summary: Creates the nth energy eigenstate.
   example: []
   syntax:
-    content: public static WaveFunction1D State(int n, float mass, float omega, float h_bar = 1)
+    content: public static SeparableWaveFunction1D State(int n, float mass, float omega, float h_bar = 1)
     parameters:
     - id: n
       type: System.Int32
@@ -80,9 +80,9 @@ items:
       type: System.Single
       description: Reduced Planck constant (must be greater than zero).
     return:
-      type: QuantumWaves.WaveFunction1D
+      type: QuantumWaves.SeparableWaveFunction1D
       description: A separable wave function representing the state.
-    content.vb: Public Shared Function State(n As Integer, mass As Single, omega As Single, h_bar As Single = 1) As WaveFunction1D
+    content.vb: Public Shared Function State(n As Integer, mass As Single, omega As Single, h_bar As Single = 1) As SeparableWaveFunction1D
   overload: QuantumWaves.Solutions.HarmonicOscillator1D.State*
   exceptions:
   - type: System.ArgumentOutOfRangeException
@@ -434,13 +434,13 @@ references:
   nameWithType.vb: Single
   fullName.vb: Single
   name.vb: Single
-- uid: QuantumWaves.WaveFunction1D
-  commentId: T:QuantumWaves.WaveFunction1D
+- uid: QuantumWaves.SeparableWaveFunction1D
+  commentId: T:QuantumWaves.SeparableWaveFunction1D
   parent: QuantumWaves
-  href: QuantumWaves.WaveFunction1D.html
-  name: WaveFunction1D
-  nameWithType: WaveFunction1D
-  fullName: QuantumWaves.WaveFunction1D
+  href: QuantumWaves.SeparableWaveFunction1D.html
+  name: SeparableWaveFunction1D
+  nameWithType: SeparableWaveFunction1D
+  fullName: QuantumWaves.SeparableWaveFunction1D
 - uid: QuantumWaves
   commentId: N:QuantumWaves
   href: QuantumWaves.html
