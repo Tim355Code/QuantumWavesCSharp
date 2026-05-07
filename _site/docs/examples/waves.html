@@ -2,21 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started | QuantumLibraryCSharp </title>
+      <title>Basic wave function operations and calculations | QuantumLibraryCSharp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started | QuantumLibraryCSharp ">
+      <meta name="title" content="Basic wave function operations and calculations | QuantumLibraryCSharp ">
       
       
-      <link rel="icon" href="../favicon.ico">
-      <link rel="stylesheet" href="../public/docfx.min.css">
-      <link rel="stylesheet" href="../public/main.css">
-      <meta name="docfx:navrel" content="../toc.html">
-      <meta name="docfx:tocrel" content="toc.html">
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
       
-      <meta name="docfx:rel" content="../">
+      <meta name="docfx:rel" content="../../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/index.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/examples/waves.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -30,7 +30,7 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
-      <script type="module" src="./../public/docfx.min.js"></script>
+      <script type="module" src="./../../public/docfx.min.js"></script>
 
       <script>
         const theme = localStorage.getItem('theme') || 'auto'
@@ -43,8 +43,8 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
-            <img id="logo" class="svg" src="../logo.svg" alt="QuantumLibraryCSharp">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="QuantumLibraryCSharp">
             QuantumLibraryCSharp
           </a>
           <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,54 +85,82 @@
         </div>
 
         <article data-uid="">
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="basic-wave-function-operations-and-calculations">Basic wave function operations and calculations</h1>
 
-<p>QuantumWavesCSharp is a small educational library which provides utilities for complex arithmetic and simple one dimensional quantum wave function calculations in C#.</p>
-<p>This guide shows how to install the project, create complex numbers, define a normalized 1D wave function, and verify that its total probability is approximately 1.</p>
-<h2 id="installation">Installation</h2>
-<p>Clone the repository:</p>
-<pre><code class="lang-bash">git clone https://github.com/Tim355Code/QuantumWavesCSharp.git
-</code></pre>
-<p>Then include the project in your C# solution.</p>
-<h2 id="complex-arithmetic">Complex arithmetic</h2>
-<pre><code class="lang-csharp">using CMath;
-
-ComplexF z = new ComplexF(2f, 5f);
-ComplexF w = 2f + ComplexF.I * 5f;
-
-float magnitude = MathC.Abs(z);
-ComplexF conjugate = z.Conjugate;
-
-Console.WriteLine(conjugate); // 2 - 5i
-</code></pre>
-<h2 id="create-a-wave-function">Create a wave function</h2>
-<p>A <code>WaveFunction1D</code> represents a complex valued function over a one dimensional domain.
-The wave function is automatically normalized so that the total probability over its domain is approximately <code>1</code>.</p>
+<p><code>WaveFunction1D</code> provides utility functions for computing properties commonly used in quantum simulations.</p>
+<p>This includes:</p>
+<ul>
+<li>normalization,</li>
+<li>probability in range,</li>
+<li>and spatial sampling.</li>
+</ul>
+<h2 id="manual-normalization">Manual normalization</h2>
+<p>Finding normalization constants is not always feasible, so <code>WaveFunction1D</code> provides a <code>TryNormalize</code> function.
+<code>TryNormalize</code> attempts to integrate the probability density over the entire domain and adjust the amplitude so the total probability becomes approximately <code>1</code>.</p>
+<p>For infinite domains or divergent functions, normalization may fail and the function returns <code>false</code>.</p>
 <pre><code class="lang-csharp">using CMath;
 using QuantumWaves;
 
 WaveFunction1D wave = new SeparableWaveFunction1D
 (
-    spacePart: x =&gt; x,
+    spacePart: x =&gt; MathF.Exp(-x),
+    timePart: t =&gt; MathC.Exp(ComplexF.I * t),
+    domain: new FloatRange(0, float.PositiveInfinity),
+    amplitude: 1f
+);
+
+if (wave.TryNormalize())
+{
+    Console.WriteLine(wave.Amplitude); // approx sqrt(2) + 0i
+}
+</code></pre>
+<h2 id="probability-in-range">Probability in range</h2>
+<p><code>ProbabilityInRange</code> integrates the probability density over a specified interval.
+This is useful for measuring how much of the wave function lies inside a region of space.</p>
+<pre><code class="lang-csharp">using CMath;
+using QuantumWaves;
+
+WaveFunction1D wave = new SeparableWaveFunction1D
+(
+    spacePart: x =&gt; 1,
     timePart: t =&gt; MathC.Exp(ComplexF.I * t),
     domain: new FloatRange(0f, 4f)
 );
-Console.WriteLine(wave.Amplitude); // ~ 0.2165 + 0i = 1 / sqrt(64 / 3)
 
-float total = wave.ProbabilityInRange(t: 0f, domain: new FloatRange(0f, 4f));
-Console.WriteLine(total); // ~1
+wave.TryNormalize();
+Console.WriteLine(wave.ProbabilityInRange(t: 0, domain: new FloatRange(-100, 100))); // approx 1
+Console.WriteLine(wave.ProbabilityInRange(t: 0, domain: new FloatRange(0, 2f)));     // approx 0.5
 </code></pre>
-<h2 id="next-steps">Next steps</h2>
+<h2 id="sampling">Sampling</h2>
+<p>Spatial sampling is commonly used in visualization and simulation of quantum systems. Since approximating the cumulative distribution function can be relatively expensive, the method allows bulk sampling.</p>
+<pre><code class="lang-csharp">using CMath;
+using QuantumWaves;
+
+WaveFunction1D wave = new SeparableWaveFunction1D
+(
+    spacePart: x =&gt; MathF.Exp(-x),
+    timePart: t =&gt; MathC.Exp(ComplexF.I * t),
+    domain: new FloatRange(0, float.PositiveInfinity),
+    amplitude: MathF.Sqrt(2f)
+);
+
+wave.Sample(sampleCount: 10, out float[] samples, t: 0, rng: new Random(Seed: 21));
+for(int i = 0; i &lt; 10; i++)
+{
+    Console.WriteLine(samples[i]); // Depends on seed, in this case between 0.0 and 2.0
+}
+</code></pre>
+<h2 id="see-also">See also</h2>
 <ul>
-<li><a href="concepts.html">Read the core concepts</a></li>
-<li><a href="examples/index.html">See more examples</a></li>
-<li><a href="../api/QuantumWaves.html">Browse the API reference</a></li>
+<li><a href="../concepts.html">Core concepts</a></li>
+<li><a href="built-in.html">Built-in solutions examples</a></li>
+<li><a href="../../api/QuantumWaves.html">API reference</a></li>
 </ul>
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/index.md/#L1" class="edit-link">Edit this page</a>
+          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/examples/waves.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

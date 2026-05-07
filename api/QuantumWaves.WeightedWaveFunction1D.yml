@@ -21,7 +21,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: WeightedWaveFunction1D
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
     startLine: 9
@@ -43,7 +43,7 @@ items:
   - QuantumWaves.WaveFunction1D.ProbabilityDensity(System.Single,System.Single)
   - QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
   - QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
-  - QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -65,7 +65,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Coefficients
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
     startLine: 17
@@ -96,7 +96,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: WaveFunctions
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
     startLine: 22
@@ -127,7 +127,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: .ctor
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
     startLine: 37
@@ -177,7 +177,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Add
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
     startLine: 65
@@ -216,7 +216,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: EvaluateRaw
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
     startLine: 80
@@ -488,21 +488,21 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
-  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
   parent: QuantumWaves.WaveFunction1D
   isExternal: true
-  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
-  name: Sample(int, out float[], float, int, Random, float, float, int)
-  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, Random, float, float, int)
-  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, System.Random, float, float, int)
-  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
-  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, System.Random, Single, Single, Integer)
-  name.vb: Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+  name: Sample(int, out float[], float, int, int, Random, float, float, int)
+  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, int, Random, float, float, int)
+  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, int, System.Random, float, float, int)
+  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
+  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, System.Random, Single, Single, Integer)
+  name.vb: Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
   spec.csharp:
-  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
     name: Sample
-    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
   - name: (
   - uid: System.Int32
     name: int
@@ -524,6 +524,12 @@ references:
     name: float
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
   - uid: System.Int32
@@ -556,9 +562,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
     name: Sample
-    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
   - name: (
   - uid: System.Int32
     name: Integer
@@ -578,6 +584,12 @@ references:
     name: Single
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
   - uid: System.Int32

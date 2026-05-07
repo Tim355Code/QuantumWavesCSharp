@@ -20,6 +20,17 @@ namespace QuantumWaves
             _wave = wave;
         }
 
+        /// <summary>
+        /// Initializes a wave function from a given function and automatically normalizes its amplitude.
+        /// </summary>
+        /// <param name="wave">Function defining ψ(x, t).</param>
+        /// <param name="domain">The spatial domain of the wave function.</param>
+        public SimpleWaveFunction1D(Func<float, float, ComplexF> wave, FloatRange domain)
+            : this(wave, domain, 1)
+        {
+            TryNormalize();
+        }
+
         /// <summary>Evaluates the unscaled wave function at (x, t).</summary>
         /// <param name="x">The position at which to evaluate the unscaled wave function.</param>
         /// <param name="t">The time at which to evaluate the unscaled wave function.</param>

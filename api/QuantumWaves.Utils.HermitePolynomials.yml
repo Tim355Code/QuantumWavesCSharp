@@ -17,7 +17,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/HermitePolynomials.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: HermitePolynomials
     path: src/QuantumLibrary/Waves/Utils/HermitePolynomials.cs
     startLine: 7
@@ -54,7 +54,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/HermitePolynomials.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Delegate
     path: src/QuantumLibrary/Waves/Utils/HermitePolynomials.cs
     startLine: 15

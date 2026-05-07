@@ -116,54 +116,100 @@ namespace QuantumWaves
             return false;
         }
 
-        /// <summary>Generates random position samples of the wave on a finite domain.</summary>
+        /// <summary>
+        /// Generates random position samples of the wave on a finite domain.
+        /// </summary>
         /// <param name="count">The number of samples to generate.</param>
         /// <param name="samples">Contains the samples if successful, otherwise an empty array.</param>
         /// <param name="t">Time at which normalization is evaluated.</param>
         /// <param name="domain">The domain to sample.</param>
-        /// <param name="pointCount">The number of discrete points used to approximate the cumulative distribution.</param>
+        /// <param name="pointCount">
+        /// The number of discrete points used to approximate the cumulative distribution.
+        /// Larger values improve sampling accuracy at the cost of additional computation.
+        /// </param>
+        /// <param name="segmentIntervals">
+        /// The number of Simpson integration intervals used for each CDF segment.
+        /// Must be positive. Higher values improve local integration accuracy but increase
+        /// computation cost. Simpson integration requires an even number of intervals;
+        /// odd values are automatically rounded up.
+        /// </param>
         /// <param name="rng">The random number generator used for sampling.</param>
-        /// <returns><see langword="true"/> if sampling succeeded, otherwise <see langword="false"/>.</returns>
+        /// <returns>
+        /// <see langword="true"/> if sampling succeeded, otherwise <see langword="false"/>.
+        /// </returns>
         private bool SampleFromFiniteDomain(int count, out float[] samples, float t, FloatRange domain,
-            int pointCount, Random rng)
+            int pointCount, int segmentIntervals, Random rng)
         {
-            samples = new float[0];
+        samples = Array.Empty<float>();
 
-            float[] xs = new float[pointCount];
-            float[] cdf = new float[pointCount];
+        float[] xs = new float[pointCount];
+        float[] cdf = new float[pointCount];
 
-            float amplitudeSqr = MathC.AbsSqr(Amplitude);
+        float dx = domain.Length / (pointCount - 1);
 
-            for (int i = 0; i < pointCount; i++)
-            {
-                float x = domain.Min + domain.Length * (i + 1f) / pointCount;
+        for (int i = 0; i < pointCount; i++)
+            xs[i] = domain.Min + i * dx;
 
-                xs[i] = x;
-                cdf[i] = amplitudeSqr * IntegrateRaw(t, new FloatRange(domain.Min, x));
-            }
+        cdf[0] = 0f;
 
-            float total = cdf[pointCount - 1];
+        // Simpson integration requires an even interval count.
+        if (segmentIntervals % 2 != 0)
+            segmentIntervals++;
 
-            if (total <= float.Epsilon)
-                return false;
+        float amplitudeSqr = MathC.AbsSqr(Amplitude);
 
-            // Normalize CDF
-            for (int i = 0; i < pointCount; i++)
-                cdf[i] /= total;
+        for (int i = 1; i < pointCount; i++)
+        {
+            float segmentProbability = amplitudeSqr * IntegrateRaw(
+                t,
+                new FloatRange(xs[i - 1], xs[i]),
+                segmentIntervals
+            );
 
-            cdf[pointCount - 1] = 1f;
-            samples = new float[count];
-
-            for (int k = 0; k < count; k++)
-            {
-                float u = (float)rng.NextDouble();
-
-                int index = cdf.LowerBound(u);
-                samples[k] = xs[index];
-            }
-
-            return true;
+            cdf[i] = cdf[i - 1] + segmentProbability;
         }
+
+        float total = cdf[pointCount - 1];
+
+        if (total <= float.Epsilon || float.IsNaN(total) || float.IsInfinity(total))
+            return false;
+
+        // Normalize CDF
+        for (int i = 0; i < pointCount; i++)
+            cdf[i] /= total;
+
+        cdf[pointCount - 1] = 1f;
+
+        samples = new float[count];
+
+        for (int k = 0; k < count; k++)
+        {
+            float u = (float)rng.NextDouble();
+
+            int index = cdf.LowerBound(u);
+
+            if (index <= 0)
+            {
+                samples[k] = xs[0];
+                continue;
+            }
+
+            float cdf0 = cdf[index - 1];
+            float cdf1 = cdf[index];
+
+            if (cdf1 <= cdf0)
+            {
+                samples[k] = xs[index];
+                continue;
+            }
+
+            float local = (u - cdf0) / (cdf1 - cdf0);
+
+            samples[k] = xs[index - 1] + local * (xs[index] - xs[index - 1]);
+        }
+
+        return true;
+    }
 
         /// <summary>Attempts to normalize the wave function.</summary>
         /// <param name="t">Time at which normalization is evaluated.</param>
@@ -186,16 +232,30 @@ namespace QuantumWaves
         }
 
         /// <summary>Generates random position samples of the wave.</summary>
-        /// <param name="sampleCount">The number of samples to generate. Must be greater than zero.</param>
+        /// <param name="sampleCount">
+        /// The number of samples to generate. Must be greater than zero.
+        /// </param>
         /// <param name="samples">Contains the samples if successful, otherwise an empty array.</param>
         /// <param name="t">The time at which the wave function is sampled.</param>
         /// <param name="pointCount">
         /// The number of discrete points used to approximate the cumulative distribution.
         /// Must be greater than one.
+        ///
+        /// Larger values improve the accuracy of the sampled distribution but increase
+        /// preprocessing cost.
+        /// </param>
+        /// <param name="segmentIntervals">
+        /// The number of Simpson integration intervals used for each cumulative
+        /// distribution segment. Must be greater than zero.
+        ///
+        /// Larger values improve local integration accuracy but increase computation cost.
+        /// Simpson integration requires an even number of intervals, odd values are
+        /// automatically rounded up.
         /// </param>
         /// <param name="rng">The random number generator used for sampling.</param>
         /// <param name="tolerance">
-        /// Relative convergence tolerance for infinite domain expansion. Must be greater than zero.
+        /// Relative convergence tolerance for infinite domain expansion.
+        /// Must be greater than zero.
         /// </param>
         /// <param name="maxAllowed">Maximum allowed integral value. Must be greater than zero.</param>
         /// <param name="maxCount">Maximum number of expansion iterations. Must be greater than zero.</param>
@@ -203,12 +263,14 @@ namespace QuantumWaves
         /// <exception cref="ArgumentOutOfRangeException">
         /// Thrown if <paramref name="sampleCount"/> is less than or equal to zero,
         /// <paramref name="pointCount"/> is less than or equal to one,
+        /// <paramref name="segmentIntervals"/> is less than or equal to zero,
         /// <paramref name="tolerance"/> is less than or equal to zero,
         /// <paramref name="maxAllowed"/> is less than or equal to zero,
         /// or <paramref name="maxCount"/> is less than or equal to zero.
         /// </exception>
-        public bool Sample(int sampleCount, out float[] samples, float t = 0f, int pointCount = 1000, 
-            Random? rng = null, float tolerance = 1e-4f, float maxAllowed = 1e6f, int maxCount = 10000)
+        public bool Sample(int sampleCount, out float[] samples, float t = 0f, int pointCount = 1000,
+            int segmentIntervals = 8, Random? rng = null, float tolerance = 1e-4f, float maxAllowed = 1e6f,
+            int maxCount = 10000)
         {
             samples = Array.Empty<float>();
 
@@ -217,6 +279,9 @@ namespace QuantumWaves
 
             if (pointCount <= 1)
                 throw new ArgumentOutOfRangeException(nameof(pointCount), "must be greater than one.");
+
+            if (segmentIntervals <= 0)
+                throw new ArgumentOutOfRangeException(nameof(segmentIntervals), "must be greater than zero.");
 
             if (tolerance <= float.Epsilon)
                 throw new ArgumentOutOfRangeException(nameof(tolerance), "must be greater than zero.");
@@ -232,7 +297,15 @@ namespace QuantumWaves
             if (!TryGetSamplingDomain(t, out FloatRange samplingDomain, tolerance, maxAllowed, maxCount))
                 return false;
 
-            return SampleFromFiniteDomain(sampleCount, out samples, t, samplingDomain, pointCount, rng);
+            return SampleFromFiniteDomain(
+                sampleCount,
+                out samples,
+                t,
+                samplingDomain,
+                pointCount,
+                segmentIntervals,
+                rng
+            );
         }
     }
 }

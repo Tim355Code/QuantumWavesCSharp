@@ -19,7 +19,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/MathEx.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: MathEx
     path: src/QuantumLibrary/Waves/Utils/MathEx.cs
     startLine: 8
@@ -56,7 +56,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/MathEx.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Factorial
     path: src/QuantumLibrary/Waves/Utils/MathEx.cs
     startLine: 16
@@ -98,7 +98,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/MathEx.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Simpson
     path: src/QuantumLibrary/Waves/Utils/MathEx.cs
     startLine: 37
@@ -152,7 +152,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/MathEx.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: SimpsonComplex
     path: src/QuantumLibrary/Waves/Utils/MathEx.cs
     startLine: 72

@@ -46,7 +46,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: ComplexF
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 7
@@ -79,7 +79,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Zero
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 10
@@ -108,7 +108,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: One
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 12
@@ -137,7 +137,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: I
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 14
@@ -166,7 +166,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: NaN
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 17
@@ -194,7 +194,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: PositiveRealInfinity
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 22
@@ -223,7 +223,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: NegativeRealInfinity
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 26
@@ -252,7 +252,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: PositiveImaginaryInfinity
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 30
@@ -281,7 +281,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: NegativeImaginaryInfinity
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 34
@@ -310,7 +310,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Real
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 37
@@ -341,7 +341,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Imaginary
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 39
@@ -372,7 +372,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: IsNaN
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 42
@@ -403,7 +403,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: IsInfinity
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 44
@@ -434,7 +434,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: IsFinite
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 46
@@ -465,7 +465,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Magnitude
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 50
@@ -497,7 +497,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: MagnitudeSqr
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 52
@@ -528,7 +528,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Conjugate
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 56
@@ -560,7 +560,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Normalized
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 60
@@ -592,7 +592,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: .ctor
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 74
@@ -630,7 +630,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: ToString
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 85
@@ -665,7 +665,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Equals
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 101
@@ -704,7 +704,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Equals
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 115
@@ -741,7 +741,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: GetHashCode
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 122
@@ -773,7 +773,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_Implicit
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 128
@@ -809,7 +809,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_Addition
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 132
@@ -847,7 +847,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_Subtraction
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 135
@@ -885,7 +885,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_Multiply
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 138
@@ -923,7 +923,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_Division
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 145
@@ -962,7 +962,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_UnaryNegation
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 162
@@ -998,7 +998,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_Equality
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 170
@@ -1040,7 +1040,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/ComplexF.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: op_Inequality
     path: src/QuantumLibrary/Core/ComplexF.cs
     startLine: 177

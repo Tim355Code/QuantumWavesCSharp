@@ -1,27 +1,30 @@
 # QuantumWavesCSharp ![.NET Standard](https://img.shields.io/badge/.NET-Standard%202.1-blue)
 
 A small C# library for working with complex numbers and simple quantum wave functions.
-The library is designed to be lightweight, easy to use. It can be used for simulations, numerical experiments, or as a tool for visualization.
+The library is designed to be lightweight and easy to use. It can be used for simulations, numerical experiments, or as a tool for visualization.
 
 ## Features
 - ```ComplexF``` - a float based complex number type.
 - ```MathC``` - provides mathematical operations on complex numbers
 - Wave function abstractions (1D)
-- Built-in solutions such as infinite potential well
-- Support for superposition of states (if time leftover)
-- Wave function abstractions (3D) (if time leftover)
-- Usage example for visualization in Unity (if time leftover)
-
+- Built-in solutions such as:
+   - infinite potential well,
+   - harmonic oscillator,
+   - Gaussian wave packet
+     
 ## Installation
-
 Clone the repository:
 ```bash
-TODO
+git clone https://github.com/Tim355Code/QuantumWavesCSharp.git
 ```
 Then include the project in your C# solution.
 
+---
 ## Documentation
-[API Reference](docs/api.md)
+- [Getting started](docs/index.md)
+- [Core concepts](docs/concepts.md)
+- [Examples](docs/examples/index.md)
+- [API Reference](api/QuantumWaves.yml)
 
 ## Example
 ```csharp
@@ -37,7 +40,17 @@ ComplexF conjugate = z.Conjugate;
 var psi = new SimpleWaveFunction1D((x, t) =>
 {
     return MathC.Exp(ComplexF.I * x);
-}, FloatRange.Infinite, ComplexF.One);
+}, FloatRange.Infinite, ComplexF.One); // defined over (-∞, ∞)
 
 float probability = psi.ProbabilityDensity(1.0f, 0.0f);
 ```
+See the rest [here](docs/examples/index.md)
+
+## Running tests
+```bash
+cd src
+dotnet test
+```
+## Roadmap
+- Three dimensional wave function abstractions
+- Unity visualization examples

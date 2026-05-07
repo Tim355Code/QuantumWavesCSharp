@@ -26,11 +26,24 @@ namespace QuantumWaves
             Func<float, ComplexF> spacePart, Func<float, ComplexF> timePart,
             float amplitude) : base(domain, amplitude)
         {
-            if (timePart == null) throw new ArgumentNullException(nameof(TimePart));
-            if (spacePart == null) throw new ArgumentNullException(nameof(SpacePart));
+            SpacePart = spacePart ?? throw new ArgumentNullException(nameof(SpacePart));
+            TimePart = timePart ?? throw new ArgumentNullException(nameof(TimePart));
+        }
 
-            SpacePart = spacePart;
-            TimePart = timePart;
+        /// <summary>
+        /// Initializes a separable wave function with specified space and time components,
+        /// and automatically normalizes its amplitude.
+        /// </summary>
+        /// <param name="domain">The spatial domain of the wave function.</param>
+        /// <param name="spacePart">The spatial component of the wave function.</param>
+        /// <param name="timePart">The time dependent component of the wave function.</param>
+        /// /// <exception cref="ArgumentNullException">
+        /// Thrown if <paramref name="spacePart"/> or <paramref name="timePart"/> is <see langword="null"/>.
+        /// </exception>
+        public SeparableWaveFunction1D(FloatRange domain, Func<float, ComplexF> spacePart,
+            Func<float, ComplexF> timePart) : this(domain, spacePart, timePart, 1f)
+        {
+            TryNormalize();
         }
 
         /// <summary>Creates the generic time dependent solution for a given energy.</summary>

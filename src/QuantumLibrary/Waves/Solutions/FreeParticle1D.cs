@@ -65,6 +65,8 @@ namespace QuantumWaves.Solutions
         /// </param>
         /// <param name="sigma">
         /// Spatial width parameter of the Gaussian packet. Must be greater than zero.
+        /// Smaller values produce a more localized packet in position space and a wider
+        /// momentum-space distribution.
         /// </param>
         /// <param name="k0">
         /// Central wave number of the packet.
@@ -82,6 +84,10 @@ namespace QuantumWaves.Solutions
         /// <param name="deltaK">
         /// Spacing between sampled wave numbers in momentum space.
         /// Must be greater than zero.
+        ///
+        /// If <see langword="null"/>, a value is automatically chosen based on
+        /// <paramref name="sigma"/> and <paramref name="termCount"/> to provide
+        /// a reasonable momentum-space sampling range.
         /// </param>
         /// <returns>
         /// A weighted superposition of plane waves approximating a Gaussian wave packet.
@@ -90,8 +96,27 @@ namespace QuantumWaves.Solutions
         /// The packet is constructed by discretizing the Fourier integral representation
         /// of a Gaussian momentum distribution.
         ///
+        /// Approximation quality depends on both the momentum-space sampling density
+        /// (<paramref name="deltaK"/>) and the total sampled momentum range:
+        ///
+        /// <code>
+        /// kRange ≈ termCount * deltaK
+        /// </code>
+        ///
+        /// Choosing a very small <paramref name="deltaK"/> without increasing
+        /// <paramref name="termCount"/> can truncate significant portions of the
+        /// Gaussian momentum distribution, producing inaccurate normalization and
+        /// distorted probability densities.
+        ///
+        /// For accurate results, the sampled momentum range should span several
+        /// Gaussian widths in momentum space, typically:
+        ///
+        /// <code>
+        /// |k - k0| ≲ 5 / sigma
+        /// </code>
+        ///
         /// Larger <paramref name="termCount"/> and smaller <paramref name="deltaK"/>
-        /// improve the approximation quality at the cost of additional computation.
+        /// generally improve the approximation at the cost of additional computation.
         ///
         /// The resulting packet is approximately normalized when the sampled momentum
         /// range is sufficiently large.
@@ -104,8 +129,8 @@ namespace QuantumWaves.Solutions
         /// <exception cref="ArgumentException">
         /// Thrown if <paramref name="termCount"/> is even.
         /// </exception>
-        public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, float hBar,
-            int termCount = 500, float deltaK = 0.01f)
+        public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, 
+            float hBar = 1, int termCount = 499, float? deltaK = null)
         {
             if (sigma <= float.Epsilon)
                 throw new ArgumentOutOfRangeException(nameof(sigma), "must be greater than zero.");
@@ -127,13 +152,15 @@ namespace QuantumWaves.Solutions
 
             float normalization = MathF.Pow(2f * sigma * sigma / MathF.PI, 0.25f);
 
+            deltaK ??= 10f / (sigma * (termCount - 1));
+
             for (int i = 0; i < termCount; i++)
             {
-                float dk = (i - half) * deltaK;
+                float dk = (i - half) * deltaK.Value;
                 float k = k0 + dk;
 
                 coefficients[i] = normalization * MathF.Exp(-sigma * sigma * dk * dk) * 
-                    MathC.Exp(-ComplexF.I * dk * x0) * deltaK;
+                    MathC.Exp(-ComplexF.I * dk * x0) * deltaK.Value;
 
                 waves[i] = PlaneWave(k, mass, hBar);
             }

@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Concepts | QuantumLibraryCSharp </title>
+      <title>Core Concepts | QuantumLibraryCSharp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Concepts | QuantumLibraryCSharp ">
+      <meta name="title" content="Core Concepts | QuantumLibraryCSharp ">
       
       
       <link rel="icon" href="../favicon.ico">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/concepts.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,33 +85,69 @@
         </div>
 
         <article data-uid="">
-<h1 id="concepts">Concepts</h1>
+<h1 id="core-concepts">Core Concepts</h1>
 
+<p>This library provides mathematical abstractions commonly used in one-dimensional quantum mechanics simulations.
+At its core are:</p>
+<ul>
+<li>complex-valued arithmetic,</li>
+<li>wave function representations,</li>
+<li>normalization utilities,</li>
+<li>probability sampling tools,</li>
+<li>and built-in analytical solutions.</li>
+</ul>
 <h2 id="complex-numbers">Complex numbers</h2>
+<p>Quantum wave functions are complex valued and therefore require complex arithmetic for representation and evaluation.
+Mathematically, complex numbers are made using the imaginary unit:
+<code>i = sqrt(-1)</code></p>
 <p><code>ComplexF</code> represents a complex number using two <code>float</code> values: a real component and an imaginary component.</p>
 <pre><code class="lang-csharp">ComplexF z = new ComplexF(2f, 5f);
 </code></pre>
-<p>The value represents:</p>
-<pre><code class="lang-text">z = real + imaginary * i
-</code></pre>
-<h2 id="polar-form">Polar form</h2>
+<p>The value represents:
+<code>z = real + imaginary * i</code></p>
+<h3 id="polar-form">Polar form</h3>
 <p>Complex numbers can also be represented using a radius and angle:</p>
 <pre><code class="lang-csharp">(float radius, float angle) = MathC.ToPolar(z);
 ComplexF restored = MathC.FromPolar(radius, angle);
 </code></pre>
-<h2 id="wave-functions">Wave functions</h2>
-<p><code>WaveFunction1D</code> represents a function of position and time:</p>
-<pre><code class="lang-text">ψ(x, t)
-</code></pre>
-<p>The probability density is:</p>
-<pre><code class="lang-text">|ψ(x, t)|²
-</code></pre>
-<h2 id="superposition">Superposition</h2>
-<p><code>WeightedWaveFunction1D</code> represents a weighted sum of wave functions.</p>
+<p>This representation is usually referred to as polar form or Euler form.</p>
+<p>Using complex valued functions, we can represent physical particle states.</p>
+<h2 id="wave-functions">Wave Functions</h2>
+<p>In quantum mechanics, the state of a particle is represented by a wave function.
+<code>WaveFunction1D</code> models a one dimensional wave function dependent on position and time:
+<code>ψ(x, t)</code></p>
+<p>The probability density is:
+<code>|ψ(x, t)|²</code></p>
+<h3 id="separable-wave-function">Separable Wave Function</h3>
+<p>Many analytical solutions to the Schrödinger equation can be split into independent spatial and time dependent components.</p>
+<p><code>SeparableWaveFunction1D</code> represents a wave function by storing the two components separately.</p>
+<h3 id="weighted-wave-function">Weighted Wave Function</h3>
+<p>Systems rarely exist in pure eigenstates, and being able to write a wave function as a sum of eigenstates is very important.
+<code>WeightedWaveFunction1D</code> represents a wave function as a linear combination of other states, typically eigenstates.</p>
+<h2 id="normalization">Normalization</h2>
+<p>A key aspect of the wave function is that its absolute square is equal to the probability density of finding a particle there.
+The integral of the probability density over all space must equal one.</p>
+<p>To help with this <code>WaveFunction1D</code>  contains an <code>Amplitude</code> field, effectively used for normalization.
+If it is not passed in the constructor explicitly the function will attempt to normalize itself. Simpson integration is used for this purpose.</p>
+<h2 id="sampling">Sampling</h2>
+<p>Sampling allows probabilistic measurement of particle positions from the wave function.
+<code>WaveFunction1D</code> includes a built in sampler which approximates the cumulative density function (CDF) and randomly selects positions.</p>
+<p>An example of sampling can be found <a href="examples/waves.html#sampling">here</a>.</p>
+<h2 id="built-in-solutions">Built-in Solutions</h2>
+<p>To simplify testing, the library includes several analytical one dimensional quantum systems:</p>
+<ul>
+<li>Infinite well</li>
+<li>Harmonic oscillator</li>
+<li>Free particle plane wave</li>
+<li>Gaussian packet</li>
+</ul>
+<p>These implementations can be used directly or serve as building blocks for more advanced simulations.
+<a href="examples/built-in.html">See example usage.</a></p>
 
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/docs/concepts.md/#L1" class="edit-link">Edit this page</a>
         </div>
 
         <div class="next-article d-print-none border-top" id="nextArticle"></div>

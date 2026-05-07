@@ -13,7 +13,7 @@ items:
   - QuantumWaves.WaveFunction1D.IntegrateRaw(System.Single,FloatRange,System.Int32)
   - QuantumWaves.WaveFunction1D.ProbabilityDensity(System.Single,System.Single)
   - QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
-  - QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
   - QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
   langs:
   - csharp
@@ -26,7 +26,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: WaveFunction1D
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 7
@@ -67,7 +67,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Amplitude
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 10
@@ -98,7 +98,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Domain
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 13
@@ -129,7 +129,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: .ctor
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 18
@@ -167,7 +167,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Evaluate
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 31
@@ -211,7 +211,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: EvaluateRaw
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 38
@@ -252,7 +252,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: ProbabilityDensity
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 44
@@ -293,7 +293,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: ProbabilityInRange
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 51
@@ -337,7 +337,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: IntegrateRaw
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
     startLine: 61
@@ -381,10 +381,10 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: TryNormalize
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 173
+    startLine: 219
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -413,32 +413,32 @@ items:
   nameWithType.vb: WaveFunction1D.TryNormalize(Single, Single, Single, Integer)
   fullName.vb: QuantumWaves.WaveFunction1D.TryNormalize(Single, Single, Single, Integer)
   name.vb: TryNormalize(Single, Single, Single, Integer)
-- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
-  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
-  id: Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  id: Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
   parent: QuantumWaves.WaveFunction1D
   langs:
   - csharp
   - vb
-  name: Sample(int, out float[], float, int, Random?, float, float, int)
-  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, Random?, float, float, int)
-  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, System.Random?, float, float, int)
+  name: Sample(int, out float[], float, int, int, Random?, float, float, int)
+  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, int, Random?, float, float, int)
+  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, int, System.Random?, float, float, int)
   type: Method
   source:
     remote:
       path: src/QuantumLibrary/Waves/WaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Sample
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 209
+    startLine: 270
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
   summary: Generates random position samples of the wave.
   example: []
   syntax:
-    content: public bool Sample(int sampleCount, out float[] samples, float t = 0, int pointCount = 1000, Random? rng = null, float tolerance = 0.0001, float maxAllowed = 1000000, int maxCount = 10000)
+    content: public bool Sample(int sampleCount, out float[] samples, float t = 0, int pointCount = 1000, int segmentIntervals = 8, Random? rng = null, float tolerance = 0.0001, float maxAllowed = 1000000, int maxCount = 10000)
     parameters:
     - id: sampleCount
       type: System.Int32
@@ -455,12 +455,33 @@ items:
         The number of discrete points used to approximate the cumulative distribution.
 
         Must be greater than one.
+
+
+        Larger values improve the accuracy of the sampled distribution but increase
+
+        preprocessing cost.
+    - id: segmentIntervals
+      type: System.Int32
+      description: >-
+        The number of Simpson integration intervals used for each cumulative
+
+        distribution segment. Must be greater than zero.
+
+
+        Larger values improve local integration accuracy but increase computation cost.
+
+        Simpson integration requires an even number of intervals, odd values are
+
+        automatically rounded up.
     - id: rng
       type: System.Random
       description: The random number generator used for sampling.
     - id: tolerance
       type: System.Single
-      description: Relative convergence tolerance for infinite domain expansion. Must be greater than zero.
+      description: >-
+        Relative convergence tolerance for infinite domain expansion.
+
+        Must be greater than zero.
     - id: maxAllowed
       type: System.Single
       description: Maximum allowed integral value. Must be greater than zero.
@@ -470,7 +491,7 @@ items:
     return:
       type: System.Boolean
       description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if sampling succeeded, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
-    content.vb: Public Function Sample(sampleCount As Integer, samples As Single(), t As Single = 0, pointCount As Integer = 1000, rng As Random = Nothing, tolerance As Single = 0.0001, maxAllowed As Single = 1000000, maxCount As Integer = 10000) As Boolean
+    content.vb: Public Function Sample(sampleCount As Integer, samples As Single(), t As Single = 0, pointCount As Integer = 1000, segmentIntervals As Integer = 8, rng As Random = Nothing, tolerance As Single = 0.0001, maxAllowed As Single = 1000000, maxCount As Integer = 10000) As Boolean
   overload: QuantumWaves.WaveFunction1D.Sample*
   exceptions:
   - type: System.ArgumentOutOfRangeException
@@ -480,14 +501,16 @@ items:
 
       <code class="paramref">pointCount</code> is less than or equal to one,
 
+      <code class="paramref">segmentIntervals</code> is less than or equal to zero,
+
       <code class="paramref">tolerance</code> is less than or equal to zero,
 
       <code class="paramref">maxAllowed</code> is less than or equal to zero,
 
       or <code class="paramref">maxCount</code> is less than or equal to zero.
-  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
-  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, System.Random, Single, Single, Integer)
-  name.vb: Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
+  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
+  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, System.Random, Single, Single, Integer)
+  name.vb: Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
 references:
 - uid: QuantumWaves
   commentId: N:QuantumWaves
@@ -850,7 +873,7 @@ references:
   fullName: System.ArgumentOutOfRangeException
 - uid: QuantumWaves.WaveFunction1D.Sample*
   commentId: Overload:QuantumWaves.WaveFunction1D.Sample
-  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
   name: Sample
   nameWithType: WaveFunction1D.Sample
   fullName: QuantumWaves.WaveFunction1D.Sample

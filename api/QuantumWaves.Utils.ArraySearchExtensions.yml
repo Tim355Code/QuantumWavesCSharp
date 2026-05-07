@@ -17,7 +17,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/ArraySearchExtensions.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: ArraySearchExtensions
     path: src/QuantumLibrary/Waves/Utils/ArraySearchExtensions.cs
     startLine: 3
@@ -55,7 +55,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Utils/ArraySearchExtensions.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: LowerBound
     path: src/QuantumLibrary/Waves/Utils/ArraySearchExtensions.cs
     startLine: 12

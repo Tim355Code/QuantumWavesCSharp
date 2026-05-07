@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/new/main/apiSpec/new?filename=QuantumWaves_SimpleWaveFunction1D.md&amp;value=---%0Auid%3A%20QuantumWaves.SimpleWaveFunction1D%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="QuantumWaves_SimpleWaveFunction1D" data-uid="QuantumWaves.SimpleWaveFunction1D" class="text-break">
-Class SimpleWaveFunction1D  
+Class SimpleWaveFunction1D  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -144,7 +144,7 @@ Class SimpleWaveFunction1D
       <a class="xref" href="QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_TryNormalize_System_Single_System_Single_System_Single_System_Int32_">WaveFunction1D.TryNormalize(float, float, float, int)</a>
     </div>
     <div>
-      <a class="xref" href="QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_">WaveFunction1D.Sample(int, out float[], float, int, Random, float, float, int)</a>
+      <a class="xref" href="QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_">WaveFunction1D.Sample(int, out float[], float, int, int, Random, float, float, int)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
@@ -180,9 +180,45 @@ Class SimpleWaveFunction1D
 
   <a id="QuantumWaves_SimpleWaveFunction1D__ctor_" data-uid="QuantumWaves.SimpleWaveFunction1D.#ctor*"></a>
 
+  <h3 id="QuantumWaves_SimpleWaveFunction1D__ctor_System_Func_System_Single_System_Single_CMath_ComplexF__FloatRange_" data-uid="QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange)">
+  SimpleWaveFunction1D(Func&lt;float, float, ComplexF&gt;, FloatRange)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Initializes a wave function from a given function and automatically normalizes its amplitude.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SimpleWaveFunction1D(Func&lt;float, float, ComplexF&gt; wave, FloatRange domain)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>wave</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.func-3">Func</a>&lt;<a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>, <a class="xref" href="CMath.ComplexF.html">ComplexF</a>&gt;</dt>
+    <dd><p>Function defining ψ(x, t).</p>
+</dd>
+    <dt><code>domain</code> <a class="xref" href="FloatRange.html">FloatRange</a></dt>
+    <dd><p>The spatial domain of the wave function.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="QuantumWaves_SimpleWaveFunction1D__ctor_" data-uid="QuantumWaves.SimpleWaveFunction1D.#ctor*"></a>
+
   <h3 id="QuantumWaves_SimpleWaveFunction1D__ctor_System_Func_System_Single_System_Single_CMath_ComplexF__FloatRange_CMath_ComplexF_" data-uid="QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)">
   SimpleWaveFunction1D(Func&lt;float, float, ComplexF&gt;, FloatRange, ComplexF)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Initializes a wave function from a given function.</p>
@@ -225,7 +261,7 @@ Class SimpleWaveFunction1D
 
   <h3 id="QuantumWaves_SimpleWaveFunction1D_EvaluateRaw_System_Single_System_Single_" data-uid="QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(System.Single,System.Single)">
   EvaluateRaw(float, float)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs/#L38"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Evaluates the unscaled wave function at (x, t).</p>
@@ -267,6 +303,7 @@ Class SimpleWaveFunction1D
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

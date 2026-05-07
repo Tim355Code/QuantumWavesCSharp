@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      
+      <meta name="docfx:docurl" content="https://github.com/Tim355Code/QuantumWavesCSharp/new/main/apiSpec/new?filename=QuantumWaves_Solutions_FreeParticle1D.md&amp;value=---%0Auid%3A%20QuantumWaves.Solutions.FreeParticle1D%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -89,7 +89,7 @@
 
 
   <h1 id="QuantumWaves_Solutions_FreeParticle1D" data-uid="QuantumWaves.Solutions.FreeParticle1D" class="text-break">
-Class FreeParticle1D  
+Class FreeParticle1D  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs/#L9"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -157,7 +157,7 @@ Class FreeParticle1D
 
   <h3 id="QuantumWaves_Solutions_FreeParticle1D_Energy_System_Single_System_Single_System_Single_" data-uid="QuantumWaves.Solutions.FreeParticle1D.Energy(System.Single,System.Single,System.Single)">
   Energy(float, float, float)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Computes the energy of a free particle given its wave number.</p>
@@ -207,9 +207,9 @@ is less than or equal to zero.</p>
 
   <a id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_" data-uid="QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket*"></a>
 
-  <h3 id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Single_" data-uid="QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)">
-  GaussianWavePacket(float, float, float, float, float, int, float)
-  
+  <h3 id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Nullable_System_Single__" data-uid="QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Nullable{System.Single})">
+  GaussianWavePacket(float, float, float, float, float, int, float?)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs/#L132"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates an approximate Gaussian wave packet as a weighted sum of plane waves.</p>
@@ -217,7 +217,7 @@ is less than or equal to zero.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, float hBar, int termCount = 500, float deltaK = 0.01)</code></pre>
+    <pre><code class="lang-csharp hljs">public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, float hBar = 1, int termCount = 499, float? deltaK = null)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -226,7 +226,9 @@ is less than or equal to zero.</p>
     <dd><p>Initial center position of the packet.</p>
 </dd>
     <dt><code>sigma</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd><p>Spatial width parameter of the Gaussian packet. Must be greater than zero.</p>
+    <dd><p>Spatial width parameter of the Gaussian packet. Must be greater than zero.
+Smaller values produce a more localized packet in position space and a wider
+momentum-space distribution.</p>
 </dd>
     <dt><code>k0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Central wave number of the packet.</p>
@@ -241,9 +243,12 @@ is less than or equal to zero.</p>
     <dd><p>Number of plane wave terms used in the approximation.
 Must be positive and odd.</p>
 </dd>
-    <dt><code>deltaK</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>deltaK</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a>?</dt>
     <dd><p>Spacing between sampled wave numbers in momentum space.
 Must be greater than zero.</p>
+<p>If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, a value is automatically chosen based on
+<code class="paramref">sigma</code> and <code class="paramref">termCount</code> to provide
+a reasonable momentum-space sampling range.</p>
 </dd>
   </dl>
 
@@ -260,11 +265,21 @@ Must be greater than zero.</p>
 
 
 
-  <h4 class="section" id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Single__remarks">Remarks</h4>
+  <h4 class="section" id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Nullable_System_Single___remarks">Remarks</h4>
   <div class="markdown level1 remarks"><p>The packet is constructed by discretizing the Fourier integral representation
 of a Gaussian momentum distribution.</p>
+<p>Approximation quality depends on both the momentum-space sampling density
+(<code class="paramref">deltaK</code>) and the total sampled momentum range:</p>
+<pre><code class="lang-csharp">kRange ≈ termCount * deltaK</code></pre>
+<p>Choosing a very small <code class="paramref">deltaK</code> without increasing
+<code class="paramref">termCount</code> can truncate significant portions of the
+Gaussian momentum distribution, producing inaccurate normalization and
+distorted probability densities.</p>
+<p>For accurate results, the sampled momentum range should span several
+Gaussian widths in momentum space, typically:</p>
+<pre><code class="lang-csharp">|k - k0| ≲ 5 / sigma</code></pre>
 <p>Larger <code class="paramref">termCount</code> and smaller <code class="paramref">deltaK</code>
-improve the approximation quality at the cost of additional computation.</p>
+generally improve the approximation at the cost of additional computation.</p>
 <p>The resulting packet is approximately normalized when the sampled momentum
 range is sufficiently large.</p>
 </div>
@@ -287,7 +302,7 @@ or <code class="paramref">deltaK</code> is invalid.</p>
 
   <h3 id="QuantumWaves_Solutions_FreeParticle1D_PlaneWave_System_Single_System_Single_System_Single_" data-uid="QuantumWaves.Solutions.FreeParticle1D.PlaneWave(System.Single,System.Single,System.Single)">
   PlaneWave(float, float, float)
-  
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Creates a plane wave solution for a free particle.</p>
@@ -342,6 +357,7 @@ is less than or equal to zero.</p>
 </article>
 
         <div class="contribution d-print-none">
+          <a href="https://github.com/Tim355Code/QuantumWavesCSharp/blob/main/src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs/#L9" class="edit-link">Edit this page</a>
         </div>
 
 

@@ -181,7 +181,7 @@ public class WaveFunction1DTests
 
         foreach (float sample in samples)
         {
-            Assert.True(sample > 0f);
+            Assert.True(sample >= 0f);
             Assert.True(sample <= 1f);
         }
     }
@@ -194,5 +194,18 @@ public class WaveFunction1DTests
         Assert.False(wave.Sample(sampleCount: 10, out float[] samples, t: 0f, pointCount: 100, rng: new Random(123)));
 
         Assert.Empty(samples);
+    }
+
+    [Theory]
+    [InlineData(0)]
+    [InlineData(-1)]
+    public void Sample_Throws_WhenSegmentIntervals_IsNotPositive(int segmentIntervals)
+    {
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
+
+        var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
+            wave.Sample(sampleCount: 10, out _, pointCount: 10, segmentIntervals: segmentIntervals, rng: new Random(123)));
+
+        Assert.Equal("segmentIntervals", exception.ParamName);
     }
 }

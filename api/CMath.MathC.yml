@@ -35,7 +35,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: MathC
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 7
@@ -72,7 +72,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Abs
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 12
@@ -107,7 +107,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: AbsSqr
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 20
@@ -142,7 +142,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Approximately
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 35
@@ -193,7 +193,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Arg
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 47
@@ -228,7 +228,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Cis
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 55
@@ -266,7 +266,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: ToPolar
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 63
@@ -301,7 +301,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: FromPolar
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 72
@@ -342,7 +342,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Exp
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 80
@@ -377,7 +377,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Pow
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 90
@@ -416,7 +416,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Ln
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 99
@@ -452,7 +452,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Log
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 111
@@ -491,7 +491,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Sqrt
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 119
@@ -526,7 +526,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Sin
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 128
@@ -561,7 +561,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Cos
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 136
@@ -596,7 +596,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Tan
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 145
@@ -632,7 +632,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Clamp
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 157
@@ -673,7 +673,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Clamp01
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 167
@@ -708,7 +708,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: LerpUnclamped
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 181
@@ -752,7 +752,7 @@ items:
     remote:
       path: src/QuantumLibrary/Core/MathC.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Lerp
     path: src/QuantumLibrary/Core/MathC.cs
     startLine: 198

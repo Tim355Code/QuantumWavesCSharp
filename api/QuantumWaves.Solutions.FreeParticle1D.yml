@@ -6,7 +6,7 @@ items:
   parent: QuantumWaves.Solutions
   children:
   - QuantumWaves.Solutions.FreeParticle1D.Energy(System.Single,System.Single,System.Single)
-  - QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
+  - QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Nullable{System.Single})
   - QuantumWaves.Solutions.FreeParticle1D.PlaneWave(System.Single,System.Single,System.Single)
   langs:
   - csharp
@@ -19,7 +19,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: FreeParticle1D
     path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
     startLine: 8
@@ -56,7 +56,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: PlaneWave
     path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
     startLine: 24
@@ -108,7 +108,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: Energy
     path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
     startLine: 48
@@ -144,25 +144,25 @@ items:
   nameWithType.vb: FreeParticle1D.Energy(Single, Single, Single)
   fullName.vb: QuantumWaves.Solutions.FreeParticle1D.Energy(Single, Single, Single)
   name.vb: Energy(Single, Single, Single)
-- uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
-  commentId: M:QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
-  id: GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
+- uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Nullable{System.Single})
+  commentId: M:QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Nullable{System.Single})
+  id: GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Nullable{System.Single})
   parent: QuantumWaves.Solutions.FreeParticle1D
   langs:
   - csharp
   - vb
-  name: GaussianWavePacket(float, float, float, float, float, int, float)
-  nameWithType: FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float)
-  fullName: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float)
+  name: GaussianWavePacket(float, float, float, float, float, int, float?)
+  nameWithType: FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float?)
+  fullName: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float?)
   type: Method
   source:
     remote:
       path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: GaussianWavePacket
     path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
-    startLine: 106
+    startLine: 131
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves.Solutions
@@ -173,9 +173,34 @@ items:
     of a Gaussian momentum distribution.
 
 
+    Approximation quality depends on both the momentum-space sampling density
+
+    (<code class="paramref">deltaK</code>) and the total sampled momentum range:
+
+
+    <pre><code class="lang-csharp">kRange ≈ termCount * deltaK</code></pre>
+
+
+    Choosing a very small <code class="paramref">deltaK</code> without increasing
+
+    <code class="paramref">termCount</code> can truncate significant portions of the
+
+    Gaussian momentum distribution, producing inaccurate normalization and
+
+    distorted probability densities.
+
+
+    For accurate results, the sampled momentum range should span several
+
+    Gaussian widths in momentum space, typically:
+
+
+    <pre><code class="lang-csharp">|k - k0| ≲ 5 / sigma</code></pre>
+
+
     Larger <code class="paramref">termCount</code> and smaller <code class="paramref">deltaK</code>
 
-    improve the approximation quality at the cost of additional computation.
+    generally improve the approximation at the cost of additional computation.
 
 
     The resulting packet is approximately normalized when the sampled momentum
@@ -183,14 +208,19 @@ items:
     range is sufficiently large.
   example: []
   syntax:
-    content: public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, float hBar, int termCount = 500, float deltaK = 0.01)
+    content: public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, float hBar = 1, int termCount = 499, float? deltaK = null)
     parameters:
     - id: x0
       type: System.Single
       description: Initial center position of the packet.
     - id: sigma
       type: System.Single
-      description: Spatial width parameter of the Gaussian packet. Must be greater than zero.
+      description: >-
+        Spatial width parameter of the Gaussian packet. Must be greater than zero.
+
+        Smaller values produce a more localized packet in position space and a wider
+
+        momentum-space distribution.
     - id: k0
       type: System.Single
       description: Central wave number of the packet.
@@ -207,15 +237,22 @@ items:
 
         Must be positive and odd.
     - id: deltaK
-      type: System.Single
+      type: System.Nullable{System.Single}
       description: >-
         Spacing between sampled wave numbers in momentum space.
 
         Must be greater than zero.
+
+
+        If <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>, a value is automatically chosen based on
+
+        <code class="paramref">sigma</code> and <code class="paramref">termCount</code> to provide
+
+        a reasonable momentum-space sampling range.
     return:
       type: QuantumWaves.WeightedWaveFunction1D
       description: A weighted superposition of plane waves approximating a Gaussian wave packet.
-    content.vb: Public Shared Function GaussianWavePacket(x0 As Single, sigma As Single, k0 As Single, mass As Single, hBar As Single, termCount As Integer = 500, deltaK As Single = 0.01) As WeightedWaveFunction1D
+    content.vb: Public Shared Function GaussianWavePacket(x0 As Single, sigma As Single, k0 As Single, mass As Single, hBar As Single = 1, termCount As Integer = 499, deltaK As Single? = Nothing) As WeightedWaveFunction1D
   overload: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket*
   exceptions:
   - type: System.ArgumentOutOfRangeException
@@ -229,9 +266,9 @@ items:
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
     description: Thrown if <code class="paramref">termCount</code> is even.
-  nameWithType.vb: FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
-  fullName.vb: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
-  name.vb: GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
+  nameWithType.vb: FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single?)
+  fullName.vb: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single?)
+  name.vb: GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single?)
 references:
 - uid: QuantumWaves.Solutions
   commentId: N:QuantumWaves.Solutions
@@ -544,7 +581,7 @@ references:
   fullName: System.ArgumentException
 - uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket*
   commentId: Overload:QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket
-  href: QuantumWaves.Solutions.FreeParticle1D.html#QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Single_
+  href: QuantumWaves.Solutions.FreeParticle1D.html#QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Nullable_System_Single__
   name: GaussianWavePacket
   nameWithType: FreeParticle1D.GaussianWavePacket
   fullName: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket
@@ -559,6 +596,29 @@ references:
   nameWithType.vb: Integer
   fullName.vb: Integer
   name.vb: Integer
+- uid: System.Nullable{System.Single}
+  commentId: T:System.Nullable{System.Single}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float?
+  nameWithType: float?
+  fullName: float?
+  nameWithType.vb: Single?
+  fullName.vb: Single?
+  name.vb: Single?
+  spec.csharp:
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '?'
 - uid: QuantumWaves.WeightedWaveFunction1D
   commentId: T:QuantumWaves.WeightedWaveFunction1D
   parent: QuantumWaves
@@ -566,3 +626,31 @@ references:
   name: WeightedWaveFunction1D
   nameWithType: WeightedWaveFunction1D
   fullName: QuantumWaves.WeightedWaveFunction1D
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

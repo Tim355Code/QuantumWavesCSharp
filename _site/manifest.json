@@ -1,5 +1,5 @@
 {
-  "source_base_path": "/Users/timothy/Documents/GitHub/grudat26/merko-ovn7",
+  "source_base_path": "/Users/timothy/Documents/GitHub/QuantumWavesCSharp",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -269,20 +269,40 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/examples.md",
+      "source_relative_path": "docs/examples/arithmetic.md",
       "output": {
         ".html": {
-          "relative_path": "docs/examples.html"
+          "relative_path": "docs/examples/arithmetic.html"
         }
       },
       "version": ""
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/getting-started.md",
+      "source_relative_path": "docs/examples/built-in.md",
       "output": {
         ".html": {
-          "relative_path": "docs/getting-started.html"
+          "relative_path": "docs/examples/built-in.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/waves.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/waves.html"
         }
       },
       "version": ""

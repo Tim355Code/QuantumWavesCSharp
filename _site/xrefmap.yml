@@ -677,6 +677,15 @@ references:
   commentId: T:QuantumWaves.SeparableWaveFunction1D
   fullName: QuantumWaves.SeparableWaveFunction1D
   nameWithType: SeparableWaveFunction1D
+- uid: QuantumWaves.SeparableWaveFunction1D.#ctor(FloatRange,System.Func{System.Single,CMath.ComplexF},System.Func{System.Single,CMath.ComplexF})
+  name: SeparableWaveFunction1D(FloatRange, Func<float, ComplexF>, Func<float, ComplexF>)
+  href: api/QuantumWaves.SeparableWaveFunction1D.html#QuantumWaves_SeparableWaveFunction1D__ctor_FloatRange_System_Func_System_Single_CMath_ComplexF__System_Func_System_Single_CMath_ComplexF__
+  commentId: M:QuantumWaves.SeparableWaveFunction1D.#ctor(FloatRange,System.Func{System.Single,CMath.ComplexF},System.Func{System.Single,CMath.ComplexF})
+  name.vb: New(FloatRange, Func(Of Single, ComplexF), Func(Of Single, ComplexF))
+  fullName: QuantumWaves.SeparableWaveFunction1D.SeparableWaveFunction1D(FloatRange, System.Func<float, CMath.ComplexF>, System.Func<float, CMath.ComplexF>)
+  fullName.vb: QuantumWaves.SeparableWaveFunction1D.New(FloatRange, System.Func(Of Single, CMath.ComplexF), System.Func(Of Single, CMath.ComplexF))
+  nameWithType: SeparableWaveFunction1D.SeparableWaveFunction1D(FloatRange, Func<float, ComplexF>, Func<float, ComplexF>)
+  nameWithType.vb: SeparableWaveFunction1D.New(FloatRange, Func(Of Single, ComplexF), Func(Of Single, ComplexF))
 - uid: QuantumWaves.SeparableWaveFunction1D.#ctor(FloatRange,System.Func{System.Single,CMath.ComplexF},System.Func{System.Single,CMath.ComplexF},System.Single)
   name: SeparableWaveFunction1D(FloatRange, Func<float, ComplexF>, Func<float, ComplexF>, float)
   href: api/QuantumWaves.SeparableWaveFunction1D.html#QuantumWaves_SeparableWaveFunction1D__ctor_FloatRange_System_Func_System_Single_CMath_ComplexF__System_Func_System_Single_CMath_ComplexF__System_Single_
@@ -760,6 +769,15 @@ references:
   commentId: T:QuantumWaves.SimpleWaveFunction1D
   fullName: QuantumWaves.SimpleWaveFunction1D
   nameWithType: SimpleWaveFunction1D
+- uid: QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange)
+  name: SimpleWaveFunction1D(Func<float, float, ComplexF>, FloatRange)
+  href: api/QuantumWaves.SimpleWaveFunction1D.html#QuantumWaves_SimpleWaveFunction1D__ctor_System_Func_System_Single_System_Single_CMath_ComplexF__FloatRange_
+  commentId: M:QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange)
+  name.vb: New(Func(Of Single, Single, ComplexF), FloatRange)
+  fullName: QuantumWaves.SimpleWaveFunction1D.SimpleWaveFunction1D(System.Func<float, float, CMath.ComplexF>, FloatRange)
+  fullName.vb: QuantumWaves.SimpleWaveFunction1D.New(System.Func(Of Single, Single, CMath.ComplexF), FloatRange)
+  nameWithType: SimpleWaveFunction1D.SimpleWaveFunction1D(Func<float, float, ComplexF>, FloatRange)
+  nameWithType.vb: SimpleWaveFunction1D.New(Func(Of Single, Single, ComplexF), FloatRange)
 - uid: QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
   name: SimpleWaveFunction1D(Func<float, float, ComplexF>, FloatRange, ComplexF)
   href: api/QuantumWaves.SimpleWaveFunction1D.html#QuantumWaves_SimpleWaveFunction1D__ctor_System_Func_System_Single_System_Single_CMath_ComplexF__FloatRange_CMath_ComplexF_
@@ -823,15 +841,15 @@ references:
   isSpec: "True"
   fullName: QuantumWaves.Solutions.FreeParticle1D.Energy
   nameWithType: FreeParticle1D.Energy
-- uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
-  name: GaussianWavePacket(float, float, float, float, float, int, float)
-  href: api/QuantumWaves.Solutions.FreeParticle1D.html#QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Single_
-  commentId: M:QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
-  name.vb: GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
-  fullName: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float)
-  fullName.vb: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
-  nameWithType: FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float)
-  nameWithType.vb: FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
+- uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Nullable{System.Single})
+  name: GaussianWavePacket(float, float, float, float, float, int, float?)
+  href: api/QuantumWaves.Solutions.FreeParticle1D.html#QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Nullable_System_Single__
+  commentId: M:QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Nullable{System.Single})
+  name.vb: GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single?)
+  fullName: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float?)
+  fullName.vb: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single?)
+  nameWithType: FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float?)
+  nameWithType.vb: FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single?)
 - uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket*
   name: GaussianWavePacket
   href: api/QuantumWaves.Solutions.FreeParticle1D.html#QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_
@@ -1166,15 +1184,15 @@ references:
   isSpec: "True"
   fullName: QuantumWaves.WaveFunction1D.ProbabilityInRange
   nameWithType: WaveFunction1D.ProbabilityInRange
-- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
-  name: Sample(int, out float[], float, int, Random?, float, float, int)
-  href: api/QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
-  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
-  name.vb: Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
-  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, System.Random?, float, float, int)
-  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, System.Random, Single, Single, Integer)
-  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, Random?, float, float, int)
-  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
+- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  name: Sample(int, out float[], float, int, int, Random?, float, float, int)
+  href: api/QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  name.vb: Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
+  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, int, System.Random?, float, float, int)
+  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, System.Random, Single, Single, Integer)
+  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, int, Random?, float, float, int)
+  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
 - uid: QuantumWaves.WaveFunction1D.Sample*
   name: Sample
   href: api/QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_

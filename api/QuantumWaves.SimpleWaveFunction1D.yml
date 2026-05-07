@@ -5,6 +5,7 @@ items:
   id: SimpleWaveFunction1D
   parent: QuantumWaves
   children:
+  - QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange)
   - QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
   - QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(System.Single,System.Single)
   langs:
@@ -18,7 +19,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: SimpleWaveFunction1D
     path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
     startLine: 8
@@ -41,7 +42,7 @@ items:
   - QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
   - QuantumWaves.WaveFunction1D.IntegrateRaw(System.Single,FloatRange,System.Int32)
   - QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
-  - QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
   - System.Object.GetHashCode
@@ -64,7 +65,7 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: .ctor
     path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
     startLine: 16
@@ -90,6 +91,44 @@ items:
   nameWithType.vb: SimpleWaveFunction1D.New(Func(Of Single, Single, ComplexF), FloatRange, ComplexF)
   fullName.vb: QuantumWaves.SimpleWaveFunction1D.New(System.Func(Of Single, Single, CMath.ComplexF), FloatRange, CMath.ComplexF)
   name.vb: New(Func(Of Single, Single, ComplexF), FloatRange, ComplexF)
+- uid: QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange)
+  commentId: M:QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange)
+  id: '#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange)'
+  parent: QuantumWaves.SimpleWaveFunction1D
+  langs:
+  - csharp
+  - vb
+  name: SimpleWaveFunction1D(Func<float, float, ComplexF>, FloatRange)
+  nameWithType: SimpleWaveFunction1D.SimpleWaveFunction1D(Func<float, float, ComplexF>, FloatRange)
+  fullName: QuantumWaves.SimpleWaveFunction1D.SimpleWaveFunction1D(System.Func<float, float, CMath.ComplexF>, FloatRange)
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
+      branch: main
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
+    id: .ctor
+    path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
+    startLine: 27
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves
+  summary: Initializes a wave function from a given function and automatically normalizes its amplitude.
+  example: []
+  syntax:
+    content: public SimpleWaveFunction1D(Func<float, float, ComplexF> wave, FloatRange domain)
+    parameters:
+    - id: wave
+      type: System.Func{System.Single,System.Single,CMath.ComplexF}
+      description: Function defining ψ(x, t).
+    - id: domain
+      type: FloatRange
+      description: The spatial domain of the wave function.
+    content.vb: Public Sub New(wave As Func(Of Single, Single, ComplexF), domain As FloatRange)
+  overload: QuantumWaves.SimpleWaveFunction1D.#ctor*
+  nameWithType.vb: SimpleWaveFunction1D.New(Func(Of Single, Single, ComplexF), FloatRange)
+  fullName.vb: QuantumWaves.SimpleWaveFunction1D.New(System.Func(Of Single, Single, CMath.ComplexF), FloatRange)
+  name.vb: New(Func(Of Single, Single, ComplexF), FloatRange)
 - uid: QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(System.Single,System.Single)
   commentId: M:QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(System.Single,System.Single)
   id: EvaluateRaw(System.Single,System.Single)
@@ -105,10 +144,10 @@ items:
     remote:
       path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
       branch: main
-      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+      repo: git@github.com:Tim355Code/QuantumWavesCSharp.git
     id: EvaluateRaw
     path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
-    startLine: 26
+    startLine: 37
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -430,21 +469,21 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
-  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
   parent: QuantumWaves.WaveFunction1D
   isExternal: true
-  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
-  name: Sample(int, out float[], float, int, Random, float, float, int)
-  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, Random, float, float, int)
-  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, System.Random, float, float, int)
-  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
-  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, System.Random, Single, Single, Integer)
-  name.vb: Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+  name: Sample(int, out float[], float, int, int, Random, float, float, int)
+  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, int, Random, float, float, int)
+  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, int, System.Random, float, float, int)
+  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
+  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, Integer, System.Random, Single, Single, Integer)
+  name.vb: Sample(Integer, Single(), Single, Integer, Integer, Random, Single, Single, Integer)
   spec.csharp:
-  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
     name: Sample
-    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
   - name: (
   - uid: System.Int32
     name: int
@@ -466,6 +505,12 @@ references:
     name: float
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
   - uid: System.Int32
@@ -498,9 +543,9 @@ references:
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
   spec.vb:
-  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Int32,System.Random,System.Single,System.Single,System.Int32)
     name: Sample
-    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Int32_System_Random_System_Single_System_Single_System_Int32_
   - name: (
   - uid: System.Int32
     name: Integer
@@ -520,6 +565,12 @@ references:
     name: Single
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: ','
   - name: " "
   - uid: System.Int32
