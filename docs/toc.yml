@@ -4,12 +4,5 @@
   href: concepts.md
 - name: Examples
   href: examples/
-  items:
-    - name: Complex Arithmetic
-      href: examples/arithmetic.md
-    - name: Wave Functions
-      href: examples/waves.md
-    - name: Built-in Solutions
-      href: examples/built-in.md
 - name: API Reference
   href: ../api/

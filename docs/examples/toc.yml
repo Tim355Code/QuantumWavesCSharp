@@ -1,0 +1,8 @@
+- name: Overview
+  href: index.md
+- name: Complex Arithmetic
+  href: arithmetic.md
+- name: Wave Functions
+  href: waves.md
+- name: Built-in Solutions
+  href: built-in.md
