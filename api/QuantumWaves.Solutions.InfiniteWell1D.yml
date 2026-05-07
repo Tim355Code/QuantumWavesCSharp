@@ -58,14 +58,14 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: State
     path: src/QuantumLibrary/Waves/Solutions/InfiniteWell1D.cs
-    startLine: 19
+    startLine: 23
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves.Solutions
   summary: Creates the nth energy eigenstate.
   example: []
   syntax:
-    content: public static SeparableWaveFunction1D State(int n, float length, float mass, float h_bar = 1)
+    content: public static SeparableWaveFunction1D State(int n, float length, float mass, float hBar = 1)
     parameters:
     - id: n
       type: System.Int32
@@ -76,18 +76,23 @@ items:
     - id: mass
       type: System.Single
       description: Particle mass (must be greater than zero).
-    - id: h_bar
+    - id: hBar
       type: System.Single
       description: Reduced Planck constant (must be greater than zero).
     return:
       type: QuantumWaves.SeparableWaveFunction1D
       description: A separable wave function representing the state.
-    content.vb: Public Shared Function State(n As Integer, length As Single, mass As Single, h_bar As Single = 1) As SeparableWaveFunction1D
+    content.vb: Public Shared Function State(n As Integer, length As Single, mass As Single, hBar As Single = 1) As SeparableWaveFunction1D
   overload: QuantumWaves.Solutions.InfiniteWell1D.State*
   exceptions:
   - type: System.ArgumentOutOfRangeException
     commentId: T:System.ArgumentOutOfRangeException
-    description: Thrown if any parameter is invalid.
+    description: >-
+      Thrown if <code class="paramref">n</code> is less than or equal to zero,
+
+      or if <code class="paramref">length</code>, <code class="paramref">mass</code>,
+
+      or <code class="paramref">hBar</code> is less than or equal to zero.
   nameWithType.vb: InfiniteWell1D.State(Integer, Single, Single, Single)
   fullName.vb: QuantumWaves.Solutions.InfiniteWell1D.State(Integer, Single, Single, Single)
   name.vb: State(Integer, Single, Single, Single)
@@ -109,14 +114,14 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Energy
     path: src/QuantumLibrary/Waves/Solutions/InfiniteWell1D.cs
-    startLine: 47
+    startLine: 55
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves.Solutions
   summary: Computes the energy of the nth state in the well.
   example: []
   syntax:
-    content: public static float Energy(int n, float length, float mass, float h_bar = 1)
+    content: public static float Energy(int n, float length, float mass, float hBar = 1)
     parameters:
     - id: n
       type: System.Int32
@@ -127,18 +132,23 @@ items:
     - id: mass
       type: System.Single
       description: Particle mass (must be greater than zero).
-    - id: h_bar
+    - id: hBar
       type: System.Single
       description: Reduced Planck constant (must be greater than zero).
     return:
       type: System.Single
       description: The energy value.
-    content.vb: Public Shared Function Energy(n As Integer, length As Single, mass As Single, h_bar As Single = 1) As Single
+    content.vb: Public Shared Function Energy(n As Integer, length As Single, mass As Single, hBar As Single = 1) As Single
   overload: QuantumWaves.Solutions.InfiniteWell1D.Energy*
   exceptions:
   - type: System.ArgumentOutOfRangeException
     commentId: T:System.ArgumentOutOfRangeException
-    description: Thrown if any parameter is invalid.
+    description: >-
+      Thrown if <code class="paramref">n</code> is less than or equal to zero,
+
+      or if <code class="paramref">length</code>, <code class="paramref">mass</code>,
+
+      or <code class="paramref">hBar</code> is less than or equal to zero.
   nameWithType.vb: InfiniteWell1D.Energy(Integer, Single, Single, Single)
   fullName.vb: QuantumWaves.Solutions.InfiniteWell1D.Energy(Integer, Single, Single, Single)
   name.vb: Energy(Integer, Single, Single, Single)

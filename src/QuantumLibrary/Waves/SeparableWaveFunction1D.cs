@@ -8,45 +8,52 @@ namespace QuantumWaves
     /// </summary>
     public sealed class SeparableWaveFunction1D : WaveFunction1D
     {
-        /// <summary>
-        /// Gets the spatial part of the wave function.
-        /// </summary>
-        public readonly Func<float, ComplexF> SpacePart;
+        /// <summary>Gets the spatial part of the wave function.</summary>
+        public Func<float, ComplexF> SpacePart { get; }
 
-        /// <summary>
-        /// Gets the time dependent part of the wave function.
-        /// </summary>
-        public readonly Func<float, ComplexF> TimePart;
+        /// <summary>Gets the time dependent part of the wave function.</summary>
+        public Func<float, ComplexF> TimePart { get; }
 
-        /// <summary>
-        /// Initializes a separable wave function with specified space and time components.
-        /// </summary>
-        public SeparableWaveFunction1D(FloatRange domain, 
+        /// <summary>Initializes a separable wave function with specified space and time components.</summary>
+        /// <param name="domain">The spatial domain of the wave function.</param>
+        /// <param name="spacePart">The spatial component of the wave function.</param>
+        /// <param name="timePart">The time dependent component of the wave function.</param>
+        /// <param name="amplitude">The amplitude of the wave function.</param>
+        /// /// <exception cref="ArgumentNullException">
+        /// Thrown if <paramref name="spacePart"/> or <paramref name="timePart"/> is <see langword="null"/>.
+        /// </exception>
+        public SeparableWaveFunction1D(FloatRange domain,
             Func<float, ComplexF> spacePart, Func<float, ComplexF> timePart,
             float amplitude) : base(domain, amplitude)
         {
+            if (timePart == null) throw new ArgumentNullException(nameof(TimePart));
+            if (spacePart == null) throw new ArgumentNullException(nameof(SpacePart));
+
             SpacePart = spacePart;
             TimePart = timePart;
         }
 
-        /// <summary>
-        /// Creates the generic time dependent solution for a given energy.
-        /// </summary>
+        /// <summary>Creates the generic time dependent solution for a given energy.</summary>
         /// <param name="energy">Energy value.</param>
-        /// <param name="h_bar">Reduced Planck constant (must be greater than zero).</param>
+        /// <param name="hBar">Reduced Planck constant. Must be greater than zero.</param>
         /// <returns>A function representing the time evolution.</returns>
-        /// <exception cref="ArgumentOutOfRangeException">Thrown if h_bar is not positive.</exception>
-        public static Func<float, ComplexF> TimeSolution(float energy, float h_bar = 1)
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// Thrown if <paramref name="hBar"/> is less than or equal to zero.
+        /// </exception>
+        public static Func<float, ComplexF> TimeSolution(float energy, float hBar = 1)
         {
-            if (h_bar <= float.Epsilon)
-                throw new ArgumentOutOfRangeException(nameof(h_bar), "must be greater than zero.");
+            if (hBar <= float.Epsilon)
+                throw new ArgumentOutOfRangeException(nameof(hBar), "must be greater than zero.");
 
-            return (t) => MathC.Exp(-ComplexF.I * energy * t / h_bar);
+            return (t) => MathC.Exp(-ComplexF.I * energy * t / hBar);
         }
         
         /// <summary>
-        /// Evaluates the unscaled wave function at (x, t) using the space and time components.
+        /// Evaluates the unscaled wave function at (<paramref name="x"/>, <paramref name="t"/>) using the space and time components.
         /// </summary>
-        protected override ComplexF EvaluateRaw(float x, float t) =>  SpacePart(x) * TimePart(t);
+        /// <param name="x">The position at which to evaluate the spatial component.</param>
+        /// <param name="t">The time at which to evaluate the time dependent component.</param>
+        /// <returns>The unscaled value of the wave function at <paramref name="x"/> and <paramref name="t"/>.</returns>
+        protected override ComplexF EvaluateRaw(float x, float t) => SpacePart(x) * TimePart(t);
     }
 }

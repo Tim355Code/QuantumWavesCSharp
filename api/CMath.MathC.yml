@@ -145,7 +145,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Approximately
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 33
+    startLine: 35
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -168,9 +168,13 @@ items:
       description: >-
         <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the magnitude of <code class="paramref">a</code> - <code class="paramref">b</code>
 
-        is less than or equal to <code class="paramref">tolerance</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+        is less than or equal to <code class="paramref">tolerance</code>, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Shared Function Approximately(a As ComplexF, b As ComplexF, tolerance As Single = 1E-05) As Boolean
   overload: CMath.MathC.Approximately*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown if <code class="paramref">tolerance</code> is less or equal to zero.
   nameWithType.vb: MathC.Approximately(ComplexF, ComplexF, Single)
   fullName.vb: CMath.MathC.Approximately(CMath.ComplexF, CMath.ComplexF, Single)
   name.vb: Approximately(ComplexF, ComplexF, Single)
@@ -192,7 +196,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Arg
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 45
+    startLine: 47
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -227,7 +231,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Cis
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 53
+    startLine: 55
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -265,7 +269,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: ToPolar
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 61
+    startLine: 63
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -300,7 +304,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: FromPolar
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 70
+    startLine: 72
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -341,7 +345,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Exp
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 78
+    startLine: 80
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -376,7 +380,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Pow
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 88
+    startLine: 90
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -415,7 +419,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Ln
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 97
+    startLine: 99
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -451,7 +455,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Log
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 109
+    startLine: 111
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -490,7 +494,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Sqrt
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 117
+    startLine: 119
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -525,7 +529,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Sin
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 126
+    startLine: 128
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -560,7 +564,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Cos
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 134
+    startLine: 136
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -595,7 +599,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Tan
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 143
+    startLine: 145
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -631,12 +635,11 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Clamp
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 158
+    startLine: 157
   assemblies:
   - QuantumLibrary
   namespace: CMath
   summary: Clamps the given value component-wise between the given minimum and maximum values.
-  remarks: The real and imaginary components are clamped independently.
   example: []
   syntax:
     content: public static ComplexF Clamp(ComplexF value, ComplexF min, ComplexF max)
@@ -673,12 +676,11 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Clamp01
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 171
+    startLine: 167
   assemblies:
   - QuantumLibrary
   namespace: CMath
   summary: Clamps the value component-wise between 0 and 1.
-  remarks: The real and imaginary components are clamped independently.
   example: []
   syntax:
     content: public static ComplexF Clamp01(ComplexF value)
@@ -709,7 +711,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: LerpUnclamped
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 185
+    startLine: 181
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -753,7 +755,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Lerp
     path: src/QuantumLibrary/Core/MathC.cs
-    startLine: 202
+    startLine: 198
   assemblies:
   - QuantumLibrary
   namespace: CMath
@@ -1054,6 +1056,13 @@ references:
   name: AbsSqr
   nameWithType: MathC.AbsSqr
   fullName: CMath.MathC.AbsSqr
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
 - uid: CMath.MathC.Approximately*
   commentId: Overload:CMath.MathC.Approximately
   href: CMath.MathC.html#CMath_MathC_Approximately_CMath_ComplexF_CMath_ComplexF_System_Single_

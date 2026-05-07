@@ -165,7 +165,7 @@ Class HarmonicOscillator1D
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float Energy(int n, float omega, float h_bar = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public static float Energy(int n, float omega, float hBar = 1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -176,7 +176,7 @@ Class HarmonicOscillator1D
     <dt><code>omega</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Angular frequency (must be greater than zero).</p>
 </dd>
-    <dt><code>h_bar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>hBar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Reduced Planck constant (must be greater than zero).</p>
 </dd>
   </dl>
@@ -198,7 +198,9 @@ Class HarmonicOscillator1D
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if any parameter is invalid.</p>
+    <dd><p>Thrown if <code class="paramref">n</code> is negative, or if
+<code class="paramref">omega</code> or <code class="paramref">hBar</code>
+is less than or equal to zero.</p>
 </dd>
   </dl>
 
@@ -216,7 +218,7 @@ Class HarmonicOscillator1D
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SeparableWaveFunction1D State(int n, float mass, float omega, float h_bar = 1)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SeparableWaveFunction1D State(int n, float mass, float omega, float hBar = 1)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -230,7 +232,7 @@ Class HarmonicOscillator1D
     <dt><code>omega</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Angular frequency (must be greater than zero).</p>
 </dd>
-    <dt><code>h_bar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>hBar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Reduced Planck constant (must be greater than zero).</p>
 </dd>
   </dl>
@@ -252,7 +254,8 @@ Class HarmonicOscillator1D
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if any parameter is invalid.</p>
+    <dd><p>Thrown if <code class="paramref">n</code> is invalid, or if <code class="paramref">mass</code>,
+<code class="paramref">omega</code>, or <code class="paramref">hBar</code> is less than or equal to zero.</p>
 </dd>
   </dl>
 

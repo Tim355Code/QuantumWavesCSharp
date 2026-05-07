@@ -8,7 +8,7 @@ public class WaveFunction1DTests
     [Fact]
     public void Evaluate_Works_WhenInsideDomain()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 2f,
+        var wave = new SimpleWaveFunction1D((x, t) => 2f,
             new FloatRange(0f, 10f), 3f);
 
         ComplexF result = wave.Evaluate(5f, 0f);
@@ -18,7 +18,7 @@ public class WaveFunction1DTests
     [Fact]
     public void Evaluate_Works_WhenOutsideDomain()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 123f,
+        var wave = new SimpleWaveFunction1D((x, t) => 123f,
             new FloatRange(0f, 10f), 1f);
 
         ComplexF result = wave.Evaluate(-1f, 0f);
@@ -29,7 +29,7 @@ public class WaveFunction1DTests
     [Fact]
     public void Evaluate_ReturnsZero_WhenOnDomainBoundary()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 123f,
+        var wave = new SimpleWaveFunction1D((x, t) => 123f,
             new FloatRange(0f, 10f), 1f);
 
         ComplexF atMin = wave.Evaluate(0f, 0f);
@@ -42,7 +42,7 @@ public class WaveFunction1DTests
     [Fact]
     public void ProbabilityDensity_ReturnsMagnitudeSquaredOfEvaluatedWave()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => new ComplexF(3f, 4f),
+        var wave = new SimpleWaveFunction1D((x, t) => new ComplexF(3f, 4f),
             new FloatRange(0f, 10f), 2f);
 
         // Raw value is 3 + 4i, amplitude is 2.
@@ -56,14 +56,14 @@ public class WaveFunction1DTests
     [Fact]
     public void ProbabilityDensity_ReturnsZeroOutsideDomain()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => new ComplexF(3f, 4f), new FloatRange(0f, 10f), 2f);
+        var wave = new SimpleWaveFunction1D((x, t) => new ComplexF(3f, 4f), new FloatRange(0f, 10f), 2f);
         Assert.Equal(0f, wave.ProbabilityDensity(11f, 0f), 5);
     }
 
     [Fact]
     public void ProbabilityInRange_Works()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 2f,
+        var wave = new SimpleWaveFunction1D((x, t) => 2f,
             new FloatRange(0f, 10f), 3f);
 
         // ψ = 3 * 2 = 6
@@ -77,7 +77,7 @@ public class WaveFunction1DTests
     [Fact]
     public void TryNormalize_ReturnsTrue_ForNonZeroFiniteWave()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 4f), 123f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 4f), 123f);
         Assert.True(wave.TryNormalize(t: 0f));
 
         // Integral of |1|^2 over length 4 is 4 => amplitude is 1 / sqrt(4)
@@ -87,7 +87,7 @@ public class WaveFunction1DTests
     [Fact]
     public void TryNormalize_Works()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 4f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 4f), 1f);
 
         bool success = wave.TryNormalize(t: 0f);
 
@@ -101,7 +101,7 @@ public class WaveFunction1DTests
     [Fact]
     public void TryNormalize_ReturnsFalse_ForZeroWave()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 0f,
+        var wave = new SimpleWaveFunction1D((x, t) => 0f,
             new FloatRange(0f, 4f), 1f);
 
         Assert.False(wave.TryNormalize(t: 0f));
@@ -112,7 +112,7 @@ public class WaveFunction1DTests
     [InlineData(-1)]
     public void Sample_Throws_WhenSampleCount_IsNotPositive(int sampleCount)
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
 
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             wave.Sample(sampleCount, out _, pointCount: 10, rng: new Random(123)));
@@ -126,7 +126,7 @@ public class WaveFunction1DTests
     [InlineData(-1)]
     public void Sample_Throws_WhenPointCount_IsNotGreaterThanOne(int pointCount)
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
 
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             wave.Sample(sampleCount: 10, out _, pointCount: pointCount, rng: new Random(123)));
@@ -139,7 +139,7 @@ public class WaveFunction1DTests
     [InlineData(-1f)]
     public void Sample_Throws_WhenTolerance_IsNotPositive(float tolerance)
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
 
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             wave.Sample(sampleCount: 10, out _, pointCount: 10, rng: new Random(123), tolerance: tolerance));
@@ -152,7 +152,7 @@ public class WaveFunction1DTests
     [InlineData(-1f)]
     public void Sample_Throws_WhenMaxAllowed_IsNotPositive(float maxAllowed)
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             wave.Sample(sampleCount: 10, out _, pointCount: 10, rng: new Random(123), maxAllowed: maxAllowed));
 
@@ -164,7 +164,7 @@ public class WaveFunction1DTests
     [InlineData(-1)]
     public void Sample_Throws_WhenMaxCount_IsNotPositive(int maxCount)
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
         var exception = Assert.Throws<ArgumentOutOfRangeException>(() =>
             wave.Sample(sampleCount: 10, out _, pointCount: 10, rng: new Random(123), maxCount: maxCount));
 
@@ -174,7 +174,7 @@ public class WaveFunction1DTests
     [Fact]
     public void Sample_ReturnsSamples_InsideFiniteDomain()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 1f, new FloatRange(0f, 1f), 1f);
 
         Assert.True(wave.Sample(sampleCount: 100, out float[] samples, t: 0f, pointCount: 100, rng: new Random(123)));
         Assert.Equal(100, samples.Length);
@@ -189,7 +189,7 @@ public class WaveFunction1DTests
     [Fact]
     public void Sample_ReturnsFalseAndEmptyArray_ForZeroWave()
     {
-        var wave = new SimpeWaveFunction1D((x, t) => 0f, new FloatRange(0f, 1f), 1f);
+        var wave = new SimpleWaveFunction1D((x, t) => 0f, new FloatRange(0f, 1f), 1f);
 
         Assert.False(wave.Sample(sampleCount: 10, out float[] samples, t: 0f, pointCount: 100, rng: new Random(123)));
 

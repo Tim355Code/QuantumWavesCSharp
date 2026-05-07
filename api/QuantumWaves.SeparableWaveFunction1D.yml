@@ -51,7 +51,7 @@ items:
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
 - uid: QuantumWaves.SeparableWaveFunction1D.SpacePart
-  commentId: F:QuantumWaves.SeparableWaveFunction1D.SpacePart
+  commentId: P:QuantumWaves.SeparableWaveFunction1D.SpacePart
   id: SpacePart
   parent: QuantumWaves.SeparableWaveFunction1D
   langs:
@@ -60,7 +60,7 @@ items:
   name: SpacePart
   nameWithType: SeparableWaveFunction1D.SpacePart
   fullName: QuantumWaves.SeparableWaveFunction1D.SpacePart
-  type: Field
+  type: Property
   source:
     remote:
       path: src/QuantumLibrary/Waves/SeparableWaveFunction1D.cs
@@ -68,19 +68,21 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: SpacePart
     path: src/QuantumLibrary/Waves/SeparableWaveFunction1D.cs
-    startLine: 13
+    startLine: 11
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
   summary: Gets the spatial part of the wave function.
   example: []
   syntax:
-    content: public readonly Func<float, ComplexF> SpacePart
+    content: public Func<float, ComplexF> SpacePart { get; }
+    parameters: []
     return:
       type: System.Func{System.Single,CMath.ComplexF}
-    content.vb: Public ReadOnly SpacePart As Func(Of Single, ComplexF)
+    content.vb: Public ReadOnly Property SpacePart As Func(Of Single, ComplexF)
+  overload: QuantumWaves.SeparableWaveFunction1D.SpacePart*
 - uid: QuantumWaves.SeparableWaveFunction1D.TimePart
-  commentId: F:QuantumWaves.SeparableWaveFunction1D.TimePart
+  commentId: P:QuantumWaves.SeparableWaveFunction1D.TimePart
   id: TimePart
   parent: QuantumWaves.SeparableWaveFunction1D
   langs:
@@ -89,7 +91,7 @@ items:
   name: TimePart
   nameWithType: SeparableWaveFunction1D.TimePart
   fullName: QuantumWaves.SeparableWaveFunction1D.TimePart
-  type: Field
+  type: Property
   source:
     remote:
       path: src/QuantumLibrary/Waves/SeparableWaveFunction1D.cs
@@ -97,17 +99,19 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: TimePart
     path: src/QuantumLibrary/Waves/SeparableWaveFunction1D.cs
-    startLine: 18
+    startLine: 14
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
   summary: Gets the time dependent part of the wave function.
   example: []
   syntax:
-    content: public readonly Func<float, ComplexF> TimePart
+    content: public Func<float, ComplexF> TimePart { get; }
+    parameters: []
     return:
       type: System.Func{System.Single,CMath.ComplexF}
-    content.vb: Public ReadOnly TimePart As Func(Of Single, ComplexF)
+    content.vb: Public ReadOnly Property TimePart As Func(Of Single, ComplexF)
+  overload: QuantumWaves.SeparableWaveFunction1D.TimePart*
 - uid: QuantumWaves.SeparableWaveFunction1D.#ctor(FloatRange,System.Func{System.Single,CMath.ComplexF},System.Func{System.Single,CMath.ComplexF},System.Single)
   commentId: M:QuantumWaves.SeparableWaveFunction1D.#ctor(FloatRange,System.Func{System.Single,CMath.ComplexF},System.Func{System.Single,CMath.ComplexF},System.Single)
   id: '#ctor(FloatRange,System.Func{System.Single,CMath.ComplexF},System.Func{System.Single,CMath.ComplexF},System.Single)'
@@ -126,7 +130,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: .ctor
     path: src/QuantumLibrary/Waves/SeparableWaveFunction1D.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -137,14 +141,22 @@ items:
     parameters:
     - id: domain
       type: FloatRange
+      description: The spatial domain of the wave function.
     - id: spacePart
       type: System.Func{System.Single,CMath.ComplexF}
+      description: The spatial component of the wave function.
     - id: timePart
       type: System.Func{System.Single,CMath.ComplexF}
+      description: The time dependent component of the wave function.
     - id: amplitude
       type: System.Single
+      description: The amplitude of the wave function.
     content.vb: Public Sub New(domain As FloatRange, spacePart As Func(Of Single, ComplexF), timePart As Func(Of Single, ComplexF), amplitude As Single)
   overload: QuantumWaves.SeparableWaveFunction1D.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if <code class="paramref">spacePart</code> or <code class="paramref">timePart</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
   nameWithType.vb: SeparableWaveFunction1D.New(FloatRange, Func(Of Single, ComplexF), Func(Of Single, ComplexF), Single)
   fullName.vb: QuantumWaves.SeparableWaveFunction1D.New(FloatRange, System.Func(Of Single, CMath.ComplexF), System.Func(Of Single, CMath.ComplexF), Single)
   name.vb: New(FloatRange, Func(Of Single, ComplexF), Func(Of Single, ComplexF), Single)
@@ -166,30 +178,30 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: TimeSolution
     path: src/QuantumLibrary/Waves/SeparableWaveFunction1D.cs
-    startLine: 38
+    startLine: 42
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
   summary: Creates the generic time dependent solution for a given energy.
   example: []
   syntax:
-    content: public static Func<float, ComplexF> TimeSolution(float energy, float h_bar = 1)
+    content: public static Func<float, ComplexF> TimeSolution(float energy, float hBar = 1)
     parameters:
     - id: energy
       type: System.Single
       description: Energy value.
-    - id: h_bar
+    - id: hBar
       type: System.Single
-      description: Reduced Planck constant (must be greater than zero).
+      description: Reduced Planck constant. Must be greater than zero.
     return:
       type: System.Func{System.Single,CMath.ComplexF}
       description: A function representing the time evolution.
-    content.vb: Public Shared Function TimeSolution(energy As Single, h_bar As Single = 1) As Func(Of Single, ComplexF)
+    content.vb: Public Shared Function TimeSolution(energy As Single, hBar As Single = 1) As Func(Of Single, ComplexF)
   overload: QuantumWaves.SeparableWaveFunction1D.TimeSolution*
   exceptions:
   - type: System.ArgumentOutOfRangeException
     commentId: T:System.ArgumentOutOfRangeException
-    description: Thrown if h_bar is not positive.
+    description: Thrown if <code class="paramref">hBar</code> is less than or equal to zero.
   nameWithType.vb: SeparableWaveFunction1D.TimeSolution(Single, Single)
   fullName.vb: QuantumWaves.SeparableWaveFunction1D.TimeSolution(Single, Single)
   name.vb: TimeSolution(Single, Single)
@@ -211,21 +223,24 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: EvaluateRaw
     path: src/QuantumLibrary/Waves/SeparableWaveFunction1D.cs
-    startLine: 49
+    startLine: 56
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
-  summary: Evaluates the unscaled wave function at (x, t) using the space and time components.
+  summary: Evaluates the unscaled wave function at (<code class="paramref">x</code>, <code class="paramref">t</code>) using the space and time components.
   example: []
   syntax:
     content: protected override ComplexF EvaluateRaw(float x, float t)
     parameters:
     - id: x
       type: System.Single
+      description: The position at which to evaluate the spatial component.
     - id: t
       type: System.Single
+      description: The time at which to evaluate the time dependent component.
     return:
       type: CMath.ComplexF
+      description: The unscaled value of the wave function at <code class="paramref">x</code> and <code class="paramref">t</code>.
     content.vb: Protected Overrides Function EvaluateRaw(x As Single, t As Single) As ComplexF
   overridden: QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
   overload: QuantumWaves.SeparableWaveFunction1D.EvaluateRaw*
@@ -800,6 +815,12 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: QuantumWaves.SeparableWaveFunction1D.SpacePart*
+  commentId: Overload:QuantumWaves.SeparableWaveFunction1D.SpacePart
+  href: QuantumWaves.SeparableWaveFunction1D.html#QuantumWaves_SeparableWaveFunction1D_SpacePart
+  name: SpacePart
+  nameWithType: SeparableWaveFunction1D.SpacePart
+  fullName: QuantumWaves.SeparableWaveFunction1D.SpacePart
 - uid: System.Func{System.Single,CMath.ComplexF}
   commentId: T:System.Func{System.Single,CMath.ComplexF}
   parent: System
@@ -879,6 +900,19 @@ references:
   - name: " "
   - name: TResult
   - name: )
+- uid: QuantumWaves.SeparableWaveFunction1D.TimePart*
+  commentId: Overload:QuantumWaves.SeparableWaveFunction1D.TimePart
+  href: QuantumWaves.SeparableWaveFunction1D.html#QuantumWaves_SeparableWaveFunction1D_TimePart
+  name: TimePart
+  nameWithType: SeparableWaveFunction1D.TimePart
+  fullName: QuantumWaves.SeparableWaveFunction1D.TimePart
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
 - uid: QuantumWaves.SeparableWaveFunction1D.#ctor*
   commentId: Overload:QuantumWaves.SeparableWaveFunction1D.#ctor
   href: QuantumWaves.SeparableWaveFunction1D.html#QuantumWaves_SeparableWaveFunction1D__ctor_FloatRange_System_Func_System_Single_CMath_ComplexF__System_Func_System_Single_CMath_ComplexF__System_Single_

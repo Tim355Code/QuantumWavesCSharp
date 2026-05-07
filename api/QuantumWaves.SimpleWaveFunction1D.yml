@@ -1,25 +1,25 @@
 ### YamlMime:ManagedReference
 items:
-- uid: QuantumWaves.SimpeWaveFunction1D
-  commentId: T:QuantumWaves.SimpeWaveFunction1D
-  id: SimpeWaveFunction1D
+- uid: QuantumWaves.SimpleWaveFunction1D
+  commentId: T:QuantumWaves.SimpleWaveFunction1D
+  id: SimpleWaveFunction1D
   parent: QuantumWaves
   children:
-  - QuantumWaves.SimpeWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
-  - QuantumWaves.SimpeWaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  - QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
+  - QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(System.Single,System.Single)
   langs:
   - csharp
   - vb
-  name: SimpeWaveFunction1D
-  nameWithType: SimpeWaveFunction1D
-  fullName: QuantumWaves.SimpeWaveFunction1D
+  name: SimpleWaveFunction1D
+  nameWithType: SimpleWaveFunction1D
+  fullName: QuantumWaves.SimpleWaveFunction1D
   type: Class
   source:
     remote:
       path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
       branch: main
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
-    id: SimpeWaveFunction1D
+    id: SimpleWaveFunction1D
     path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
     startLine: 8
   assemblies:
@@ -28,8 +28,8 @@ items:
   summary: Represents a general one dimensional wave function defined by a delegate.
   example: []
   syntax:
-    content: 'public class SimpeWaveFunction1D : WaveFunction1D'
-    content.vb: Public Class SimpeWaveFunction1D Inherits WaveFunction1D
+    content: 'public class SimpleWaveFunction1D : WaveFunction1D'
+    content.vb: Public Class SimpleWaveFunction1D Inherits WaveFunction1D
   inheritance:
   - System.Object
   - QuantumWaves.WaveFunction1D
@@ -49,16 +49,16 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: QuantumWaves.SimpeWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
-  commentId: M:QuantumWaves.SimpeWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
+- uid: QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
+  commentId: M:QuantumWaves.SimpleWaveFunction1D.#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)
   id: '#ctor(System.Func{System.Single,System.Single,CMath.ComplexF},FloatRange,CMath.ComplexF)'
-  parent: QuantumWaves.SimpeWaveFunction1D
+  parent: QuantumWaves.SimpleWaveFunction1D
   langs:
   - csharp
   - vb
-  name: SimpeWaveFunction1D(Func<float, float, ComplexF>, FloatRange, ComplexF)
-  nameWithType: SimpeWaveFunction1D.SimpeWaveFunction1D(Func<float, float, ComplexF>, FloatRange, ComplexF)
-  fullName: QuantumWaves.SimpeWaveFunction1D.SimpeWaveFunction1D(System.Func<float, float, CMath.ComplexF>, FloatRange, CMath.ComplexF)
+  name: SimpleWaveFunction1D(Func<float, float, ComplexF>, FloatRange, ComplexF)
+  nameWithType: SimpleWaveFunction1D.SimpleWaveFunction1D(Func<float, float, ComplexF>, FloatRange, ComplexF)
+  fullName: QuantumWaves.SimpleWaveFunction1D.SimpleWaveFunction1D(System.Func<float, float, CMath.ComplexF>, FloatRange, CMath.ComplexF)
   type: Constructor
   source:
     remote:
@@ -67,39 +67,39 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: .ctor
     path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
-    startLine: 18
+    startLine: 16
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
   summary: Initializes a wave function from a given function.
   example: []
   syntax:
-    content: public SimpeWaveFunction1D(Func<float, float, ComplexF> wave, FloatRange domain, ComplexF normalizationConstant)
+    content: public SimpleWaveFunction1D(Func<float, float, ComplexF> wave, FloatRange domain, ComplexF amplitude)
     parameters:
     - id: wave
       type: System.Func{System.Single,System.Single,CMath.ComplexF}
       description: Function defining ψ(x, t).
     - id: domain
       type: FloatRange
-      description: Spatial domain of the wave function.
-    - id: normalizationConstant
+      description: The spatial domain of the wave function.
+    - id: amplitude
       type: CMath.ComplexF
-      description: Initial amplitude (normalization constant).
-    content.vb: Public Sub New(wave As Func(Of Single, Single, ComplexF), domain As FloatRange, normalizationConstant As ComplexF)
-  overload: QuantumWaves.SimpeWaveFunction1D.#ctor*
-  nameWithType.vb: SimpeWaveFunction1D.New(Func(Of Single, Single, ComplexF), FloatRange, ComplexF)
-  fullName.vb: QuantumWaves.SimpeWaveFunction1D.New(System.Func(Of Single, Single, CMath.ComplexF), FloatRange, CMath.ComplexF)
+      description: The amplitude of the wave function.
+    content.vb: Public Sub New(wave As Func(Of Single, Single, ComplexF), domain As FloatRange, amplitude As ComplexF)
+  overload: QuantumWaves.SimpleWaveFunction1D.#ctor*
+  nameWithType.vb: SimpleWaveFunction1D.New(Func(Of Single, Single, ComplexF), FloatRange, ComplexF)
+  fullName.vb: QuantumWaves.SimpleWaveFunction1D.New(System.Func(Of Single, Single, CMath.ComplexF), FloatRange, CMath.ComplexF)
   name.vb: New(Func(Of Single, Single, ComplexF), FloatRange, ComplexF)
-- uid: QuantumWaves.SimpeWaveFunction1D.EvaluateRaw(System.Single,System.Single)
-  commentId: M:QuantumWaves.SimpeWaveFunction1D.EvaluateRaw(System.Single,System.Single)
+- uid: QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  commentId: M:QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(System.Single,System.Single)
   id: EvaluateRaw(System.Single,System.Single)
-  parent: QuantumWaves.SimpeWaveFunction1D
+  parent: QuantumWaves.SimpleWaveFunction1D
   langs:
   - csharp
   - vb
   name: EvaluateRaw(float, float)
-  nameWithType: SimpeWaveFunction1D.EvaluateRaw(float, float)
-  fullName: QuantumWaves.SimpeWaveFunction1D.EvaluateRaw(float, float)
+  nameWithType: SimpleWaveFunction1D.EvaluateRaw(float, float)
+  fullName: QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(float, float)
   type: Method
   source:
     remote:
@@ -108,7 +108,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: EvaluateRaw
     path: src/QuantumLibrary/Waves/SimpleWaveFunction1D.cs
-    startLine: 27
+    startLine: 26
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -119,15 +119,18 @@ items:
     parameters:
     - id: x
       type: System.Single
+      description: The position at which to evaluate the unscaled wave function.
     - id: t
       type: System.Single
+      description: The time at which to evaluate the unscaled wave function.
     return:
       type: CMath.ComplexF
+      description: The unscaled value of the wave function at <code class="paramref">x</code> and <code class="paramref">t</code>.
     content.vb: Protected Overrides Function EvaluateRaw(x As Single, t As Single) As ComplexF
   overridden: QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
-  overload: QuantumWaves.SimpeWaveFunction1D.EvaluateRaw*
-  nameWithType.vb: SimpeWaveFunction1D.EvaluateRaw(Single, Single)
-  fullName.vb: QuantumWaves.SimpeWaveFunction1D.EvaluateRaw(Single, Single)
+  overload: QuantumWaves.SimpleWaveFunction1D.EvaluateRaw*
+  nameWithType.vb: SimpleWaveFunction1D.EvaluateRaw(Single, Single)
+  fullName.vb: QuantumWaves.SimpleWaveFunction1D.EvaluateRaw(Single, Single)
   name.vb: EvaluateRaw(Single, Single)
 references:
 - uid: QuantumWaves
@@ -774,14 +777,14 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: QuantumWaves.SimpeWaveFunction1D.#ctor*
-  commentId: Overload:QuantumWaves.SimpeWaveFunction1D.#ctor
-  href: QuantumWaves.SimpeWaveFunction1D.html#QuantumWaves_SimpeWaveFunction1D__ctor_System_Func_System_Single_System_Single_CMath_ComplexF__FloatRange_CMath_ComplexF_
-  name: SimpeWaveFunction1D
-  nameWithType: SimpeWaveFunction1D.SimpeWaveFunction1D
-  fullName: QuantumWaves.SimpeWaveFunction1D.SimpeWaveFunction1D
-  nameWithType.vb: SimpeWaveFunction1D.New
-  fullName.vb: QuantumWaves.SimpeWaveFunction1D.New
+- uid: QuantumWaves.SimpleWaveFunction1D.#ctor*
+  commentId: Overload:QuantumWaves.SimpleWaveFunction1D.#ctor
+  href: QuantumWaves.SimpleWaveFunction1D.html#QuantumWaves_SimpleWaveFunction1D__ctor_System_Func_System_Single_System_Single_CMath_ComplexF__FloatRange_CMath_ComplexF_
+  name: SimpleWaveFunction1D
+  nameWithType: SimpleWaveFunction1D.SimpleWaveFunction1D
+  fullName: QuantumWaves.SimpleWaveFunction1D.SimpleWaveFunction1D
+  nameWithType.vb: SimpleWaveFunction1D.New
+  fullName.vb: QuantumWaves.SimpleWaveFunction1D.New
   name.vb: New
 - uid: System.Func{System.Single,System.Single,CMath.ComplexF}
   commentId: T:System.Func{System.Single,System.Single,CMath.ComplexF}
@@ -942,12 +945,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.single
   - name: )
-- uid: QuantumWaves.SimpeWaveFunction1D.EvaluateRaw*
-  commentId: Overload:QuantumWaves.SimpeWaveFunction1D.EvaluateRaw
-  href: QuantumWaves.SimpeWaveFunction1D.html#QuantumWaves_SimpeWaveFunction1D_EvaluateRaw_System_Single_System_Single_
+- uid: QuantumWaves.SimpleWaveFunction1D.EvaluateRaw*
+  commentId: Overload:QuantumWaves.SimpleWaveFunction1D.EvaluateRaw
+  href: QuantumWaves.SimpleWaveFunction1D.html#QuantumWaves_SimpleWaveFunction1D_EvaluateRaw_System_Single_System_Single_
   name: EvaluateRaw
-  nameWithType: SimpeWaveFunction1D.EvaluateRaw
-  fullName: QuantumWaves.SimpeWaveFunction1D.EvaluateRaw
+  nameWithType: SimpleWaveFunction1D.EvaluateRaw
+  fullName: QuantumWaves.SimpleWaveFunction1D.EvaluateRaw
 - uid: System.Single
   commentId: T:System.Single
   parent: System

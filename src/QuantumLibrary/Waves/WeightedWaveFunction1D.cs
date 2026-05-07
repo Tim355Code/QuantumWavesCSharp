@@ -27,8 +27,14 @@ namespace QuantumWaves
         /// </summary>
         /// <param name="startCoefficients">Initial coefficients.</param>
         /// <param name="startWaveFunctions">Initial wave functions.</param>
-        /// <exception cref="ArgumentNullException">Thrown if an input array or wave function is null.</exception>
-        /// <exception cref="ArgumentException">Thrown if no wave functions are provided or array sizes do not match.</exception>
+        /// <exception cref="ArgumentNullException">
+        /// Thrown if <paramref name="startCoefficients"/>,
+        /// <paramref name="startWaveFunctions"/>,
+        /// or any wave function element is <see langword="null"/>.
+        /// </exception>
+        /// <exception cref="ArgumentException">
+        /// Thrown if no wave functions are provided or the array sizes do not match.
+        /// </exception>
         public WeightedWaveFunction1D(ComplexF[] startCoefficients, WaveFunction1D[] startWaveFunctions) 
             : base(FloatRange.Infinite, ComplexF.One)
         {
@@ -42,7 +48,9 @@ namespace QuantumWaves
 
             for(int i = 0; i < startCoefficients.Length; i++)
             {
-                if (startWaveFunctions[i] == null) throw new ArgumentNullException($"Wave function index = {i} is null.");
+                if (startWaveFunctions[i] == null)
+                    throw new ArgumentNullException($"{nameof(startWaveFunctions)}[{i}]", 
+                        "Wave function element may not be null.");
 
                 waveFunctions.Add(startWaveFunctions[i]);
                 coefficients.Add(startCoefficients[i]);
@@ -57,22 +65,28 @@ namespace QuantumWaves
         /// <exception cref="ArgumentNullException">Thrown if waveFunction is null.</exception>
         public void Add(ComplexF coefficient, WaveFunction1D waveFunction)
         {
-            if (waveFunction == null) throw new ArgumentNullException("Wave function may not be null.");
+            if (waveFunction == null) 
+                throw new ArgumentNullException(nameof(waveFunction));
 
             waveFunctions.Add(waveFunction);
             coefficients.Add(coefficient);
         }
 
-        /// <summary>
-        /// Evaluates the weighted sum at (x, t).
-        /// </summary>
+        /// <summary>Evaluates the weighted sum at (<paramref name="x"/>, <paramref name="t"/>).</summary>
+        /// <param name="x">The position at which to evaluate the weighted wave function.</param>
+        /// <param name="t">The time at which to evaluate the weighted wave function.</param>
+        /// <returns>
+        /// The weighted sum of all component wave functions evaluated at <paramref name="x"/> and <paramref name="t"/>.
+        /// </returns>
         protected override ComplexF EvaluateRaw(float x, float t)
         {
             ComplexF total = ComplexF.Zero;
-            for(int i = 0; i < coefficients.Count; i++)
+
+            for (int i = 0; i < coefficients.Count; i++)
             {
                 total += waveFunctions[i].Evaluate(x, t) * coefficients[i];
             }
+
             return total;
         }
     }

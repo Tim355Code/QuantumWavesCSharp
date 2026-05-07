@@ -5,7 +5,7 @@ items:
   id: QuantumWaves
   children:
   - QuantumWaves.SeparableWaveFunction1D
-  - QuantumWaves.SimpeWaveFunction1D
+  - QuantumWaves.SimpleWaveFunction1D
   - QuantumWaves.WaveFunction1D
   - QuantumWaves.WeightedWaveFunction1D
   langs:
@@ -25,12 +25,12 @@ references:
   name: SeparableWaveFunction1D
   nameWithType: SeparableWaveFunction1D
   fullName: QuantumWaves.SeparableWaveFunction1D
-- uid: QuantumWaves.SimpeWaveFunction1D
-  commentId: T:QuantumWaves.SimpeWaveFunction1D
-  href: QuantumWaves.SimpeWaveFunction1D.html
-  name: SimpeWaveFunction1D
-  nameWithType: SimpeWaveFunction1D
-  fullName: QuantumWaves.SimpeWaveFunction1D
+- uid: QuantumWaves.SimpleWaveFunction1D
+  commentId: T:QuantumWaves.SimpleWaveFunction1D
+  href: QuantumWaves.SimpleWaveFunction1D.html
+  name: SimpleWaveFunction1D
+  nameWithType: SimpleWaveFunction1D
+  fullName: QuantumWaves.SimpleWaveFunction1D
 - uid: QuantumWaves.WaveFunction1D
   commentId: T:QuantumWaves.WaveFunction1D
   parent: QuantumWaves
@@ -40,6 +40,7 @@ references:
   fullName: QuantumWaves.WaveFunction1D
 - uid: QuantumWaves.WeightedWaveFunction1D
   commentId: T:QuantumWaves.WeightedWaveFunction1D
+  parent: QuantumWaves
   href: QuantumWaves.WeightedWaveFunction1D.html
   name: WeightedWaveFunction1D
   nameWithType: WeightedWaveFunction1D

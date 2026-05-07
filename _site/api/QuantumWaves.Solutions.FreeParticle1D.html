@@ -165,7 +165,7 @@ Class FreeParticle1D
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static float Energy(float k, float mass, float h_bar)</code></pre>
+    <pre><code class="lang-csharp hljs">public static float Energy(float k, float mass, float hBar)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -176,7 +176,7 @@ Class FreeParticle1D
     <dt><code>mass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Particle mass (must be greater than zero).</p>
 </dd>
-    <dt><code>h_bar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>hBar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Reduced Planck constant (must be greater than zero).</p>
 </dd>
   </dl>
@@ -198,7 +198,86 @@ Class FreeParticle1D
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if mass or h_bar is not positive.</p>
+    <dd><p>Thrown if <code class="paramref">mass</code> or <code class="paramref">hBar</code>
+is less than or equal to zero.</p>
+</dd>
+  </dl>
+
+
+
+  <a id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_" data-uid="QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket*"></a>
+
+  <h3 id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Single_" data-uid="QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)">
+  GaussianWavePacket(float, float, float, float, float, int, float)
+  
+  </h3>
+
+  <div class="markdown level1 summary"><p>Creates an approximate Gaussian wave packet as a weighted sum of plane waves.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, float hBar, int termCount = 500, float deltaK = 0.01)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>x0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Initial center position of the packet.</p>
+</dd>
+    <dt><code>sigma</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Spatial width parameter of the Gaussian packet. Must be greater than zero.</p>
+</dd>
+    <dt><code>k0</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Central wave number of the packet.</p>
+</dd>
+    <dt><code>mass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Particle mass. Must be greater than zero.</p>
+</dd>
+    <dt><code>hBar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Reduced Planck constant. Must be greater than zero.</p>
+</dd>
+    <dt><code>termCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd><p>Number of plane wave terms used in the approximation.
+Must be positive and odd.</p>
+</dd>
+    <dt><code>deltaK</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Spacing between sampled wave numbers in momentum space.
+Must be greater than zero.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="QuantumWaves.WeightedWaveFunction1D.html">WeightedWaveFunction1D</a></dt>
+    <dd><p>A weighted superposition of plane waves approximating a Gaussian wave packet.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+  <h4 class="section" id="QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Single__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>The packet is constructed by discretizing the Fourier integral representation
+of a Gaussian momentum distribution.</p>
+<p>Larger <code class="paramref">termCount</code> and smaller <code class="paramref">deltaK</code>
+improve the approximation quality at the cost of additional computation.</p>
+<p>The resulting packet is approximately normalized when the sampled momentum
+range is sufficiently large.</p>
+</div>
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
+    <dd><p>Thrown if <code class="paramref">sigma</code>, <code class="paramref">mass</code>,
+<code class="paramref">hBar</code>, <code class="paramref">termCount</code>,
+or <code class="paramref">deltaK</code> is invalid.</p>
+</dd>
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
+    <dd><p>Thrown if <code class="paramref">termCount</code> is even.</p>
 </dd>
   </dl>
 
@@ -216,7 +295,7 @@ Class FreeParticle1D
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static SeparableWaveFunction1D PlaneWave(float k, float mass, float h_bar)</code></pre>
+    <pre><code class="lang-csharp hljs">public static SeparableWaveFunction1D PlaneWave(float k, float mass, float hBar)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -227,7 +306,7 @@ Class FreeParticle1D
     <dt><code>mass</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Particle mass (must be greater than zero).</p>
 </dd>
-    <dt><code>h_bar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>hBar</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Reduced Planck constant (must be greater than zero).</p>
 </dd>
   </dl>
@@ -245,11 +324,15 @@ Class FreeParticle1D
 
 
 
+  <h4 class="section" id="QuantumWaves_Solutions_FreeParticle1D_PlaneWave_System_Single_System_Single_System_Single__remarks">Remarks</h4>
+  <div class="markdown level1 remarks"><p>Plane waves are not square normalizable over an infinite domain.</p>
+</div>
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception">ArgumentOutOfRangeException</a></dt>
-    <dd><p>Thrown if mass or h_bar is not positive.</p>
+    <dd><p>Thrown if <code class="paramref">mass</code> or <code class="paramref">hBar</code>
+is less than or equal to zero.</p>
 </dd>
   </dl>
 

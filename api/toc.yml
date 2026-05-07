@@ -17,8 +17,8 @@ items:
   - uid: QuantumWaves.SeparableWaveFunction1D
     name: SeparableWaveFunction1D
     type: Class
-  - uid: QuantumWaves.SimpeWaveFunction1D
-    name: SimpeWaveFunction1D
+  - uid: QuantumWaves.SimpleWaveFunction1D
+    name: SimpleWaveFunction1D
     type: Class
   - uid: QuantumWaves.WaveFunction1D
     name: WaveFunction1D

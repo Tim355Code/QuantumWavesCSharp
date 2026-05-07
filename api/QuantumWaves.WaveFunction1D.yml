@@ -29,7 +29,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: WaveFunction1D
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 9
+    startLine: 7
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -42,7 +42,7 @@ items:
   - System.Object
   derivedClasses:
   - QuantumWaves.SeparableWaveFunction1D
-  - QuantumWaves.SimpeWaveFunction1D
+  - QuantumWaves.SimpleWaveFunction1D
   - QuantumWaves.WeightedWaveFunction1D
   inheritedMembers:
   - System.Object.Equals(System.Object)
@@ -70,7 +70,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Amplitude
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 14
+    startLine: 10
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -101,7 +101,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Domain
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 19
+    startLine: 13
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -132,7 +132,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: .ctor
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 24
+    startLine: 18
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -143,8 +143,10 @@ items:
     parameters:
     - id: domain
       type: FloatRange
+      description: The spatial domain of the wave function.
     - id: amplitude
       type: CMath.ComplexF
+      description: The amplitude of the wave function.
     content.vb: Protected Sub New(domain As FloatRange, amplitude As ComplexF)
   overload: QuantumWaves.WaveFunction1D.#ctor*
   nameWithType.vb: WaveFunction1D.New(FloatRange, ComplexF)
@@ -168,21 +170,27 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Evaluate
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 33
+    startLine: 31
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
-  summary: Evaluates the wave function ψ(x, t).
+  summary: Evaluates the wave function ψ(<code class="paramref">x</code>, <code class="paramref">t</code>).
   example: []
   syntax:
     content: public ComplexF Evaluate(float x, float t)
     parameters:
     - id: x
       type: System.Single
+      description: The position at which to evaluate the wave function.
     - id: t
       type: System.Single
+      description: The time at which to evaluate the wave function.
     return:
       type: CMath.ComplexF
+      description: >-
+        The value of the wave function at <code class="paramref">x</code> and <code class="paramref">t</code>,
+
+        or zero if <code class="paramref">x</code> is outside the domain.
     content.vb: Public Function Evaluate(x As Single, t As Single) As ComplexF
   overload: QuantumWaves.WaveFunction1D.Evaluate*
   nameWithType.vb: WaveFunction1D.Evaluate(Single, Single)
@@ -206,21 +214,24 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: EvaluateRaw
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 39
+    startLine: 38
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
-  summary: Evaluates the unscaled wave function at (x, t).
+  summary: Evaluates the unscaled wave function at (<code class="paramref">x</code>, <code class="paramref">t</code>).
   example: []
   syntax:
     content: protected abstract ComplexF EvaluateRaw(float x, float t)
     parameters:
     - id: x
       type: System.Single
+      description: The position at which to evaluate the unscaled wave function.
     - id: t
       type: System.Single
+      description: The time at which to evaluate the unscaled wave function.
     return:
       type: CMath.ComplexF
+      description: The unscaled value of the wave function at <code class="paramref">x</code> and <code class="paramref">t</code>.
     content.vb: Protected MustOverride Function EvaluateRaw(x As Single, t As Single) As ComplexF
   overload: QuantumWaves.WaveFunction1D.EvaluateRaw*
   nameWithType.vb: WaveFunction1D.EvaluateRaw(Single, Single)
@@ -248,17 +259,20 @@ items:
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
-  summary: Returns |ψ(x,t)|².
+  summary: Evaluates the probability density |ψ(<code class="paramref">x</code>, <code class="paramref">t</code>)|².
   example: []
   syntax:
     content: public float ProbabilityDensity(float x, float t)
     parameters:
     - id: x
       type: System.Single
+      description: The position at which to evaluate the probability density.
     - id: t
       type: System.Single
+      description: The time at which to evaluate the probability density.
     return:
       type: System.Single
+      description: The probability density at <code class="paramref">x</code> and <code class="paramref">t</code>.
     content.vb: Public Function ProbabilityDensity(x As Single, t As Single) As Single
   overload: QuantumWaves.WaveFunction1D.ProbabilityDensity*
   nameWithType.vb: WaveFunction1D.ProbabilityDensity(Single, Single)
@@ -282,7 +296,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: ProbabilityInRange
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 49
+    startLine: 51
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -293,12 +307,16 @@ items:
     parameters:
     - id: t
       type: System.Single
+      description: The time at which the probability density is evaluated.
     - id: domain
       type: FloatRange
+      description: The range over which to integrate the probability density.
     - id: intervals
       type: System.Int32
+      description: The number of intervals used by Simpson integration.
     return:
       type: System.Single
+      description: The approximate probability over the specified range.
     content.vb: Public Function ProbabilityInRange(t As Single, domain As FloatRange, intervals As Integer = 100000) As Single
   overload: QuantumWaves.WaveFunction1D.ProbabilityInRange*
   nameWithType.vb: WaveFunction1D.ProbabilityInRange(Single, FloatRange, Integer)
@@ -322,23 +340,27 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: IntegrateRaw
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 57
+    startLine: 61
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
-  summary: Integrates |ψ(x,t)|² over a range without applying amplitude.
+  summary: Integrates the squared magnitude of the unscaled wave function over a range.
   example: []
   syntax:
     content: protected float IntegrateRaw(float t, FloatRange domain, int intervals = 100000)
     parameters:
     - id: t
       type: System.Single
+      description: The time at which the raw wave function is evaluated.
     - id: domain
       type: FloatRange
+      description: The range over which to integrate the raw probability density.
     - id: intervals
       type: System.Int32
+      description: The number of intervals used by Simpson integration.
     return:
       type: System.Single
+      description: The approximate integral of the unscaled probability density over the specified range.
     content.vb: Protected Function IntegrateRaw(t As Single, domain As FloatRange, intervals As Integer = 100000) As Single
   overload: QuantumWaves.WaveFunction1D.IntegrateRaw*
   nameWithType.vb: WaveFunction1D.IntegrateRaw(Single, FloatRange, Integer)
@@ -369,7 +391,7 @@ items:
   summary: Attempts to normalize the wave function.
   example: []
   syntax:
-    content: public bool TryNormalize(float t = 0, float tolerance = 0.0001, float max_allowed = 1000000, int max_count = 10000)
+    content: public bool TryNormalize(float t = 0, float tolerance = 0.0001, float maxAllowed = 1000000, int maxCount = 10000)
     parameters:
     - id: t
       type: System.Single
@@ -377,16 +399,16 @@ items:
     - id: tolerance
       type: System.Single
       description: Relative convergence tolerance for infinite domain expansion.
-    - id: max_allowed
+    - id: maxAllowed
       type: System.Single
       description: Maximum allowed integral value.
-    - id: max_count
+    - id: maxCount
       type: System.Int32
       description: Maximum number of expansion iterations.
     return:
       type: System.Boolean
-      description: True if normalization was successfull, otherwise false.
-    content.vb: Public Function TryNormalize(t As Single = 0, tolerance As Single = 0.0001, max_allowed As Single = 1000000, max_count As Integer = 10000) As Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if normalization was successful, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function TryNormalize(t As Single = 0, tolerance As Single = 0.0001, maxAllowed As Single = 1000000, maxCount As Integer = 10000) As Boolean
   overload: QuantumWaves.WaveFunction1D.TryNormalize*
   nameWithType.vb: WaveFunction1D.TryNormalize(Single, Single, Single, Integer)
   fullName.vb: QuantumWaves.WaveFunction1D.TryNormalize(Single, Single, Single, Integer)
@@ -409,7 +431,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Sample
     path: src/QuantumLibrary/Waves/WaveFunction1D.cs
-    startLine: 211
+    startLine: 209
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -447,7 +469,7 @@ items:
       description: Maximum number of expansion iterations. Must be greater than zero.
     return:
       type: System.Boolean
-      description: True if sampling succeeded, otherwise false.
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if sampling succeeded, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
     content.vb: Public Function Sample(sampleCount As Integer, samples As Single(), t As Single = 0, pointCount As Integer = 1000, rng As Random = Nothing, tolerance As Single = 0.0001, maxAllowed As Single = 1000000, maxCount As Integer = 10000) As Boolean
   overload: QuantumWaves.WaveFunction1D.Sample*
   exceptions:

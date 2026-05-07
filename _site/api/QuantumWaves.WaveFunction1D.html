@@ -121,7 +121,7 @@ Class WaveFunction1D
     <dt>Derived</dt>
     <dd>
       <div><a class="xref" href="QuantumWaves.SeparableWaveFunction1D.html">SeparableWaveFunction1D</a></div>
-      <div><a class="xref" href="QuantumWaves.SimpeWaveFunction1D.html">SimpeWaveFunction1D</a></div>
+      <div><a class="xref" href="QuantumWaves.SimpleWaveFunction1D.html">SimpleWaveFunction1D</a></div>
       <div><a class="xref" href="QuantumWaves.WeightedWaveFunction1D.html">WeightedWaveFunction1D</a></div>
     </dd>
   </dl>
@@ -179,9 +179,11 @@ Class WaveFunction1D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>domain</code> <a class="xref" href="FloatRange.html">FloatRange</a></dt>
-    <dd></dd>
+    <dd><p>The spatial domain of the wave function.</p>
+</dd>
     <dt><code>amplitude</code> <a class="xref" href="CMath.ComplexF.html">ComplexF</a></dt>
-    <dd></dd>
+    <dd><p>The amplitude of the wave function.</p>
+</dd>
   </dl>
 
 
@@ -274,7 +276,7 @@ Class WaveFunction1D
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Evaluates the wave function ψ(x, t).</p>
+  <div class="markdown level1 summary"><p>Evaluates the wave function ψ(<code class="paramref">x</code>, <code class="paramref">t</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -285,15 +287,19 @@ Class WaveFunction1D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The position at which to evaluate the wave function.</p>
+</dd>
     <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The time at which to evaluate the wave function.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CMath.ComplexF.html">ComplexF</a></dt>
-    <dd></dd>
+    <dd><p>The value of the wave function at <code class="paramref">x</code> and <code class="paramref">t</code>,
+or zero if <code class="paramref">x</code> is outside the domain.</p>
+</dd>
   </dl>
 
 
@@ -313,7 +319,7 @@ Class WaveFunction1D
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Evaluates the unscaled wave function at (x, t).</p>
+  <div class="markdown level1 summary"><p>Evaluates the unscaled wave function at (<code class="paramref">x</code>, <code class="paramref">t</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -324,15 +330,18 @@ Class WaveFunction1D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The position at which to evaluate the unscaled wave function.</p>
+</dd>
     <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The time at which to evaluate the unscaled wave function.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CMath.ComplexF.html">ComplexF</a></dt>
-    <dd></dd>
+    <dd><p>The unscaled value of the wave function at <code class="paramref">x</code> and <code class="paramref">t</code>.</p>
+</dd>
   </dl>
 
 
@@ -352,7 +361,7 @@ Class WaveFunction1D
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Integrates |ψ(x,t)|² over a range without applying amplitude.</p>
+  <div class="markdown level1 summary"><p>Integrates the squared magnitude of the unscaled wave function over a range.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -363,17 +372,21 @@ Class WaveFunction1D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The time at which the raw wave function is evaluated.</p>
+</dd>
     <dt><code>domain</code> <a class="xref" href="FloatRange.html">FloatRange</a></dt>
-    <dd></dd>
+    <dd><p>The range over which to integrate the raw probability density.</p>
+</dd>
     <dt><code>intervals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The number of intervals used by Simpson integration.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The approximate integral of the unscaled probability density over the specified range.</p>
+</dd>
   </dl>
 
 
@@ -393,7 +406,7 @@ Class WaveFunction1D
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Returns |ψ(x,t)|².</p>
+  <div class="markdown level1 summary"><p>Evaluates the probability density |ψ(<code class="paramref">x</code>, <code class="paramref">t</code>)|².</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -404,15 +417,18 @@ Class WaveFunction1D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The position at which to evaluate the probability density.</p>
+</dd>
     <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The time at which to evaluate the probability density.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The probability density at <code class="paramref">x</code> and <code class="paramref">t</code>.</p>
+</dd>
   </dl>
 
 
@@ -443,17 +459,21 @@ Class WaveFunction1D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The time at which the probability density is evaluated.</p>
+</dd>
     <dt><code>domain</code> <a class="xref" href="FloatRange.html">FloatRange</a></dt>
-    <dd></dd>
+    <dd><p>The range over which to integrate the probability density.</p>
+</dd>
     <dt><code>intervals</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd></dd>
+    <dd><p>The number of intervals used by Simpson integration.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The approximate probability over the specified range.</p>
+</dd>
   </dl>
 
 
@@ -513,7 +533,7 @@ Must be greater than one.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>True if sampling succeeded, otherwise false.</p>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if sampling succeeded, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
 </dd>
   </dl>
 
@@ -549,7 +569,7 @@ or <code class="paramref">maxCount</code> is less than or equal to zero.</p>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool TryNormalize(float t = 0, float tolerance = 0.0001, float max_allowed = 1000000, int max_count = 10000)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TryNormalize(float t = 0, float tolerance = 0.0001, float maxAllowed = 1000000, int maxCount = 10000)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
@@ -560,10 +580,10 @@ or <code class="paramref">maxCount</code> is less than or equal to zero.</p>
     <dt><code>tolerance</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Relative convergence tolerance for infinite domain expansion.</p>
 </dd>
-    <dt><code>max_allowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dt><code>maxAllowed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
     <dd><p>Maximum allowed integral value.</p>
 </dd>
-    <dt><code>max_count</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dt><code>maxCount</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
     <dd><p>Maximum number of expansion iterations.</p>
 </dd>
   </dl>
@@ -571,7 +591,7 @@ or <code class="paramref">maxCount</code> is less than or equal to zero.</p>
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd><p>True if normalization was successfull, otherwise false.</p>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if normalization was successful, otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.</p>
 </dd>
   </dl>
 

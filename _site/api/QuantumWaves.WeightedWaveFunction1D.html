@@ -208,10 +208,12 @@ Class WeightedWaveFunction1D
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentnullexception">ArgumentNullException</a></dt>
-    <dd><p>Thrown if an input array or wave function is null.</p>
+    <dd><p>Thrown if <code class="paramref">startCoefficients</code>,
+<code class="paramref">startWaveFunctions</code>,
+or any wave function element is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.</p>
 </dd>
     <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.argumentexception">ArgumentException</a></dt>
-    <dd><p>Thrown if no wave functions are provided or array sizes do not match.</p>
+    <dd><p>Thrown if no wave functions are provided or the array sizes do not match.</p>
 </dd>
   </dl>
 
@@ -338,7 +340,7 @@ Class WeightedWaveFunction1D
   
   </h3>
 
-  <div class="markdown level1 summary"><p>Evaluates the weighted sum at (x, t).</p>
+  <div class="markdown level1 summary"><p>Evaluates the weighted sum at (<code class="paramref">x</code>, <code class="paramref">t</code>).</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -349,15 +351,18 @@ Class WeightedWaveFunction1D
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
     <dt><code>x</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The position at which to evaluate the weighted wave function.</p>
+</dd>
     <dt><code>t</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
-    <dd></dd>
+    <dd><p>The time at which to evaluate the weighted wave function.</p>
+</dd>
   </dl>
 
   <h4 class="section">Returns</h4>
   <dl class="parameters">
     <dt><a class="xref" href="CMath.ComplexF.html">ComplexF</a></dt>
-    <dd></dd>
+    <dd><p>The weighted sum of all component wave functions evaluated at <code class="paramref">x</code> and <code class="paramref">t</code>.</p>
+</dd>
   </dl>
 
 

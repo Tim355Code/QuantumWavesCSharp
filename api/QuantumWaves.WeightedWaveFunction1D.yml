@@ -130,7 +130,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: .ctor
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
-    startLine: 31
+    startLine: 37
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -150,10 +150,15 @@ items:
   exceptions:
   - type: System.ArgumentNullException
     commentId: T:System.ArgumentNullException
-    description: Thrown if an input array or wave function is null.
+    description: >-
+      Thrown if <code class="paramref">startCoefficients</code>,
+
+      <code class="paramref">startWaveFunctions</code>,
+
+      or any wave function element is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
   - type: System.ArgumentException
     commentId: T:System.ArgumentException
-    description: Thrown if no wave functions are provided or array sizes do not match.
+    description: Thrown if no wave functions are provided or the array sizes do not match.
   nameWithType.vb: WeightedWaveFunction1D.New(ComplexF(), WaveFunction1D())
   fullName.vb: QuantumWaves.WeightedWaveFunction1D.New(CMath.ComplexF(), QuantumWaves.WaveFunction1D())
   name.vb: New(ComplexF(), WaveFunction1D())
@@ -175,7 +180,7 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Add
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
-    startLine: 57
+    startLine: 65
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
@@ -214,21 +219,24 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: EvaluateRaw
     path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
-    startLine: 68
+    startLine: 80
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves
-  summary: Evaluates the weighted sum at (x, t).
+  summary: Evaluates the weighted sum at (<code class="paramref">x</code>, <code class="paramref">t</code>).
   example: []
   syntax:
     content: protected override ComplexF EvaluateRaw(float x, float t)
     parameters:
     - id: x
       type: System.Single
+      description: The position at which to evaluate the weighted wave function.
     - id: t
       type: System.Single
+      description: The time at which to evaluate the weighted wave function.
     return:
       type: CMath.ComplexF
+      description: The weighted sum of all component wave functions evaluated at <code class="paramref">x</code> and <code class="paramref">t</code>.
     content.vb: Protected Overrides Function EvaluateRaw(x As Single, t As Single) As ComplexF
   overridden: QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
   overload: QuantumWaves.WeightedWaveFunction1D.EvaluateRaw*

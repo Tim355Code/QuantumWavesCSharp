@@ -6,6 +6,7 @@ items:
   parent: QuantumWaves.Solutions
   children:
   - QuantumWaves.Solutions.FreeParticle1D.Energy(System.Single,System.Single,System.Single)
+  - QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
   - QuantumWaves.Solutions.FreeParticle1D.PlaneWave(System.Single,System.Single,System.Single)
   langs:
   - csharp
@@ -58,14 +59,15 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: PlaneWave
     path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
-    startLine: 18
+    startLine: 24
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves.Solutions
   summary: Creates a plane wave solution for a free particle.
+  remarks: Plane waves are not square normalizable over an infinite domain.
   example: []
   syntax:
-    content: public static SeparableWaveFunction1D PlaneWave(float k, float mass, float h_bar)
+    content: public static SeparableWaveFunction1D PlaneWave(float k, float mass, float hBar)
     parameters:
     - id: k
       type: System.Single
@@ -73,18 +75,21 @@ items:
     - id: mass
       type: System.Single
       description: Particle mass (must be greater than zero).
-    - id: h_bar
+    - id: hBar
       type: System.Single
       description: Reduced Planck constant (must be greater than zero).
     return:
       type: QuantumWaves.SeparableWaveFunction1D
       description: A separable wave function representing the plane wave.
-    content.vb: Public Shared Function PlaneWave(k As Single, mass As Single, h_bar As Single) As SeparableWaveFunction1D
+    content.vb: Public Shared Function PlaneWave(k As Single, mass As Single, hBar As Single) As SeparableWaveFunction1D
   overload: QuantumWaves.Solutions.FreeParticle1D.PlaneWave*
   exceptions:
   - type: System.ArgumentOutOfRangeException
     commentId: T:System.ArgumentOutOfRangeException
-    description: Thrown if mass or h_bar is not positive.
+    description: >-
+      Thrown if <code class="paramref">mass</code> or <code class="paramref">hBar</code>
+
+      is less than or equal to zero.
   nameWithType.vb: FreeParticle1D.PlaneWave(Single, Single, Single)
   fullName.vb: QuantumWaves.Solutions.FreeParticle1D.PlaneWave(Single, Single, Single)
   name.vb: PlaneWave(Single, Single, Single)
@@ -106,14 +111,14 @@ items:
       repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
     id: Energy
     path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
-    startLine: 39
+    startLine: 48
   assemblies:
   - QuantumLibrary
   namespace: QuantumWaves.Solutions
   summary: Computes the energy of a free particle given its wave number.
   example: []
   syntax:
-    content: public static float Energy(float k, float mass, float h_bar)
+    content: public static float Energy(float k, float mass, float hBar)
     parameters:
     - id: k
       type: System.Single
@@ -121,21 +126,112 @@ items:
     - id: mass
       type: System.Single
       description: Particle mass (must be greater than zero).
-    - id: h_bar
+    - id: hBar
       type: System.Single
       description: Reduced Planck constant (must be greater than zero).
     return:
       type: System.Single
       description: The particle energy.
-    content.vb: Public Shared Function Energy(k As Single, mass As Single, h_bar As Single) As Single
+    content.vb: Public Shared Function Energy(k As Single, mass As Single, hBar As Single) As Single
   overload: QuantumWaves.Solutions.FreeParticle1D.Energy*
   exceptions:
   - type: System.ArgumentOutOfRangeException
     commentId: T:System.ArgumentOutOfRangeException
-    description: Thrown if mass or h_bar is not positive.
+    description: >-
+      Thrown if <code class="paramref">mass</code> or <code class="paramref">hBar</code>
+
+      is less than or equal to zero.
   nameWithType.vb: FreeParticle1D.Energy(Single, Single, Single)
   fullName.vb: QuantumWaves.Solutions.FreeParticle1D.Energy(Single, Single, Single)
   name.vb: Energy(Single, Single, Single)
+- uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
+  commentId: M:QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
+  id: GaussianWavePacket(System.Single,System.Single,System.Single,System.Single,System.Single,System.Int32,System.Single)
+  parent: QuantumWaves.Solutions.FreeParticle1D
+  langs:
+  - csharp
+  - vb
+  name: GaussianWavePacket(float, float, float, float, float, int, float)
+  nameWithType: FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float)
+  fullName: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(float, float, float, float, float, int, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: GaussianWavePacket
+    path: src/QuantumLibrary/Waves/Solutions/FreeParticle1D.cs
+    startLine: 106
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves.Solutions
+  summary: Creates an approximate Gaussian wave packet as a weighted sum of plane waves.
+  remarks: >-
+    The packet is constructed by discretizing the Fourier integral representation
+
+    of a Gaussian momentum distribution.
+
+
+    Larger <code class="paramref">termCount</code> and smaller <code class="paramref">deltaK</code>
+
+    improve the approximation quality at the cost of additional computation.
+
+
+    The resulting packet is approximately normalized when the sampled momentum
+
+    range is sufficiently large.
+  example: []
+  syntax:
+    content: public static WeightedWaveFunction1D GaussianWavePacket(float x0, float sigma, float k0, float mass, float hBar, int termCount = 500, float deltaK = 0.01)
+    parameters:
+    - id: x0
+      type: System.Single
+      description: Initial center position of the packet.
+    - id: sigma
+      type: System.Single
+      description: Spatial width parameter of the Gaussian packet. Must be greater than zero.
+    - id: k0
+      type: System.Single
+      description: Central wave number of the packet.
+    - id: mass
+      type: System.Single
+      description: Particle mass. Must be greater than zero.
+    - id: hBar
+      type: System.Single
+      description: Reduced Planck constant. Must be greater than zero.
+    - id: termCount
+      type: System.Int32
+      description: >-
+        Number of plane wave terms used in the approximation.
+
+        Must be positive and odd.
+    - id: deltaK
+      type: System.Single
+      description: >-
+        Spacing between sampled wave numbers in momentum space.
+
+        Must be greater than zero.
+    return:
+      type: QuantumWaves.WeightedWaveFunction1D
+      description: A weighted superposition of plane waves approximating a Gaussian wave packet.
+    content.vb: Public Shared Function GaussianWavePacket(x0 As Single, sigma As Single, k0 As Single, mass As Single, hBar As Single, termCount As Integer = 500, deltaK As Single = 0.01) As WeightedWaveFunction1D
+  overload: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: >-
+      Thrown if <code class="paramref">sigma</code>, <code class="paramref">mass</code>,
+
+      <code class="paramref">hBar</code>, <code class="paramref">termCount</code>,
+
+      or <code class="paramref">deltaK</code> is invalid.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if <code class="paramref">termCount</code> is even.
+  nameWithType.vb: FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
+  fullName.vb: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
+  name.vb: GaussianWavePacket(Single, Single, Single, Single, Single, Integer, Single)
 references:
 - uid: QuantumWaves.Solutions
   commentId: N:QuantumWaves.Solutions
@@ -439,3 +535,34 @@ references:
   name: Energy
   nameWithType: FreeParticle1D.Energy
   fullName: QuantumWaves.Solutions.FreeParticle1D.Energy
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket*
+  commentId: Overload:QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket
+  href: QuantumWaves.Solutions.FreeParticle1D.html#QuantumWaves_Solutions_FreeParticle1D_GaussianWavePacket_System_Single_System_Single_System_Single_System_Single_System_Single_System_Int32_System_Single_
+  name: GaussianWavePacket
+  nameWithType: FreeParticle1D.GaussianWavePacket
+  fullName: QuantumWaves.Solutions.FreeParticle1D.GaussianWavePacket
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: QuantumWaves.WeightedWaveFunction1D
+  commentId: T:QuantumWaves.WeightedWaveFunction1D
+  parent: QuantumWaves
+  href: QuantumWaves.WeightedWaveFunction1D.html
+  name: WeightedWaveFunction1D
+  nameWithType: WeightedWaveFunction1D
+  fullName: QuantumWaves.WeightedWaveFunction1D

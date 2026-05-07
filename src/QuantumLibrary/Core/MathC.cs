@@ -29,8 +29,10 @@ namespace CMath
         /// <param name="tolerance">The maximum allowed distance between the two values.</param>
         /// <returns>
         /// <see langword="true"/> if the magnitude of <paramref name="a"/> - <paramref name="b"/>
-        /// is less than or equal to <paramref name="tolerance"/>; otherwise, <see langword="false"/>.
+        /// is less than or equal to <paramref name="tolerance"/>, otherwise <see langword="false"/>.
         /// </returns>
+        /// <exception cref="ArgumentOutOfRangeException">
+        /// Thrown if <paramref name="tolerance"/> is less or equal to zero.</exception>
         public static bool Approximately(ComplexF a, ComplexF b, float tolerance = 1e-5f)
         {
             if (tolerance <= 0)
@@ -153,9 +155,6 @@ namespace CMath
         /// <param name="min">The minimum component values.</param>
         /// <param name="max">The maximum component values.</param>
         /// <returns>The component-wise clamped complex value.</returns>
-        /// <remarks>
-        /// The real and imaginary components are clamped independently.
-        /// </remarks>
         public static ComplexF Clamp(ComplexF value, ComplexF min, ComplexF max)
         {
             return new ComplexF(
@@ -166,9 +165,6 @@ namespace CMath
         /// <summary>Clamps the value component-wise between 0 and 1.</summary>
         /// <param name="value">The complex value to clamp.</param>
         /// <returns>The component-wise clamped complex value.</returns>
-        /// <remarks>
-        /// The real and imaginary components are clamped independently.
-        /// </remarks>
         public static ComplexF Clamp01(ComplexF value)
         {
             return new ComplexF(
