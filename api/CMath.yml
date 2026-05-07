@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: CMath
+  commentId: N:CMath
+  id: CMath
+  children:
+  - CMath.ComplexF
+  - CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: CMath
+  nameWithType: CMath
+  fullName: CMath
+  type: Namespace
+  assemblies:
+  - QuantumLibrary
+references:
+- uid: CMath.ComplexF
+  commentId: T:CMath.ComplexF
+  parent: CMath
+  href: CMath.ComplexF.html
+  name: ComplexF
+  nameWithType: ComplexF
+  fullName: CMath.ComplexF
+- uid: CMath.MathC
+  commentId: T:CMath.MathC
+  href: CMath.MathC.html
+  name: MathC
+  nameWithType: MathC
+  fullName: CMath.MathC
+- uid: CMath
+  commentId: N:CMath
+  href: CMath.html
+  name: CMath
+  nameWithType: CMath
+  fullName: CMath

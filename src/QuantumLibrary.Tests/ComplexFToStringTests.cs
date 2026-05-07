@@ -1,6 +1,4 @@
-using CMath;
-
-namespace QuantumLibrary.Tests;
+namespace CMath.Tests;
 
 public class ComplexFToStringTests
 {

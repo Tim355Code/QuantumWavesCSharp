@@ -1,12 +1,8 @@
-﻿using CMath;
+﻿using QuantumWaves;
+using QuantumWaves.Solutions;
 
-ComplexF a = new ComplexF(3, 4);
-Console.WriteLine($"a: {a}");
-Console.WriteLine($"Magnitude of a: {a.Magnitude}");
-Console.WriteLine($"Conjugate of a: {a.Conjugate}");
+WaveFunction1D infiniteWell = HarmonicOscillator1D.State(3, 1f, 1f);
+Console.WriteLine($"True normalization constant: {infiniteWell.Amplitude}");
 
-ComplexF b = ComplexF.I * 2f;
-
-ComplexF c = a * b;
-Console.WriteLine($"c: {c}");
-
+Console.WriteLine(infiniteWell.TryNormalize());
+Console.WriteLine($"Approx normalization constant: {infiniteWell.Amplitude}");

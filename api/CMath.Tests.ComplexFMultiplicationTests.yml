@@ -1,0 +1,552 @@
+### YamlMime:ManagedReference
+items:
+- uid: CMath.Tests.ComplexFMultiplicationTests
+  commentId: T:CMath.Tests.ComplexFMultiplicationTests
+  id: ComplexFMultiplicationTests
+  parent: CMath.Tests
+  children:
+  - CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN
+  - CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue
+  - CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero
+  - CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity
+  - CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: ComplexFMultiplicationTests
+  nameWithType: ComplexFMultiplicationTests
+  fullName: CMath.Tests.ComplexFMultiplicationTests
+  type: Class
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: ComplexFMultiplicationTests
+    path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+    startLine: 2
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: public class ComplexFMultiplicationTests
+    content.vb: Public Class ComplexFMultiplicationTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: Multiplication_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  parent: CMath.Tests.ComplexFMultiplicationTests
+  langs:
+  - csharp
+  - vb
+  name: Multiplication_Works(float, float, float, float, float, float)
+  nameWithType: ComplexFMultiplicationTests.Multiplication_Works(float, float, float, float, float, float)
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works(float, float, float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Multiplication_Works
+    path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+    startLine: 4
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Theory]
+
+      [InlineData(new object[] { 1, 2, 3, 4, -5, 10 })]
+
+      [InlineData(new object[] { 0, 1, 0, 1, -1, 0 })]
+
+      [InlineData(new object[] { 2, 0, 3, 4, 6, 8 })]
+
+      public void Multiplication_Works(float ar, float ai, float br, float bi, float er, float ei)
+    parameters:
+    - id: ar
+      type: System.Single
+    - id: ai
+      type: System.Single
+    - id: br
+      type: System.Single
+    - id: bi
+      type: System.Single
+    - id: er
+      type: System.Single
+    - id: ei
+      type: System.Single
+    content.vb: >-
+      <Theory>
+
+      <InlineData(New Object() { 1, 2, 3, 4, -5, 10 })>
+
+      <InlineData(New Object() { 0, 1, 0, 1, -1, 0 })>
+
+      <InlineData(New Object() { 2, 0, 3, 4, 6, 8 })>
+
+      Public Sub Multiplication_Works(ar As Single, ai As Single, br As Single, bi As Single, er As Single, ei As Single)
+  overload: CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works*
+  attributes:
+  - type: Xunit.TheoryAttribute
+    ctor: Xunit.TheoryAttribute.#ctor
+    arguments: []
+  nameWithType.vb: ComplexFMultiplicationTests.Multiplication_Works(Single, Single, Single, Single, Single, Single)
+  fullName.vb: CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works(Single, Single, Single, Single, Single, Single)
+  name.vb: Multiplication_Works(Single, Single, Single, Single, Single, Single)
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero
+  commentId: M:CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero
+  id: Multiplication_ByZero_ReturnsZero
+  parent: CMath.Tests.ComplexFMultiplicationTests
+  langs:
+  - csharp
+  - vb
+  name: Multiplication_ByZero_ReturnsZero()
+  nameWithType: ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero()
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Multiplication_ByZero_ReturnsZero
+    path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+    startLine: 16
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Multiplication_ByZero_ReturnsZero()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Multiplication_ByZero_ReturnsZero()
+  overload: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue
+  commentId: M:CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue
+  id: Multiplication_ByOne_ReturnsSameValue
+  parent: CMath.Tests.ComplexFMultiplicationTests
+  langs:
+  - csharp
+  - vb
+  name: Multiplication_ByOne_ReturnsSameValue()
+  nameWithType: ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue()
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Multiplication_ByOne_ReturnsSameValue
+    path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+    startLine: 22
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Multiplication_ByOne_ReturnsSameValue()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Multiplication_ByOne_ReturnsSameValue()
+  overload: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN
+  commentId: M:CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN
+  id: Multiplication_ByNaN_ReturnsNaN
+  parent: CMath.Tests.ComplexFMultiplicationTests
+  langs:
+  - csharp
+  - vb
+  name: Multiplication_ByNaN_ReturnsNaN()
+  nameWithType: ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN()
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Multiplication_ByNaN_ReturnsNaN
+    path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+    startLine: 30
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Multiplication_ByNaN_ReturnsNaN()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Multiplication_ByNaN_ReturnsNaN()
+  overload: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity
+  commentId: M:CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity
+  id: Multiplication_WithInfinity_ReturnsInfinity
+  parent: CMath.Tests.ComplexFMultiplicationTests
+  langs:
+  - csharp
+  - vb
+  name: Multiplication_WithInfinity_ReturnsInfinity()
+  nameWithType: ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity()
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Multiplication_WithInfinity_ReturnsInfinity
+    path: src/QuantumLibrary.Tests/ComplexFMultiplicationTests.cs
+    startLine: 36
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Multiplication_WithInfinity_ReturnsInfinity()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Multiplication_WithInfinity_ReturnsInfinity()
+  overload: CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+references:
+- uid: CMath.Tests
+  commentId: N:CMath.Tests
+  href: CMath.html
+  name: CMath.Tests
+  nameWithType: CMath.Tests
+  fullName: CMath.Tests
+  spec.csharp:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+  spec.vb:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works*
+  commentId: Overload:CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works
+  href: CMath.Tests.ComplexFMultiplicationTests.html#CMath_Tests_ComplexFMultiplicationTests_Multiplication_Works_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: Multiplication_Works
+  nameWithType: ComplexFMultiplicationTests.Multiplication_Works
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_Works
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero*
+  commentId: Overload:CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero
+  href: CMath.Tests.ComplexFMultiplicationTests.html#CMath_Tests_ComplexFMultiplicationTests_Multiplication_ByZero_ReturnsZero
+  name: Multiplication_ByZero_ReturnsZero
+  nameWithType: ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByZero_ReturnsZero
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue*
+  commentId: Overload:CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue
+  href: CMath.Tests.ComplexFMultiplicationTests.html#CMath_Tests_ComplexFMultiplicationTests_Multiplication_ByOne_ReturnsSameValue
+  name: Multiplication_ByOne_ReturnsSameValue
+  nameWithType: ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByOne_ReturnsSameValue
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN*
+  commentId: Overload:CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN
+  href: CMath.Tests.ComplexFMultiplicationTests.html#CMath_Tests_ComplexFMultiplicationTests_Multiplication_ByNaN_ReturnsNaN
+  name: Multiplication_ByNaN_ReturnsNaN
+  nameWithType: ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_ByNaN_ReturnsNaN
+- uid: CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity*
+  commentId: Overload:CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity
+  href: CMath.Tests.ComplexFMultiplicationTests.html#CMath_Tests_ComplexFMultiplicationTests_Multiplication_WithInfinity_ReturnsInfinity
+  name: Multiplication_WithInfinity_ReturnsInfinity
+  nameWithType: ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity
+  fullName: CMath.Tests.ComplexFMultiplicationTests.Multiplication_WithInfinity_ReturnsInfinity

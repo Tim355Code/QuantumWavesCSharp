@@ -1,0 +1,1092 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumWaves.WeightedWaveFunction1D
+  commentId: T:QuantumWaves.WeightedWaveFunction1D
+  id: WeightedWaveFunction1D
+  parent: QuantumWaves
+  children:
+  - QuantumWaves.WeightedWaveFunction1D.#ctor(CMath.ComplexF[],QuantumWaves.WaveFunction1D[])
+  - QuantumWaves.WeightedWaveFunction1D.Add(CMath.ComplexF,QuantumWaves.WaveFunction1D)
+  - QuantumWaves.WeightedWaveFunction1D.Coefficients
+  - QuantumWaves.WeightedWaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  - QuantumWaves.WeightedWaveFunction1D.WaveFunctions
+  langs:
+  - csharp
+  - vb
+  name: WeightedWaveFunction1D
+  nameWithType: WeightedWaveFunction1D
+  fullName: QuantumWaves.WeightedWaveFunction1D
+  type: Class
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: WeightedWaveFunction1D
+    path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+    startLine: 9
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves
+  summary: Represents a weighted combination of one dimensional wave functions.
+  example: []
+  syntax:
+    content: 'public sealed class WeightedWaveFunction1D : WaveFunction1D'
+    content.vb: Public NotInheritable Class WeightedWaveFunction1D Inherits WaveFunction1D
+  inheritance:
+  - System.Object
+  - QuantumWaves.WaveFunction1D
+  inheritedMembers:
+  - QuantumWaves.WaveFunction1D.Amplitude
+  - QuantumWaves.WaveFunction1D.Domain
+  - QuantumWaves.WaveFunction1D.Evaluate(System.Single,System.Single)
+  - QuantumWaves.WaveFunction1D.ProbabilityDensity(System.Single,System.Single)
+  - QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
+  - QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
+  - QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: QuantumWaves.WeightedWaveFunction1D.Coefficients
+  commentId: P:QuantumWaves.WeightedWaveFunction1D.Coefficients
+  id: Coefficients
+  parent: QuantumWaves.WeightedWaveFunction1D
+  langs:
+  - csharp
+  - vb
+  name: Coefficients
+  nameWithType: WeightedWaveFunction1D.Coefficients
+  fullName: QuantumWaves.WeightedWaveFunction1D.Coefficients
+  type: Property
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Coefficients
+    path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+    startLine: 17
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves
+  summary: Gets the coefficients for each wave function.
+  example: []
+  syntax:
+    content: public IReadOnlyList<ComplexF> Coefficients { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{CMath.ComplexF}
+    content.vb: Public ReadOnly Property Coefficients As IReadOnlyList(Of ComplexF)
+  overload: QuantumWaves.WeightedWaveFunction1D.Coefficients*
+- uid: QuantumWaves.WeightedWaveFunction1D.WaveFunctions
+  commentId: P:QuantumWaves.WeightedWaveFunction1D.WaveFunctions
+  id: WaveFunctions
+  parent: QuantumWaves.WeightedWaveFunction1D
+  langs:
+  - csharp
+  - vb
+  name: WaveFunctions
+  nameWithType: WeightedWaveFunction1D.WaveFunctions
+  fullName: QuantumWaves.WeightedWaveFunction1D.WaveFunctions
+  type: Property
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: WaveFunctions
+    path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+    startLine: 22
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves
+  summary: Gets the wave functions in the weighted sum.
+  example: []
+  syntax:
+    content: public IReadOnlyList<WaveFunction1D> WaveFunctions { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{QuantumWaves.WaveFunction1D}
+    content.vb: Public ReadOnly Property WaveFunctions As IReadOnlyList(Of WaveFunction1D)
+  overload: QuantumWaves.WeightedWaveFunction1D.WaveFunctions*
+- uid: QuantumWaves.WeightedWaveFunction1D.#ctor(CMath.ComplexF[],QuantumWaves.WaveFunction1D[])
+  commentId: M:QuantumWaves.WeightedWaveFunction1D.#ctor(CMath.ComplexF[],QuantumWaves.WaveFunction1D[])
+  id: '#ctor(CMath.ComplexF[],QuantumWaves.WaveFunction1D[])'
+  parent: QuantumWaves.WeightedWaveFunction1D
+  langs:
+  - csharp
+  - vb
+  name: WeightedWaveFunction1D(ComplexF[], WaveFunction1D[])
+  nameWithType: WeightedWaveFunction1D.WeightedWaveFunction1D(ComplexF[], WaveFunction1D[])
+  fullName: QuantumWaves.WeightedWaveFunction1D.WeightedWaveFunction1D(CMath.ComplexF[], QuantumWaves.WaveFunction1D[])
+  type: Constructor
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: .ctor
+    path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+    startLine: 31
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves
+  summary: Initializes a weighted wave function from coefficients and wave functions.
+  example: []
+  syntax:
+    content: public WeightedWaveFunction1D(ComplexF[] startCoefficients, WaveFunction1D[] startWaveFunctions)
+    parameters:
+    - id: startCoefficients
+      type: CMath.ComplexF[]
+      description: Initial coefficients.
+    - id: startWaveFunctions
+      type: QuantumWaves.WaveFunction1D[]
+      description: Initial wave functions.
+    content.vb: Public Sub New(startCoefficients As ComplexF(), startWaveFunctions As WaveFunction1D())
+  overload: QuantumWaves.WeightedWaveFunction1D.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if an input array or wave function is null.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if no wave functions are provided or array sizes do not match.
+  nameWithType.vb: WeightedWaveFunction1D.New(ComplexF(), WaveFunction1D())
+  fullName.vb: QuantumWaves.WeightedWaveFunction1D.New(CMath.ComplexF(), QuantumWaves.WaveFunction1D())
+  name.vb: New(ComplexF(), WaveFunction1D())
+- uid: QuantumWaves.WeightedWaveFunction1D.Add(CMath.ComplexF,QuantumWaves.WaveFunction1D)
+  commentId: M:QuantumWaves.WeightedWaveFunction1D.Add(CMath.ComplexF,QuantumWaves.WaveFunction1D)
+  id: Add(CMath.ComplexF,QuantumWaves.WaveFunction1D)
+  parent: QuantumWaves.WeightedWaveFunction1D
+  langs:
+  - csharp
+  - vb
+  name: Add(ComplexF, WaveFunction1D)
+  nameWithType: WeightedWaveFunction1D.Add(ComplexF, WaveFunction1D)
+  fullName: QuantumWaves.WeightedWaveFunction1D.Add(CMath.ComplexF, QuantumWaves.WaveFunction1D)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Add
+    path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+    startLine: 57
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves
+  summary: Adds a wave function with its coefficient.
+  example: []
+  syntax:
+    content: public void Add(ComplexF coefficient, WaveFunction1D waveFunction)
+    parameters:
+    - id: coefficient
+      type: CMath.ComplexF
+      description: Coefficient for the wave function.
+    - id: waveFunction
+      type: QuantumWaves.WaveFunction1D
+      description: Wave function to add.
+    content.vb: Public Sub Add(coefficient As ComplexF, waveFunction As WaveFunction1D)
+  overload: QuantumWaves.WeightedWaveFunction1D.Add*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if waveFunction is null.
+- uid: QuantumWaves.WeightedWaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  commentId: M:QuantumWaves.WeightedWaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  id: EvaluateRaw(System.Single,System.Single)
+  parent: QuantumWaves.WeightedWaveFunction1D
+  langs:
+  - csharp
+  - vb
+  name: EvaluateRaw(float, float)
+  nameWithType: WeightedWaveFunction1D.EvaluateRaw(float, float)
+  fullName: QuantumWaves.WeightedWaveFunction1D.EvaluateRaw(float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: EvaluateRaw
+    path: src/QuantumLibrary/Waves/WeightedWaveFunction1D.cs
+    startLine: 68
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves
+  summary: Evaluates the weighted sum at (x, t).
+  example: []
+  syntax:
+    content: protected override ComplexF EvaluateRaw(float x, float t)
+    parameters:
+    - id: x
+      type: System.Single
+    - id: t
+      type: System.Single
+    return:
+      type: CMath.ComplexF
+    content.vb: Protected Overrides Function EvaluateRaw(x As Single, t As Single) As ComplexF
+  overridden: QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  overload: QuantumWaves.WeightedWaveFunction1D.EvaluateRaw*
+  nameWithType.vb: WeightedWaveFunction1D.EvaluateRaw(Single, Single)
+  fullName.vb: QuantumWaves.WeightedWaveFunction1D.EvaluateRaw(Single, Single)
+  name.vb: EvaluateRaw(Single, Single)
+references:
+- uid: QuantumWaves
+  commentId: N:QuantumWaves
+  href: QuantumWaves.html
+  name: QuantumWaves
+  nameWithType: QuantumWaves
+  fullName: QuantumWaves
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: QuantumWaves.WaveFunction1D
+  commentId: T:QuantumWaves.WaveFunction1D
+  parent: QuantumWaves
+  href: QuantumWaves.WaveFunction1D.html
+  name: WaveFunction1D
+  nameWithType: WaveFunction1D
+  fullName: QuantumWaves.WaveFunction1D
+- uid: QuantumWaves.WaveFunction1D.Amplitude
+  commentId: P:QuantumWaves.WaveFunction1D.Amplitude
+  parent: QuantumWaves.WaveFunction1D
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Amplitude
+  name: Amplitude
+  nameWithType: WaveFunction1D.Amplitude
+  fullName: QuantumWaves.WaveFunction1D.Amplitude
+- uid: QuantumWaves.WaveFunction1D.Domain
+  commentId: P:QuantumWaves.WaveFunction1D.Domain
+  parent: QuantumWaves.WaveFunction1D
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Domain
+  name: Domain
+  nameWithType: WaveFunction1D.Domain
+  fullName: QuantumWaves.WaveFunction1D.Domain
+- uid: QuantumWaves.WaveFunction1D.Evaluate(System.Single,System.Single)
+  commentId: M:QuantumWaves.WaveFunction1D.Evaluate(System.Single,System.Single)
+  parent: QuantumWaves.WaveFunction1D
+  isExternal: true
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Evaluate_System_Single_System_Single_
+  name: Evaluate(float, float)
+  nameWithType: WaveFunction1D.Evaluate(float, float)
+  fullName: QuantumWaves.WaveFunction1D.Evaluate(float, float)
+  nameWithType.vb: WaveFunction1D.Evaluate(Single, Single)
+  fullName.vb: QuantumWaves.WaveFunction1D.Evaluate(Single, Single)
+  name.vb: Evaluate(Single, Single)
+  spec.csharp:
+  - uid: QuantumWaves.WaveFunction1D.Evaluate(System.Single,System.Single)
+    name: Evaluate
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Evaluate_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: QuantumWaves.WaveFunction1D.Evaluate(System.Single,System.Single)
+    name: Evaluate
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Evaluate_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: QuantumWaves.WaveFunction1D.ProbabilityDensity(System.Single,System.Single)
+  commentId: M:QuantumWaves.WaveFunction1D.ProbabilityDensity(System.Single,System.Single)
+  parent: QuantumWaves.WaveFunction1D
+  isExternal: true
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_ProbabilityDensity_System_Single_System_Single_
+  name: ProbabilityDensity(float, float)
+  nameWithType: WaveFunction1D.ProbabilityDensity(float, float)
+  fullName: QuantumWaves.WaveFunction1D.ProbabilityDensity(float, float)
+  nameWithType.vb: WaveFunction1D.ProbabilityDensity(Single, Single)
+  fullName.vb: QuantumWaves.WaveFunction1D.ProbabilityDensity(Single, Single)
+  name.vb: ProbabilityDensity(Single, Single)
+  spec.csharp:
+  - uid: QuantumWaves.WaveFunction1D.ProbabilityDensity(System.Single,System.Single)
+    name: ProbabilityDensity
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_ProbabilityDensity_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: QuantumWaves.WaveFunction1D.ProbabilityDensity(System.Single,System.Single)
+    name: ProbabilityDensity
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_ProbabilityDensity_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
+  commentId: M:QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
+  parent: QuantumWaves.WaveFunction1D
+  isExternal: true
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_ProbabilityInRange_System_Single_FloatRange_System_Int32_
+  name: ProbabilityInRange(float, FloatRange, int)
+  nameWithType: WaveFunction1D.ProbabilityInRange(float, FloatRange, int)
+  fullName: QuantumWaves.WaveFunction1D.ProbabilityInRange(float, FloatRange, int)
+  nameWithType.vb: WaveFunction1D.ProbabilityInRange(Single, FloatRange, Integer)
+  fullName.vb: QuantumWaves.WaveFunction1D.ProbabilityInRange(Single, FloatRange, Integer)
+  name.vb: ProbabilityInRange(Single, FloatRange, Integer)
+  spec.csharp:
+  - uid: QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
+    name: ProbabilityInRange
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_ProbabilityInRange_System_Single_FloatRange_System_Int32_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: FloatRange
+    name: FloatRange
+    href: FloatRange.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuantumWaves.WaveFunction1D.ProbabilityInRange(System.Single,FloatRange,System.Int32)
+    name: ProbabilityInRange
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_ProbabilityInRange_System_Single_FloatRange_System_Int32_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: FloatRange
+    name: FloatRange
+    href: FloatRange.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
+  commentId: M:QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
+  parent: QuantumWaves.WaveFunction1D
+  isExternal: true
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_TryNormalize_System_Single_System_Single_System_Single_System_Int32_
+  name: TryNormalize(float, float, float, int)
+  nameWithType: WaveFunction1D.TryNormalize(float, float, float, int)
+  fullName: QuantumWaves.WaveFunction1D.TryNormalize(float, float, float, int)
+  nameWithType.vb: WaveFunction1D.TryNormalize(Single, Single, Single, Integer)
+  fullName.vb: QuantumWaves.WaveFunction1D.TryNormalize(Single, Single, Single, Integer)
+  name.vb: TryNormalize(Single, Single, Single, Integer)
+  spec.csharp:
+  - uid: QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
+    name: TryNormalize
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_TryNormalize_System_Single_System_Single_System_Single_System_Int32_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuantumWaves.WaveFunction1D.TryNormalize(System.Single,System.Single,System.Single,System.Int32)
+    name: TryNormalize
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_TryNormalize_System_Single_System_Single_System_Single_System_Int32_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  commentId: M:QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+  parent: QuantumWaves.WaveFunction1D
+  isExternal: true
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+  name: Sample(int, out float[], float, int, Random, float, float, int)
+  nameWithType: WaveFunction1D.Sample(int, out float[], float, int, Random, float, float, int)
+  fullName: QuantumWaves.WaveFunction1D.Sample(int, out float[], float, int, System.Random, float, float, int)
+  nameWithType.vb: WaveFunction1D.Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
+  fullName.vb: QuantumWaves.WaveFunction1D.Sample(Integer, Single(), Single, Integer, System.Random, Single, Single, Integer)
+  name.vb: Sample(Integer, Single(), Single, Integer, Random, Single, Single, Integer)
+  spec.csharp:
+  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+    name: Sample
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '['
+  - name: ']'
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Random
+    name: Random
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.random
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuantumWaves.WaveFunction1D.Sample(System.Int32,System.Single[]@,System.Single,System.Int32,System.Random,System.Single,System.Single,System.Int32)
+    name: Sample
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_Sample_System_Int32_System_Single____System_Single_System_Int32_System_Random_System_Single_System_Single_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: (
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Random
+    name: Random
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.random
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: QuantumWaves.WeightedWaveFunction1D.Coefficients*
+  commentId: Overload:QuantumWaves.WeightedWaveFunction1D.Coefficients
+  href: QuantumWaves.WeightedWaveFunction1D.html#QuantumWaves_WeightedWaveFunction1D_Coefficients
+  name: Coefficients
+  nameWithType: WeightedWaveFunction1D.Coefficients
+  fullName: QuantumWaves.WeightedWaveFunction1D.Coefficients
+- uid: System.Collections.Generic.IReadOnlyList{CMath.ComplexF}
+  commentId: T:System.Collections.Generic.IReadOnlyList{CMath.ComplexF}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<ComplexF>
+  nameWithType: IReadOnlyList<ComplexF>
+  fullName: System.Collections.Generic.IReadOnlyList<CMath.ComplexF>
+  nameWithType.vb: IReadOnlyList(Of ComplexF)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of CMath.ComplexF)
+  name.vb: IReadOnlyList(Of ComplexF)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: CMath.ComplexF
+    name: ComplexF
+    href: CMath.ComplexF.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: CMath.ComplexF
+    name: ComplexF
+    href: CMath.ComplexF.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: QuantumWaves.WeightedWaveFunction1D.WaveFunctions*
+  commentId: Overload:QuantumWaves.WeightedWaveFunction1D.WaveFunctions
+  href: QuantumWaves.WeightedWaveFunction1D.html#QuantumWaves_WeightedWaveFunction1D_WaveFunctions
+  name: WaveFunctions
+  nameWithType: WeightedWaveFunction1D.WaveFunctions
+  fullName: QuantumWaves.WeightedWaveFunction1D.WaveFunctions
+- uid: System.Collections.Generic.IReadOnlyList{QuantumWaves.WaveFunction1D}
+  commentId: T:System.Collections.Generic.IReadOnlyList{QuantumWaves.WaveFunction1D}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<WaveFunction1D>
+  nameWithType: IReadOnlyList<WaveFunction1D>
+  fullName: System.Collections.Generic.IReadOnlyList<QuantumWaves.WaveFunction1D>
+  nameWithType.vb: IReadOnlyList(Of WaveFunction1D)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of QuantumWaves.WaveFunction1D)
+  name.vb: IReadOnlyList(Of WaveFunction1D)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: QuantumWaves.WaveFunction1D
+    name: WaveFunction1D
+    href: QuantumWaves.WaveFunction1D.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: QuantumWaves.WaveFunction1D
+    name: WaveFunction1D
+    href: QuantumWaves.WaveFunction1D.html
+  - name: )
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: QuantumWaves.WeightedWaveFunction1D.#ctor*
+  commentId: Overload:QuantumWaves.WeightedWaveFunction1D.#ctor
+  href: QuantumWaves.WeightedWaveFunction1D.html#QuantumWaves_WeightedWaveFunction1D__ctor_CMath_ComplexF___QuantumWaves_WaveFunction1D___
+  name: WeightedWaveFunction1D
+  nameWithType: WeightedWaveFunction1D.WeightedWaveFunction1D
+  fullName: QuantumWaves.WeightedWaveFunction1D.WeightedWaveFunction1D
+  nameWithType.vb: WeightedWaveFunction1D.New
+  fullName.vb: QuantumWaves.WeightedWaveFunction1D.New
+  name.vb: New
+- uid: CMath.ComplexF[]
+  isExternal: true
+  href: CMath.ComplexF.html
+  name: ComplexF[]
+  nameWithType: ComplexF[]
+  fullName: CMath.ComplexF[]
+  nameWithType.vb: ComplexF()
+  fullName.vb: CMath.ComplexF()
+  name.vb: ComplexF()
+  spec.csharp:
+  - uid: CMath.ComplexF
+    name: ComplexF
+    href: CMath.ComplexF.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: CMath.ComplexF
+    name: ComplexF
+    href: CMath.ComplexF.html
+  - name: (
+  - name: )
+- uid: QuantumWaves.WaveFunction1D[]
+  isExternal: true
+  href: QuantumWaves.WaveFunction1D.html
+  name: WaveFunction1D[]
+  nameWithType: WaveFunction1D[]
+  fullName: QuantumWaves.WaveFunction1D[]
+  nameWithType.vb: WaveFunction1D()
+  fullName.vb: QuantumWaves.WaveFunction1D()
+  name.vb: WaveFunction1D()
+  spec.csharp:
+  - uid: QuantumWaves.WaveFunction1D
+    name: WaveFunction1D
+    href: QuantumWaves.WaveFunction1D.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: QuantumWaves.WaveFunction1D
+    name: WaveFunction1D
+    href: QuantumWaves.WaveFunction1D.html
+  - name: (
+  - name: )
+- uid: QuantumWaves.WeightedWaveFunction1D.Add*
+  commentId: Overload:QuantumWaves.WeightedWaveFunction1D.Add
+  href: QuantumWaves.WeightedWaveFunction1D.html#QuantumWaves_WeightedWaveFunction1D_Add_CMath_ComplexF_QuantumWaves_WaveFunction1D_
+  name: Add
+  nameWithType: WeightedWaveFunction1D.Add
+  fullName: QuantumWaves.WeightedWaveFunction1D.Add
+- uid: CMath.ComplexF
+  commentId: T:CMath.ComplexF
+  parent: CMath
+  href: CMath.ComplexF.html
+  name: ComplexF
+  nameWithType: ComplexF
+  fullName: CMath.ComplexF
+- uid: CMath
+  commentId: N:CMath
+  href: CMath.html
+  name: CMath
+  nameWithType: CMath
+  fullName: CMath
+- uid: QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  commentId: M:QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
+  parent: QuantumWaves.WaveFunction1D
+  isExternal: true
+  href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_EvaluateRaw_System_Single_System_Single_
+  name: EvaluateRaw(float, float)
+  nameWithType: WaveFunction1D.EvaluateRaw(float, float)
+  fullName: QuantumWaves.WaveFunction1D.EvaluateRaw(float, float)
+  nameWithType.vb: WaveFunction1D.EvaluateRaw(Single, Single)
+  fullName.vb: QuantumWaves.WaveFunction1D.EvaluateRaw(Single, Single)
+  name.vb: EvaluateRaw(Single, Single)
+  spec.csharp:
+  - uid: QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
+    name: EvaluateRaw
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_EvaluateRaw_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: QuantumWaves.WaveFunction1D.EvaluateRaw(System.Single,System.Single)
+    name: EvaluateRaw
+    href: QuantumWaves.WaveFunction1D.html#QuantumWaves_WaveFunction1D_EvaluateRaw_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: QuantumWaves.WeightedWaveFunction1D.EvaluateRaw*
+  commentId: Overload:QuantumWaves.WeightedWaveFunction1D.EvaluateRaw
+  href: QuantumWaves.WeightedWaveFunction1D.html#QuantumWaves_WeightedWaveFunction1D_EvaluateRaw_System_Single_System_Single_
+  name: EvaluateRaw
+  nameWithType: WeightedWaveFunction1D.EvaluateRaw
+  fullName: QuantumWaves.WeightedWaveFunction1D.EvaluateRaw
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

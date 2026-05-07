@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumWaves.Utils
+  commentId: N:QuantumWaves.Utils
+  id: QuantumWaves.Utils
+  children:
+  - QuantumWaves.Utils.ArraySearchExtensions
+  - QuantumWaves.Utils.HermitePolynomials
+  - QuantumWaves.Utils.MathEx
+  langs:
+  - csharp
+  - vb
+  name: QuantumWaves.Utils
+  nameWithType: QuantumWaves.Utils
+  fullName: QuantumWaves.Utils
+  type: Namespace
+  assemblies:
+  - QuantumLibrary
+references:
+- uid: QuantumWaves.Utils.ArraySearchExtensions
+  commentId: T:QuantumWaves.Utils.ArraySearchExtensions
+  href: QuantumWaves.Utils.ArraySearchExtensions.html
+  name: ArraySearchExtensions
+  nameWithType: ArraySearchExtensions
+  fullName: QuantumWaves.Utils.ArraySearchExtensions
+- uid: QuantumWaves.Utils.HermitePolynomials
+  commentId: T:QuantumWaves.Utils.HermitePolynomials
+  href: QuantumWaves.Utils.HermitePolynomials.html
+  name: HermitePolynomials
+  nameWithType: HermitePolynomials
+  fullName: QuantumWaves.Utils.HermitePolynomials
+- uid: QuantumWaves.Utils.MathEx
+  commentId: T:QuantumWaves.Utils.MathEx
+  href: QuantumWaves.Utils.MathEx.html
+  name: MathEx
+  nameWithType: MathEx
+  fullName: QuantumWaves.Utils.MathEx

@@ -1,6 +1,4 @@
-using CMath;
-
-namespace QuantumLibrary.Tests;
+namespace CMath.Tests;
 
 public class ComplexFEqualityTests
 {
@@ -108,14 +106,5 @@ public class ComplexFEqualityTests
 
         Assert.False(a == c);
         Assert.True(a != c);
-    }
-
-    [Fact]
-    public void GetHashCode_EqualValues_HaveSameHashCode()
-    {
-        var a = new ComplexF(1f, 2f);
-        var b = new ComplexF(1f, 2f);
-
-        Assert.Equal(a.GetHashCode(), b.GetHashCode());
     }
 }

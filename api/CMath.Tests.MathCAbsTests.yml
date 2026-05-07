@@ -1,0 +1,538 @@
+### YamlMime:ManagedReference
+items:
+- uid: CMath.Tests.MathCAbsTests
+  commentId: T:CMath.Tests.MathCAbsTests
+  id: MathCAbsTests
+  parent: CMath.Tests
+  children:
+  - CMath.Tests.MathCAbsTests.AbsSqr_Works
+  - CMath.Tests.MathCAbsTests.Abs_Works
+  - CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance
+  - CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance
+  - CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive(System.Single)
+  langs:
+  - csharp
+  - vb
+  name: MathCAbsTests
+  nameWithType: MathCAbsTests
+  fullName: CMath.Tests.MathCAbsTests
+  type: Class
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: MathCAbsTests
+    path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+    startLine: 2
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: public class MathCAbsTests
+    content.vb: Public Class MathCAbsTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CMath.Tests.MathCAbsTests.Abs_Works
+  commentId: M:CMath.Tests.MathCAbsTests.Abs_Works
+  id: Abs_Works
+  parent: CMath.Tests.MathCAbsTests
+  langs:
+  - csharp
+  - vb
+  name: Abs_Works()
+  nameWithType: MathCAbsTests.Abs_Works()
+  fullName: CMath.Tests.MathCAbsTests.Abs_Works()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Abs_Works
+    path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+    startLine: 4
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Abs_Works()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Abs_Works()
+  overload: CMath.Tests.MathCAbsTests.Abs_Works*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.MathCAbsTests.AbsSqr_Works
+  commentId: M:CMath.Tests.MathCAbsTests.AbsSqr_Works
+  id: AbsSqr_Works
+  parent: CMath.Tests.MathCAbsTests
+  langs:
+  - csharp
+  - vb
+  name: AbsSqr_Works()
+  nameWithType: MathCAbsTests.AbsSqr_Works()
+  fullName: CMath.Tests.MathCAbsTests.AbsSqr_Works()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: AbsSqr_Works
+    path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+    startLine: 10
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void AbsSqr_Works()
+    content.vb: >-
+      <Fact>
+
+      Public Sub AbsSqr_Works()
+  overload: CMath.Tests.MathCAbsTests.AbsSqr_Works*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance
+  commentId: M:CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance
+  id: Approximately_ReturnsTrue_WhenWithinTolerance
+  parent: CMath.Tests.MathCAbsTests
+  langs:
+  - csharp
+  - vb
+  name: Approximately_ReturnsTrue_WhenWithinTolerance()
+  nameWithType: MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance()
+  fullName: CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Approximately_ReturnsTrue_WhenWithinTolerance
+    path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+    startLine: 16
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Approximately_ReturnsTrue_WhenWithinTolerance()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Approximately_ReturnsTrue_WhenWithinTolerance()
+  overload: CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance
+  commentId: M:CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance
+  id: Approximately_ReturnsFalse_WhenOutsideTolerance
+  parent: CMath.Tests.MathCAbsTests
+  langs:
+  - csharp
+  - vb
+  name: Approximately_ReturnsFalse_WhenOutsideTolerance()
+  nameWithType: MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance()
+  fullName: CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Approximately_ReturnsFalse_WhenOutsideTolerance
+    path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+    startLine: 25
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Approximately_ReturnsFalse_WhenOutsideTolerance()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Approximately_ReturnsFalse_WhenOutsideTolerance()
+  overload: CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive(System.Single)
+  commentId: M:CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive(System.Single)
+  id: Approximately_Throws_WhenToleranceIsNotPositive(System.Single)
+  parent: CMath.Tests.MathCAbsTests
+  langs:
+  - csharp
+  - vb
+  name: Approximately_Throws_WhenToleranceIsNotPositive(float)
+  nameWithType: MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive(float)
+  fullName: CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive(float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Approximately_Throws_WhenToleranceIsNotPositive
+    path: src/QuantumLibrary.Tests/MathCAbsTests.cs
+    startLine: 34
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Theory]
+
+      [InlineData(new object[] { 0 })]
+
+      [InlineData(new object[] { -1 })]
+
+      public void Approximately_Throws_WhenToleranceIsNotPositive(float tolerance)
+    parameters:
+    - id: tolerance
+      type: System.Single
+    content.vb: >-
+      <Theory>
+
+      <InlineData(New Object() { 0 })>
+
+      <InlineData(New Object() { -1 })>
+
+      Public Sub Approximately_Throws_WhenToleranceIsNotPositive(tolerance As Single)
+  overload: CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive*
+  attributes:
+  - type: Xunit.TheoryAttribute
+    ctor: Xunit.TheoryAttribute.#ctor
+    arguments: []
+  nameWithType.vb: MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive(Single)
+  fullName.vb: CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive(Single)
+  name.vb: Approximately_Throws_WhenToleranceIsNotPositive(Single)
+references:
+- uid: CMath.Tests
+  commentId: N:CMath.Tests
+  href: CMath.html
+  name: CMath.Tests
+  nameWithType: CMath.Tests
+  fullName: CMath.Tests
+  spec.csharp:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+  spec.vb:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CMath.Tests.MathCAbsTests.Abs_Works*
+  commentId: Overload:CMath.Tests.MathCAbsTests.Abs_Works
+  href: CMath.Tests.MathCAbsTests.html#CMath_Tests_MathCAbsTests_Abs_Works
+  name: Abs_Works
+  nameWithType: MathCAbsTests.Abs_Works
+  fullName: CMath.Tests.MathCAbsTests.Abs_Works
+- uid: CMath.Tests.MathCAbsTests.AbsSqr_Works*
+  commentId: Overload:CMath.Tests.MathCAbsTests.AbsSqr_Works
+  href: CMath.Tests.MathCAbsTests.html#CMath_Tests_MathCAbsTests_AbsSqr_Works
+  name: AbsSqr_Works
+  nameWithType: MathCAbsTests.AbsSqr_Works
+  fullName: CMath.Tests.MathCAbsTests.AbsSqr_Works
+- uid: CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance*
+  commentId: Overload:CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance
+  href: CMath.Tests.MathCAbsTests.html#CMath_Tests_MathCAbsTests_Approximately_ReturnsTrue_WhenWithinTolerance
+  name: Approximately_ReturnsTrue_WhenWithinTolerance
+  nameWithType: MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance
+  fullName: CMath.Tests.MathCAbsTests.Approximately_ReturnsTrue_WhenWithinTolerance
+- uid: CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance*
+  commentId: Overload:CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance
+  href: CMath.Tests.MathCAbsTests.html#CMath_Tests_MathCAbsTests_Approximately_ReturnsFalse_WhenOutsideTolerance
+  name: Approximately_ReturnsFalse_WhenOutsideTolerance
+  nameWithType: MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance
+  fullName: CMath.Tests.MathCAbsTests.Approximately_ReturnsFalse_WhenOutsideTolerance
+- uid: CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive*
+  commentId: Overload:CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive
+  href: CMath.Tests.MathCAbsTests.html#CMath_Tests_MathCAbsTests_Approximately_Throws_WhenToleranceIsNotPositive_System_Single_
+  name: Approximately_Throws_WhenToleranceIsNotPositive
+  nameWithType: MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive
+  fullName: CMath.Tests.MathCAbsTests.Approximately_Throws_WhenToleranceIsNotPositive
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single

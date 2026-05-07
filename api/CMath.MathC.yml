@@ -1,0 +1,1251 @@
+### YamlMime:ManagedReference
+items:
+- uid: CMath.MathC
+  commentId: T:CMath.MathC
+  id: MathC
+  parent: CMath
+  children:
+  - CMath.MathC.Abs(CMath.ComplexF)
+  - CMath.MathC.AbsSqr(CMath.ComplexF)
+  - CMath.MathC.Approximately(CMath.ComplexF,CMath.ComplexF,System.Single)
+  - CMath.MathC.Arg(CMath.ComplexF)
+  - CMath.MathC.Cis(System.Single)
+  - CMath.MathC.Clamp(CMath.ComplexF,CMath.ComplexF,CMath.ComplexF)
+  - CMath.MathC.Clamp01(CMath.ComplexF)
+  - CMath.MathC.Cos(CMath.ComplexF)
+  - CMath.MathC.Exp(CMath.ComplexF)
+  - CMath.MathC.FromPolar(System.Single,System.Single)
+  - CMath.MathC.Lerp(CMath.ComplexF,CMath.ComplexF,System.Single)
+  - CMath.MathC.LerpUnclamped(CMath.ComplexF,CMath.ComplexF,System.Single)
+  - CMath.MathC.Ln(CMath.ComplexF)
+  - CMath.MathC.Log(CMath.ComplexF,CMath.ComplexF)
+  - CMath.MathC.Pow(CMath.ComplexF,CMath.ComplexF)
+  - CMath.MathC.Sin(CMath.ComplexF)
+  - CMath.MathC.Sqrt(CMath.ComplexF)
+  - CMath.MathC.Tan(CMath.ComplexF)
+  - CMath.MathC.ToPolar(CMath.ComplexF)
+  langs:
+  - csharp
+  - vb
+  name: MathC
+  nameWithType: MathC
+  fullName: CMath.MathC
+  type: Class
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: MathC
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 7
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: A collection of common complex math functions.
+  example: []
+  syntax:
+    content: public static class MathC
+    content.vb: Public Module MathC
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CMath.MathC.Abs(CMath.ComplexF)
+  commentId: M:CMath.MathC.Abs(CMath.ComplexF)
+  id: Abs(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Abs(ComplexF)
+  nameWithType: MathC.Abs(ComplexF)
+  fullName: CMath.MathC.Abs(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Abs
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 12
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the magnitude of the specified complex number.
+  example: []
+  syntax:
+    content: public static float Abs(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: System.Single
+      description: The magnitude of <code class="paramref">z</code>.
+    content.vb: Public Shared Function Abs(z As ComplexF) As Single
+  overload: CMath.MathC.Abs*
+- uid: CMath.MathC.AbsSqr(CMath.ComplexF)
+  commentId: M:CMath.MathC.AbsSqr(CMath.ComplexF)
+  id: AbsSqr(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: AbsSqr(ComplexF)
+  nameWithType: MathC.AbsSqr(ComplexF)
+  fullName: CMath.MathC.AbsSqr(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: AbsSqr
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 20
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the squared magnitude of the specified complex number.
+  example: []
+  syntax:
+    content: public static float AbsSqr(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: System.Single
+      description: The squared magnitude of <code class="paramref">z</code>.
+    content.vb: Public Shared Function AbsSqr(z As ComplexF) As Single
+  overload: CMath.MathC.AbsSqr*
+- uid: CMath.MathC.Approximately(CMath.ComplexF,CMath.ComplexF,System.Single)
+  commentId: M:CMath.MathC.Approximately(CMath.ComplexF,CMath.ComplexF,System.Single)
+  id: Approximately(CMath.ComplexF,CMath.ComplexF,System.Single)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Approximately(ComplexF, ComplexF, float)
+  nameWithType: MathC.Approximately(ComplexF, ComplexF, float)
+  fullName: CMath.MathC.Approximately(CMath.ComplexF, CMath.ComplexF, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Approximately
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 33
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns whether two complex numbers are within the specified tolerance.
+  example: []
+  syntax:
+    content: public static bool Approximately(ComplexF a, ComplexF b, float tolerance = 1E-05)
+    parameters:
+    - id: a
+      type: CMath.ComplexF
+      description: The first complex number.
+    - id: b
+      type: CMath.ComplexF
+      description: The second complex number.
+    - id: tolerance
+      type: System.Single
+      description: The maximum allowed distance between the two values.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the magnitude of <code class="paramref">a</code> - <code class="paramref">b</code>
+
+        is less than or equal to <code class="paramref">tolerance</code>; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Shared Function Approximately(a As ComplexF, b As ComplexF, tolerance As Single = 1E-05) As Boolean
+  overload: CMath.MathC.Approximately*
+  nameWithType.vb: MathC.Approximately(ComplexF, ComplexF, Single)
+  fullName.vb: CMath.MathC.Approximately(CMath.ComplexF, CMath.ComplexF, Single)
+  name.vb: Approximately(ComplexF, ComplexF, Single)
+- uid: CMath.MathC.Arg(CMath.ComplexF)
+  commentId: M:CMath.MathC.Arg(CMath.ComplexF)
+  id: Arg(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Arg(ComplexF)
+  nameWithType: MathC.Arg(ComplexF)
+  fullName: CMath.MathC.Arg(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Arg
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 45
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the argument of the specified complex number.
+  example: []
+  syntax:
+    content: public static float Arg(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: System.Single
+      description: The phase angle of <code class="paramref">z</code>, in radians.
+    content.vb: Public Shared Function Arg(z As ComplexF) As Single
+  overload: CMath.MathC.Arg*
+- uid: CMath.MathC.Cis(System.Single)
+  commentId: M:CMath.MathC.Cis(System.Single)
+  id: Cis(System.Single)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Cis(float)
+  nameWithType: MathC.Cis(float)
+  fullName: CMath.MathC.Cis(float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Cis
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 53
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns cos(angle) + i sin(angle).
+  example: []
+  syntax:
+    content: public static ComplexF Cis(float angle)
+    parameters:
+    - id: angle
+      type: System.Single
+      description: The angle, in radians.
+    return:
+      type: CMath.ComplexF
+      description: A complex number on the unit circle with the specified argument.
+    content.vb: Public Shared Function Cis(angle As Single) As ComplexF
+  overload: CMath.MathC.Cis*
+  nameWithType.vb: MathC.Cis(Single)
+  fullName.vb: CMath.MathC.Cis(Single)
+  name.vb: Cis(Single)
+- uid: CMath.MathC.ToPolar(CMath.ComplexF)
+  commentId: M:CMath.MathC.ToPolar(CMath.ComplexF)
+  id: ToPolar(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: ToPolar(ComplexF)
+  nameWithType: MathC.ToPolar(ComplexF)
+  fullName: CMath.MathC.ToPolar(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: ToPolar
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 61
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the polar representation of a complex number.
+  example: []
+  syntax:
+    content: public static (float radius, float angle) ToPolar(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: System.ValueTuple{System.Single,System.Single}
+      description: A tuple containing the magnitude and phase angle, in radians.
+    content.vb: Public Shared Function ToPolar(z As ComplexF) As (radius As Single, angle As Single)
+  overload: CMath.MathC.ToPolar*
+- uid: CMath.MathC.FromPolar(System.Single,System.Single)
+  commentId: M:CMath.MathC.FromPolar(System.Single,System.Single)
+  id: FromPolar(System.Single,System.Single)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: FromPolar(float, float)
+  nameWithType: MathC.FromPolar(float, float)
+  fullName: CMath.MathC.FromPolar(float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: FromPolar
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 70
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns a complex number based on its polar form.
+  example: []
+  syntax:
+    content: public static ComplexF FromPolar(float radius, float angle)
+    parameters:
+    - id: radius
+      type: System.Single
+      description: The distance from the origin.
+    - id: angle
+      type: System.Single
+      description: The phase angle, in radians.
+    return:
+      type: CMath.ComplexF
+      description: The complex number represented by the specified polar coordinates.
+    content.vb: Public Shared Function FromPolar(radius As Single, angle As Single) As ComplexF
+  overload: CMath.MathC.FromPolar*
+  nameWithType.vb: MathC.FromPolar(Single, Single)
+  fullName.vb: CMath.MathC.FromPolar(Single, Single)
+  name.vb: FromPolar(Single, Single)
+- uid: CMath.MathC.Exp(CMath.ComplexF)
+  commentId: M:CMath.MathC.Exp(CMath.ComplexF)
+  id: Exp(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Exp(ComplexF)
+  nameWithType: MathC.Exp(ComplexF)
+  fullName: CMath.MathC.Exp(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Exp
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 78
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns e raised to the specified complex power.
+  example: []
+  syntax:
+    content: public static ComplexF Exp(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex exponent.
+    return:
+      type: CMath.ComplexF
+      description: The value of e raised to <code class="paramref">z</code>.
+    content.vb: Public Shared Function Exp(z As ComplexF) As ComplexF
+  overload: CMath.MathC.Exp*
+- uid: CMath.MathC.Pow(CMath.ComplexF,CMath.ComplexF)
+  commentId: M:CMath.MathC.Pow(CMath.ComplexF,CMath.ComplexF)
+  id: Pow(CMath.ComplexF,CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Pow(ComplexF, ComplexF)
+  nameWithType: MathC.Pow(ComplexF, ComplexF)
+  fullName: CMath.MathC.Pow(CMath.ComplexF, CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Pow
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 88
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the result of raising a complex number to a complex power.
+  remarks: Uses the principal value of the complex logarithm.
+  example: []
+  syntax:
+    content: public static ComplexF Pow(ComplexF baseValue, ComplexF exponent)
+    parameters:
+    - id: baseValue
+      type: CMath.ComplexF
+      description: The base value.
+    - id: exponent
+      type: CMath.ComplexF
+      description: The exponent.
+    return:
+      type: CMath.ComplexF
+      description: The result of the exponentiation operation.
+    content.vb: Public Shared Function Pow(baseValue As ComplexF, exponent As ComplexF) As ComplexF
+  overload: CMath.MathC.Pow*
+- uid: CMath.MathC.Ln(CMath.ComplexF)
+  commentId: M:CMath.MathC.Ln(CMath.ComplexF)
+  id: Ln(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Ln(ComplexF)
+  nameWithType: MathC.Ln(ComplexF)
+  fullName: CMath.MathC.Ln(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Ln
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 97
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the natural logarithm of the specified complex number.
+  remarks: Returns the principal value of the complex logarithm.
+  example: []
+  syntax:
+    content: public static ComplexF Ln(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: CMath.ComplexF
+      description: The principal natural logarithm of <code class="paramref">z</code>.
+    content.vb: Public Shared Function Ln(z As ComplexF) As ComplexF
+  overload: CMath.MathC.Ln*
+- uid: CMath.MathC.Log(CMath.ComplexF,CMath.ComplexF)
+  commentId: M:CMath.MathC.Log(CMath.ComplexF,CMath.ComplexF)
+  id: Log(CMath.ComplexF,CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Log(ComplexF, ComplexF)
+  nameWithType: MathC.Log(ComplexF, ComplexF)
+  fullName: CMath.MathC.Log(CMath.ComplexF, CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Log
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 109
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the logarithm of a specified complex value in a specified base.
+  remarks: Equivalent to Ln(value) / Ln(baseValue). Uses the principal value of the complex logarithm.
+  example: []
+  syntax:
+    content: public static ComplexF Log(ComplexF value, ComplexF baseValue)
+    parameters:
+    - id: value
+      type: CMath.ComplexF
+      description: The complex value whose logarithm is calculated.
+    - id: baseValue
+      type: CMath.ComplexF
+      description: The base of the logarithm.
+    return:
+      type: CMath.ComplexF
+      description: The logarithm of <code class="paramref">value</code> in base <code class="paramref">baseValue</code>.
+    content.vb: Public Shared Function Log(value As ComplexF, baseValue As ComplexF) As ComplexF
+  overload: CMath.MathC.Log*
+- uid: CMath.MathC.Sqrt(CMath.ComplexF)
+  commentId: M:CMath.MathC.Sqrt(CMath.ComplexF)
+  id: Sqrt(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Sqrt(ComplexF)
+  nameWithType: MathC.Sqrt(ComplexF)
+  fullName: CMath.MathC.Sqrt(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Sqrt
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 117
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the principal square root of the specified complex number.
+  example: []
+  syntax:
+    content: public static ComplexF Sqrt(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: CMath.ComplexF
+      description: The principal value whose square is equal to <code class="paramref">z</code>.
+    content.vb: Public Shared Function Sqrt(z As ComplexF) As ComplexF
+  overload: CMath.MathC.Sqrt*
+- uid: CMath.MathC.Sin(CMath.ComplexF)
+  commentId: M:CMath.MathC.Sin(CMath.ComplexF)
+  id: Sin(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Sin(ComplexF)
+  nameWithType: MathC.Sin(ComplexF)
+  fullName: CMath.MathC.Sin(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Sin
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 126
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the sine of the specified complex number.
+  example: []
+  syntax:
+    content: public static ComplexF Sin(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: CMath.ComplexF
+      description: The sine of <code class="paramref">z</code>.
+    content.vb: Public Shared Function Sin(z As ComplexF) As ComplexF
+  overload: CMath.MathC.Sin*
+- uid: CMath.MathC.Cos(CMath.ComplexF)
+  commentId: M:CMath.MathC.Cos(CMath.ComplexF)
+  id: Cos(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Cos(ComplexF)
+  nameWithType: MathC.Cos(ComplexF)
+  fullName: CMath.MathC.Cos(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Cos
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 134
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the cosine of the specified complex number.
+  example: []
+  syntax:
+    content: public static ComplexF Cos(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: CMath.ComplexF
+      description: The cosine of <code class="paramref">z</code>.
+    content.vb: Public Shared Function Cos(z As ComplexF) As ComplexF
+  overload: CMath.MathC.Cos*
+- uid: CMath.MathC.Tan(CMath.ComplexF)
+  commentId: M:CMath.MathC.Tan(CMath.ComplexF)
+  id: Tan(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Tan(ComplexF)
+  nameWithType: MathC.Tan(ComplexF)
+  fullName: CMath.MathC.Tan(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Tan
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 143
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Returns the tangent of the specified complex number.
+  remarks: If the cosine of z has zero components returns <xref href="CMath.ComplexF.NaN" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public static ComplexF Tan(ComplexF z)
+    parameters:
+    - id: z
+      type: CMath.ComplexF
+      description: The complex number.
+    return:
+      type: CMath.ComplexF
+      description: The tangent of <code class="paramref">z</code>.
+    content.vb: Public Shared Function Tan(z As ComplexF) As ComplexF
+  overload: CMath.MathC.Tan*
+- uid: CMath.MathC.Clamp(CMath.ComplexF,CMath.ComplexF,CMath.ComplexF)
+  commentId: M:CMath.MathC.Clamp(CMath.ComplexF,CMath.ComplexF,CMath.ComplexF)
+  id: Clamp(CMath.ComplexF,CMath.ComplexF,CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Clamp(ComplexF, ComplexF, ComplexF)
+  nameWithType: MathC.Clamp(ComplexF, ComplexF, ComplexF)
+  fullName: CMath.MathC.Clamp(CMath.ComplexF, CMath.ComplexF, CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Clamp
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 158
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Clamps the given value component-wise between the given minimum and maximum values.
+  remarks: The real and imaginary components are clamped independently.
+  example: []
+  syntax:
+    content: public static ComplexF Clamp(ComplexF value, ComplexF min, ComplexF max)
+    parameters:
+    - id: value
+      type: CMath.ComplexF
+      description: The complex value to clamp.
+    - id: min
+      type: CMath.ComplexF
+      description: The minimum component values.
+    - id: max
+      type: CMath.ComplexF
+      description: The maximum component values.
+    return:
+      type: CMath.ComplexF
+      description: The component-wise clamped complex value.
+    content.vb: Public Shared Function Clamp(value As ComplexF, min As ComplexF, max As ComplexF) As ComplexF
+  overload: CMath.MathC.Clamp*
+- uid: CMath.MathC.Clamp01(CMath.ComplexF)
+  commentId: M:CMath.MathC.Clamp01(CMath.ComplexF)
+  id: Clamp01(CMath.ComplexF)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Clamp01(ComplexF)
+  nameWithType: MathC.Clamp01(ComplexF)
+  fullName: CMath.MathC.Clamp01(CMath.ComplexF)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Clamp01
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 171
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Clamps the value component-wise between 0 and 1.
+  remarks: The real and imaginary components are clamped independently.
+  example: []
+  syntax:
+    content: public static ComplexF Clamp01(ComplexF value)
+    parameters:
+    - id: value
+      type: CMath.ComplexF
+      description: The complex value to clamp.
+    return:
+      type: CMath.ComplexF
+      description: The component-wise clamped complex value.
+    content.vb: Public Shared Function Clamp01(value As ComplexF) As ComplexF
+  overload: CMath.MathC.Clamp01*
+- uid: CMath.MathC.LerpUnclamped(CMath.ComplexF,CMath.ComplexF,System.Single)
+  commentId: M:CMath.MathC.LerpUnclamped(CMath.ComplexF,CMath.ComplexF,System.Single)
+  id: LerpUnclamped(CMath.ComplexF,CMath.ComplexF,System.Single)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: LerpUnclamped(ComplexF, ComplexF, float)
+  nameWithType: MathC.LerpUnclamped(ComplexF, ComplexF, float)
+  fullName: CMath.MathC.LerpUnclamped(CMath.ComplexF, CMath.ComplexF, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: LerpUnclamped
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 185
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Linearly interpolates component-wise between two complex numbers without clamping the interpolation factor.
+  example: []
+  syntax:
+    content: public static ComplexF LerpUnclamped(ComplexF a, ComplexF b, float t)
+    parameters:
+    - id: a
+      type: CMath.ComplexF
+      description: The start value.
+    - id: b
+      type: CMath.ComplexF
+      description: The end value.
+    - id: t
+      type: System.Single
+      description: The interpolation factor.
+    return:
+      type: CMath.ComplexF
+      description: The component-wise interpolated complex value.
+    content.vb: Public Shared Function LerpUnclamped(a As ComplexF, b As ComplexF, t As Single) As ComplexF
+  overload: CMath.MathC.LerpUnclamped*
+  nameWithType.vb: MathC.LerpUnclamped(ComplexF, ComplexF, Single)
+  fullName.vb: CMath.MathC.LerpUnclamped(CMath.ComplexF, CMath.ComplexF, Single)
+  name.vb: LerpUnclamped(ComplexF, ComplexF, Single)
+- uid: CMath.MathC.Lerp(CMath.ComplexF,CMath.ComplexF,System.Single)
+  commentId: M:CMath.MathC.Lerp(CMath.ComplexF,CMath.ComplexF,System.Single)
+  id: Lerp(CMath.ComplexF,CMath.ComplexF,System.Single)
+  parent: CMath.MathC
+  langs:
+  - csharp
+  - vb
+  name: Lerp(ComplexF, ComplexF, float)
+  nameWithType: MathC.Lerp(ComplexF, ComplexF, float)
+  fullName: CMath.MathC.Lerp(CMath.ComplexF, CMath.ComplexF, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Core/MathC.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Lerp
+    path: src/QuantumLibrary/Core/MathC.cs
+    startLine: 202
+  assemblies:
+  - QuantumLibrary
+  namespace: CMath
+  summary: Linearly interpolates component-wise between two complex numbers.
+  remarks: The interpolation factor <code class="paramref">t</code> is clamped to the range [0, 1].
+  example: []
+  syntax:
+    content: public static ComplexF Lerp(ComplexF a, ComplexF b, float t)
+    parameters:
+    - id: a
+      type: CMath.ComplexF
+      description: The start value.
+    - id: b
+      type: CMath.ComplexF
+      description: The end value.
+    - id: t
+      type: System.Single
+      description: The interpolation factor.
+    return:
+      type: CMath.ComplexF
+      description: The component-wise interpolated complex value.
+    content.vb: Public Shared Function Lerp(a As ComplexF, b As ComplexF, t As Single) As ComplexF
+  overload: CMath.MathC.Lerp*
+  nameWithType.vb: MathC.Lerp(ComplexF, ComplexF, Single)
+  fullName.vb: CMath.MathC.Lerp(CMath.ComplexF, CMath.ComplexF, Single)
+  name.vb: Lerp(ComplexF, ComplexF, Single)
+references:
+- uid: CMath
+  commentId: N:CMath
+  href: CMath.html
+  name: CMath
+  nameWithType: CMath
+  fullName: CMath
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CMath.MathC.Abs*
+  commentId: Overload:CMath.MathC.Abs
+  href: CMath.MathC.html#CMath_MathC_Abs_CMath_ComplexF_
+  name: Abs
+  nameWithType: MathC.Abs
+  fullName: CMath.MathC.Abs
+- uid: CMath.ComplexF
+  commentId: T:CMath.ComplexF
+  parent: CMath
+  href: CMath.ComplexF.html
+  name: ComplexF
+  nameWithType: ComplexF
+  fullName: CMath.ComplexF
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: CMath.MathC.AbsSqr*
+  commentId: Overload:CMath.MathC.AbsSqr
+  href: CMath.MathC.html#CMath_MathC_AbsSqr_CMath_ComplexF_
+  name: AbsSqr
+  nameWithType: MathC.AbsSqr
+  fullName: CMath.MathC.AbsSqr
+- uid: CMath.MathC.Approximately*
+  commentId: Overload:CMath.MathC.Approximately
+  href: CMath.MathC.html#CMath_MathC_Approximately_CMath_ComplexF_CMath_ComplexF_System_Single_
+  name: Approximately
+  nameWithType: MathC.Approximately
+  fullName: CMath.MathC.Approximately
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: CMath.MathC.Arg*
+  commentId: Overload:CMath.MathC.Arg
+  href: CMath.MathC.html#CMath_MathC_Arg_CMath_ComplexF_
+  name: Arg
+  nameWithType: MathC.Arg
+  fullName: CMath.MathC.Arg
+- uid: CMath.MathC.Cis*
+  commentId: Overload:CMath.MathC.Cis
+  href: CMath.MathC.html#CMath_MathC_Cis_System_Single_
+  name: Cis
+  nameWithType: MathC.Cis
+  fullName: CMath.MathC.Cis
+- uid: CMath.MathC.ToPolar*
+  commentId: Overload:CMath.MathC.ToPolar
+  href: CMath.MathC.html#CMath_MathC_ToPolar_CMath_ComplexF_
+  name: ToPolar
+  nameWithType: MathC.ToPolar
+  fullName: CMath.MathC.ToPolar
+- uid: System.ValueTuple{System.Single,System.Single}
+  commentId: T:System.ValueTuple{System.Single,System.Single}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: (float radius, float angle)
+  nameWithType: (float radius, float angle)
+  fullName: (float radius, float angle)
+  nameWithType.vb: (radius As Single, angle As Single)
+  fullName.vb: (radius As Single, angle As Single)
+  name.vb: (radius As Single, angle As Single)
+  spec.csharp:
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: " "
+  - uid: System.ValueTuple{System.Single,System.Single}.radius
+    name: radius
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,system.single-.radius
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: " "
+  - uid: System.ValueTuple{System.Single,System.Single}.angle
+    name: angle
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,system.single-.angle
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.Single,System.Single}.radius
+    name: radius
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,system.single-.radius
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Single,System.Single}.angle
+    name: angle
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.single,system.single-.angle
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: CMath.MathC.FromPolar*
+  commentId: Overload:CMath.MathC.FromPolar
+  href: CMath.MathC.html#CMath_MathC_FromPolar_System_Single_System_Single_
+  name: FromPolar
+  nameWithType: MathC.FromPolar
+  fullName: CMath.MathC.FromPolar
+- uid: CMath.MathC.Exp*
+  commentId: Overload:CMath.MathC.Exp
+  href: CMath.MathC.html#CMath_MathC_Exp_CMath_ComplexF_
+  name: Exp
+  nameWithType: MathC.Exp
+  fullName: CMath.MathC.Exp
+- uid: CMath.MathC.Pow*
+  commentId: Overload:CMath.MathC.Pow
+  href: CMath.MathC.html#CMath_MathC_Pow_CMath_ComplexF_CMath_ComplexF_
+  name: Pow
+  nameWithType: MathC.Pow
+  fullName: CMath.MathC.Pow
+- uid: CMath.MathC.Ln*
+  commentId: Overload:CMath.MathC.Ln
+  href: CMath.MathC.html#CMath_MathC_Ln_CMath_ComplexF_
+  name: Ln
+  nameWithType: MathC.Ln
+  fullName: CMath.MathC.Ln
+- uid: CMath.MathC.Log*
+  commentId: Overload:CMath.MathC.Log
+  href: CMath.MathC.html#CMath_MathC_Log_CMath_ComplexF_CMath_ComplexF_
+  name: Log
+  nameWithType: MathC.Log
+  fullName: CMath.MathC.Log
+- uid: CMath.MathC.Sqrt*
+  commentId: Overload:CMath.MathC.Sqrt
+  href: CMath.MathC.html#CMath_MathC_Sqrt_CMath_ComplexF_
+  name: Sqrt
+  nameWithType: MathC.Sqrt
+  fullName: CMath.MathC.Sqrt
+- uid: CMath.MathC.Sin*
+  commentId: Overload:CMath.MathC.Sin
+  href: CMath.MathC.html#CMath_MathC_Sin_CMath_ComplexF_
+  name: Sin
+  nameWithType: MathC.Sin
+  fullName: CMath.MathC.Sin
+- uid: CMath.MathC.Cos*
+  commentId: Overload:CMath.MathC.Cos
+  href: CMath.MathC.html#CMath_MathC_Cos_CMath_ComplexF_
+  name: Cos
+  nameWithType: MathC.Cos
+  fullName: CMath.MathC.Cos
+- uid: CMath.ComplexF.NaN
+  commentId: F:CMath.ComplexF.NaN
+  href: CMath.ComplexF.html#CMath_ComplexF_NaN
+  name: NaN
+  nameWithType: ComplexF.NaN
+  fullName: CMath.ComplexF.NaN
+- uid: CMath.MathC.Tan*
+  commentId: Overload:CMath.MathC.Tan
+  href: CMath.MathC.html#CMath_MathC_Tan_CMath_ComplexF_
+  name: Tan
+  nameWithType: MathC.Tan
+  fullName: CMath.MathC.Tan
+- uid: CMath.MathC.Clamp*
+  commentId: Overload:CMath.MathC.Clamp
+  href: CMath.MathC.html#CMath_MathC_Clamp_CMath_ComplexF_CMath_ComplexF_CMath_ComplexF_
+  name: Clamp
+  nameWithType: MathC.Clamp
+  fullName: CMath.MathC.Clamp
+- uid: CMath.MathC.Clamp01*
+  commentId: Overload:CMath.MathC.Clamp01
+  href: CMath.MathC.html#CMath_MathC_Clamp01_CMath_ComplexF_
+  name: Clamp01
+  nameWithType: MathC.Clamp01
+  fullName: CMath.MathC.Clamp01
+- uid: CMath.MathC.LerpUnclamped*
+  commentId: Overload:CMath.MathC.LerpUnclamped
+  href: CMath.MathC.html#CMath_MathC_LerpUnclamped_CMath_ComplexF_CMath_ComplexF_System_Single_
+  name: LerpUnclamped
+  nameWithType: MathC.LerpUnclamped
+  fullName: CMath.MathC.LerpUnclamped
+- uid: CMath.MathC.Lerp*
+  commentId: Overload:CMath.MathC.Lerp
+  href: CMath.MathC.html#CMath_MathC_Lerp_CMath_ComplexF_CMath_ComplexF_System_Single_
+  name: Lerp
+  nameWithType: MathC.Lerp
+  fullName: CMath.MathC.Lerp

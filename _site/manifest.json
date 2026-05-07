@@ -1,0 +1,608 @@
+{
+  "source_base_path": "/Users/timothy/Documents/GitHub/grudat26/merko-ovn7",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.ComplexF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.ComplexF.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.ComplexF",
+      "Summary": "<p sourcefile=\"api/CMath.ComplexF.yml\" sourcestartlinenumber=\"1\">Represents a mutable complex number using floating-point components.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.MathC.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.MathC.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.MathC",
+      "Summary": "<p sourcefile=\"api/CMath.MathC.yml\" sourcestartlinenumber=\"1\">A collection of common complex math functions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexAssert.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexAssert.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexAssert",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFAdditionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFAdditionTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFAdditionTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFConstructionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFConstructionTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFConstructionTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFDivisionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFDivisionTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFDivisionTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFEqualityTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFEqualityTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFEqualityTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFGetHashCodeTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFGetHashCodeTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFGetHashCodeTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFMultiplicationTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFMultiplicationTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFMultiplicationTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFNormalizationTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFNormalizationTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFNormalizationTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFPropertyTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFPropertyTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFPropertyTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFSubtractionTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFSubtractionTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFSubtractionTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.ComplexFToStringTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.ComplexFToStringTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.ComplexFToStringTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.MathCAbsTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.MathCAbsTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.MathCAbsTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.MathCClampTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.MathCClampTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.MathCClampTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.MathCExponentialTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.MathCExponentialTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.MathCExponentialTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.MathCLerpTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.MathCLerpTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.MathCLerpTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.MathCPolarTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.MathCPolarTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.MathCPolarTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.MathCTrigTests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.MathCTrigTests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.MathCTrigTests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.TupleAssert.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.TupleAssert.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests.TupleAssert",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.Tests.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.Tests.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath.Tests",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/CMath.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/CMath.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "CMath",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.SeparableWaveFunction1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.SeparableWaveFunction1D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.SeparableWaveFunction1D",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.SeparableWaveFunction1D.yml\" sourcestartlinenumber=\"1\">Represents a separable one dimensional wave function.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.SimpeWaveFunction1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.SimpeWaveFunction1D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.SimpeWaveFunction1D",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.SimpeWaveFunction1D.yml\" sourcestartlinenumber=\"1\">Represents a general one dimensional wave function defined by a delegate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Solutions.FreeParticle1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Solutions.FreeParticle1D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Solutions.FreeParticle1D",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.Solutions.FreeParticle1D.yml\" sourcestartlinenumber=\"1\">Provides solutions for a free particle in one dimension.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Solutions.HarmonicOscillator1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Solutions.HarmonicOscillator1D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Solutions.HarmonicOscillator1D",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.Solutions.HarmonicOscillator1D.yml\" sourcestartlinenumber=\"1\">Provides solutions for the one dimensional quantum harmonic oscillator.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Solutions.InfiniteWell1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Solutions.InfiniteWell1D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Solutions.InfiniteWell1D",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.Solutions.InfiniteWell1D.yml\" sourcestartlinenumber=\"1\">Provides solutions for a particle in a one dimensional infinite potential well.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Solutions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Solutions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Solutions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Utils.ArraySearchExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Utils.ArraySearchExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Utils.ArraySearchExtensions",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.Utils.ArraySearchExtensions.yml\" sourcestartlinenumber=\"1\">Provides binary search helpers for arrays.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Utils.HermitePolynomials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Utils.HermitePolynomials.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Utils.HermitePolynomials",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.Utils.HermitePolynomials.yml\" sourcestartlinenumber=\"1\">Provides methods for generating Hermite polynomials.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Utils.MathEx.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Utils.MathEx.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Utils.MathEx",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.Utils.MathEx.yml\" sourcestartlinenumber=\"1\">Provides common mathematical utility functions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.Utils.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.Utils",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.WaveFunction1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.WaveFunction1D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.WaveFunction1D",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.WaveFunction1D.yml\" sourcestartlinenumber=\"1\">Base class for one dimensional wave functions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.WeightedWaveFunction1D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.WeightedWaveFunction1D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves.WeightedWaveFunction1D",
+      "Summary": "<p sourcefile=\"api/QuantumWaves.WeightedWaveFunction1D.yml\" sourcestartlinenumber=\"1\">Represents a weighted combination of one dimensional wave functions.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/QuantumWaves.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/QuantumWaves.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "QuantumWaves",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/concepts.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/concepts.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

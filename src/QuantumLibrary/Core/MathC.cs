@@ -140,6 +140,7 @@ namespace CMath
         /// <summary>Returns the tangent of the specified complex number.</summary>
         /// <param name="z">The complex number.</param>
         /// <returns>The tangent of <paramref name="z"/>.</returns>
+        /// <remarks> If the cosine of z has zero components returns <see cref="ComplexF.NaN"/>.</remarks>
         public static ComplexF Tan(ComplexF z)
         {
             return Sin(z) / Cos(z);

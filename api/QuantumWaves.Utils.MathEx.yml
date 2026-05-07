@@ -1,0 +1,670 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumWaves.Utils.MathEx
+  commentId: T:QuantumWaves.Utils.MathEx
+  id: MathEx
+  parent: QuantumWaves.Utils
+  children:
+  - QuantumWaves.Utils.MathEx.Factorial(System.Int32)
+  - QuantumWaves.Utils.MathEx.Simpson(System.Func{System.Single,System.Single},FloatRange,System.Int32)
+  - QuantumWaves.Utils.MathEx.SimpsonComplex(System.Func{System.Single,CMath.ComplexF},FloatRange,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: MathEx
+  nameWithType: MathEx
+  fullName: QuantumWaves.Utils.MathEx
+  type: Class
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: MathEx
+    path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+    startLine: 8
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves.Utils
+  summary: Provides common mathematical utility functions.
+  example: []
+  syntax:
+    content: public static class MathEx
+    content.vb: Public Module MathEx
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: QuantumWaves.Utils.MathEx.Factorial(System.Int32)
+  commentId: M:QuantumWaves.Utils.MathEx.Factorial(System.Int32)
+  id: Factorial(System.Int32)
+  parent: QuantumWaves.Utils.MathEx
+  langs:
+  - csharp
+  - vb
+  name: Factorial(int)
+  nameWithType: MathEx.Factorial(int)
+  fullName: QuantumWaves.Utils.MathEx.Factorial(int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Factorial
+    path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+    startLine: 16
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves.Utils
+  summary: Computes the factorial of a non-negative integer.
+  example: []
+  syntax:
+    content: public static long Factorial(int n)
+    parameters:
+    - id: n
+      type: System.Int32
+      description: The input value (must be non-negative).
+    return:
+      type: System.Int64
+      description: The factorial of n.
+    content.vb: Public Shared Function Factorial(n As Integer) As Long
+  overload: QuantumWaves.Utils.MathEx.Factorial*
+  exceptions:
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown if n is negative.
+  nameWithType.vb: MathEx.Factorial(Integer)
+  fullName.vb: QuantumWaves.Utils.MathEx.Factorial(Integer)
+  name.vb: Factorial(Integer)
+- uid: QuantumWaves.Utils.MathEx.Simpson(System.Func{System.Single,System.Single},FloatRange,System.Int32)
+  commentId: M:QuantumWaves.Utils.MathEx.Simpson(System.Func{System.Single,System.Single},FloatRange,System.Int32)
+  id: Simpson(System.Func{System.Single,System.Single},FloatRange,System.Int32)
+  parent: QuantumWaves.Utils.MathEx
+  langs:
+  - csharp
+  - vb
+  name: Simpson(Func<float, float>, FloatRange, int)
+  nameWithType: MathEx.Simpson(Func<float, float>, FloatRange, int)
+  fullName: QuantumWaves.Utils.MathEx.Simpson(System.Func<float, float>, FloatRange, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Simpson
+    path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+    startLine: 37
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves.Utils
+  summary: Approximates the definite integral of a function using Simpson's rule.
+  example: []
+  syntax:
+    content: public static float Simpson(Func<float, float> f, FloatRange domain, int intervals)
+    parameters:
+    - id: f
+      type: System.Func{System.Single,System.Single}
+      description: The function to integrate.
+    - id: domain
+      type: FloatRange
+      description: The integration range.
+    - id: intervals
+      type: System.Int32
+      description: The number of subintervals (must be positive and even).
+    return:
+      type: System.Single
+      description: The approximate integral value.
+    content.vb: Public Shared Function Simpson(f As Func(Of Single, Single), domain As FloatRange, intervals As Integer) As Single
+  overload: QuantumWaves.Utils.MathEx.Simpson*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if f is null.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown if subintervals is not positive.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if subintervals is not even or domain is invalid.
+  nameWithType.vb: MathEx.Simpson(Func(Of Single, Single), FloatRange, Integer)
+  fullName.vb: QuantumWaves.Utils.MathEx.Simpson(System.Func(Of Single, Single), FloatRange, Integer)
+  name.vb: Simpson(Func(Of Single, Single), FloatRange, Integer)
+- uid: QuantumWaves.Utils.MathEx.SimpsonComplex(System.Func{System.Single,CMath.ComplexF},FloatRange,System.Int32)
+  commentId: M:QuantumWaves.Utils.MathEx.SimpsonComplex(System.Func{System.Single,CMath.ComplexF},FloatRange,System.Int32)
+  id: SimpsonComplex(System.Func{System.Single,CMath.ComplexF},FloatRange,System.Int32)
+  parent: QuantumWaves.Utils.MathEx
+  langs:
+  - csharp
+  - vb
+  name: SimpsonComplex(Func<float, ComplexF>, FloatRange, int)
+  nameWithType: MathEx.SimpsonComplex(Func<float, ComplexF>, FloatRange, int)
+  fullName: QuantumWaves.Utils.MathEx.SimpsonComplex(System.Func<float, CMath.ComplexF>, FloatRange, int)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: SimpsonComplex
+    path: src/QuantumLibrary/Waves/Utils/MathEx.cs
+    startLine: 72
+  assemblies:
+  - QuantumLibrary
+  namespace: QuantumWaves.Utils
+  summary: Approximates the definite integral of a complex-valued function using Simpson's rule.
+  example: []
+  syntax:
+    content: public static ComplexF SimpsonComplex(Func<float, ComplexF> f, FloatRange domain, int intervals)
+    parameters:
+    - id: f
+      type: System.Func{System.Single,CMath.ComplexF}
+      description: The function to integrate.
+    - id: domain
+      type: FloatRange
+      description: The integration range.
+    - id: intervals
+      type: System.Int32
+      description: The number of subintervals (must be positive and even).
+    return:
+      type: CMath.ComplexF
+      description: The approximate complex integral value.
+    content.vb: Public Shared Function SimpsonComplex(f As Func(Of Single, ComplexF), domain As FloatRange, intervals As Integer) As ComplexF
+  overload: QuantumWaves.Utils.MathEx.SimpsonComplex*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: Thrown if f is null.
+  - type: System.ArgumentOutOfRangeException
+    commentId: T:System.ArgumentOutOfRangeException
+    description: Thrown if subintervals is not positive.
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Thrown if subintervals is not even or domain is invalid.
+  nameWithType.vb: MathEx.SimpsonComplex(Func(Of Single, ComplexF), FloatRange, Integer)
+  fullName.vb: QuantumWaves.Utils.MathEx.SimpsonComplex(System.Func(Of Single, CMath.ComplexF), FloatRange, Integer)
+  name.vb: SimpsonComplex(Func(Of Single, ComplexF), FloatRange, Integer)
+references:
+- uid: QuantumWaves.Utils
+  commentId: N:QuantumWaves.Utils
+  href: QuantumWaves.html
+  name: QuantumWaves.Utils
+  nameWithType: QuantumWaves.Utils
+  fullName: QuantumWaves.Utils
+  spec.csharp:
+  - uid: QuantumWaves
+    name: QuantumWaves
+    href: QuantumWaves.html
+  - name: .
+  - uid: QuantumWaves.Utils
+    name: Utils
+    href: QuantumWaves.Utils.html
+  spec.vb:
+  - uid: QuantumWaves
+    name: QuantumWaves
+    href: QuantumWaves.html
+  - name: .
+  - uid: QuantumWaves.Utils
+    name: Utils
+    href: QuantumWaves.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.ArgumentOutOfRangeException
+  commentId: T:System.ArgumentOutOfRangeException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentoutofrangeexception
+  name: ArgumentOutOfRangeException
+  nameWithType: ArgumentOutOfRangeException
+  fullName: System.ArgumentOutOfRangeException
+- uid: QuantumWaves.Utils.MathEx.Factorial*
+  commentId: Overload:QuantumWaves.Utils.MathEx.Factorial
+  href: QuantumWaves.Utils.MathEx.html#QuantumWaves_Utils_MathEx_Factorial_System_Int32_
+  name: Factorial
+  nameWithType: MathEx.Factorial
+  fullName: QuantumWaves.Utils.MathEx.Factorial
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: QuantumWaves.Utils.MathEx.Simpson*
+  commentId: Overload:QuantumWaves.Utils.MathEx.Simpson
+  href: QuantumWaves.Utils.MathEx.html#QuantumWaves_Utils_MathEx_Simpson_System_Func_System_Single_System_Single__FloatRange_System_Int32_
+  name: Simpson
+  nameWithType: MathEx.Simpson
+  fullName: QuantumWaves.Utils.MathEx.Simpson
+- uid: System.Func{System.Single,System.Single}
+  commentId: T:System.Func{System.Single,System.Single}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<float, float>
+  nameWithType: Func<float, float>
+  fullName: System.Func<float, float>
+  nameWithType.vb: Func(Of Single, Single)
+  fullName.vb: System.Func(Of Single, Single)
+  name.vb: Func(Of Single, Single)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: FloatRange
+  commentId: T:FloatRange
+  href: FloatRange.html
+  name: FloatRange
+  nameWithType: FloatRange
+  fullName: FloatRange
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: QuantumWaves.Utils.MathEx.SimpsonComplex*
+  commentId: Overload:QuantumWaves.Utils.MathEx.SimpsonComplex
+  href: QuantumWaves.Utils.MathEx.html#QuantumWaves_Utils_MathEx_SimpsonComplex_System_Func_System_Single_CMath_ComplexF__FloatRange_System_Int32_
+  name: SimpsonComplex
+  nameWithType: MathEx.SimpsonComplex
+  fullName: QuantumWaves.Utils.MathEx.SimpsonComplex
+- uid: System.Func{System.Single,CMath.ComplexF}
+  commentId: T:System.Func{System.Single,CMath.ComplexF}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<float, ComplexF>
+  nameWithType: Func<float, ComplexF>
+  fullName: System.Func<float, CMath.ComplexF>
+  nameWithType.vb: Func(Of Single, ComplexF)
+  fullName.vb: System.Func(Of Single, CMath.ComplexF)
+  name.vb: Func(Of Single, ComplexF)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: CMath.ComplexF
+    name: ComplexF
+    href: CMath.ComplexF.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: CMath.ComplexF
+    name: ComplexF
+    href: CMath.ComplexF.html
+  - name: )
+- uid: CMath.ComplexF
+  commentId: T:CMath.ComplexF
+  parent: CMath
+  href: CMath.ComplexF.html
+  name: ComplexF
+  nameWithType: ComplexF
+  fullName: CMath.ComplexF
+- uid: CMath
+  commentId: N:CMath
+  href: CMath.html
+  name: CMath
+  nameWithType: CMath
+  fullName: CMath

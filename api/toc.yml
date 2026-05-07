@@ -1,0 +1,55 @@
+### YamlMime:TableOfContent
+items:
+- uid: CMath
+  name: CMath
+  type: Namespace
+  items:
+  - uid: CMath.ComplexF
+    name: ComplexF
+    type: Struct
+  - uid: CMath.MathC
+    name: MathC
+    type: Class
+- uid: QuantumWaves
+  name: QuantumWaves
+  type: Namespace
+  items:
+  - uid: QuantumWaves.SeparableWaveFunction1D
+    name: SeparableWaveFunction1D
+    type: Class
+  - uid: QuantumWaves.SimpeWaveFunction1D
+    name: SimpeWaveFunction1D
+    type: Class
+  - uid: QuantumWaves.WaveFunction1D
+    name: WaveFunction1D
+    type: Class
+  - uid: QuantumWaves.WeightedWaveFunction1D
+    name: WeightedWaveFunction1D
+    type: Class
+- uid: QuantumWaves.Solutions
+  name: QuantumWaves.Solutions
+  type: Namespace
+  items:
+  - uid: QuantumWaves.Solutions.FreeParticle1D
+    name: FreeParticle1D
+    type: Class
+  - uid: QuantumWaves.Solutions.HarmonicOscillator1D
+    name: HarmonicOscillator1D
+    type: Class
+  - uid: QuantumWaves.Solutions.InfiniteWell1D
+    name: InfiniteWell1D
+    type: Class
+- uid: QuantumWaves.Utils
+  name: QuantumWaves.Utils
+  type: Namespace
+  items:
+  - uid: QuantumWaves.Utils.ArraySearchExtensions
+    name: ArraySearchExtensions
+    type: Class
+  - uid: QuantumWaves.Utils.HermitePolynomials
+    name: HermitePolynomials
+    type: Class
+  - uid: QuantumWaves.Utils.MathEx
+    name: MathEx
+    type: Class
+memberLayout: SamePage

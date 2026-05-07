@@ -3,15 +3,15 @@ using System;
 namespace CMath
 {
     /// <summary>
-    /// Represents a mutable complex number using floating-point components.
+    /// Represents an immutable complex number using float components.
     /// </summary>
     public struct ComplexF : IEquatable<ComplexF>
     {
-        /// <summary> Represents a complex number with zero components.</summary>
+        /// <summary>Represents a complex number with zero components.</summary>
         public static readonly ComplexF Zero = new ComplexF(0, 0);
-        /// <summary> Represents a complex number with unity real part and zero imaginary part.</summary>
+        /// <summary>Represents a complex number with unity real part and zero imaginary part.</summary>
         public static readonly ComplexF One = new ComplexF(1, 0);
-        /// <summary> Represents a complex number with unity imaginary part and zero real part.</summary>
+        /// <summary>Represents a complex number with unity imaginary part and zero real part.</summary>
         public static readonly ComplexF I = new ComplexF(0, 1);
 
         /// Represents a complex number whose components are <see cref="float.NaN"/>.
@@ -34,30 +34,30 @@ namespace CMath
         /// </summary>
         public static readonly ComplexF NegativeImaginaryInfinity = new ComplexF(0f, float.NegativeInfinity);
             
-        /// <summary> Gets or sets the real component.</summary>
-        public float Real { get; set; }
-        /// <summary> Gets or sets the imaginary component.</summary>
-        public float Imaginary { get; set; }
+        /// <summary>Gets the real component.</summary>
+        public float Real { get; }
+        /// <summary>Gets the imaginary component.</summary>
+        public float Imaginary { get; }
 
-        /// <summary> Gets whether either component is <see cref="float.NaN"/>.</summary>
+        /// <summary>Gets whether either component is <see cref="float.NaN"/>.</summary>
         public readonly bool IsNaN => float.IsNaN(Real) || float.IsNaN(Imaginary);
-        /// <summary> Gets whether either component is infinite.</summary>
+        /// <summary>Gets whether either component is infinite.</summary>
         public readonly bool IsInfinity => float.IsInfinity(Real) || float.IsInfinity(Imaginary);
-        /// <summary> Gets whether both components are finite.</summary>
+        /// <summary>Gets whether both components are finite.</summary>
         public readonly bool IsFinite => float.IsFinite(Real) && float.IsFinite(Imaginary);
 
-        /// <summary> Gets the magnitude of the complex number.</summary>
-        /// <remarks> Computed as sqrt(Re^2 + Im^2). May overflow for large values.</remarks>
+        /// <summary>Gets the magnitude of the complex number.</summary>
+        /// <remarks>Computed as sqrt(Re^2 + Im^2).</remarks>
         public readonly float Magnitude => MathF.Sqrt(Real * Real + Imaginary * Imaginary);
-        /// <summary> Gets the squared magnitude of the complex number.</summary>
+        /// <summary>Gets the squared magnitude of the complex number.</summary>
         public readonly float MagnitudeSqr => Real * Real + Imaginary * Imaginary;
 
-        /// <summary> Gets the complex conjugate. </summary>
-        /// <returns> A new complex number with a negated imaginary part.</returns>
+        /// <summary>Gets the complex conjugate. </summary>
+        /// <returns>A new complex number with a negated imaginary part.</returns>
         public readonly ComplexF Conjugate => new ComplexF(Real, -Imaginary);
 
-        /// <summary> Gets a normalized version of the complex number.</summary>
-        /// <returns> The complex number divided by its own magnitude, NaN if magnitude is zero.</returns>
+        /// <summary>Gets a normalized version of the complex number.</summary>
+        /// <returns>The complex number divided by its own magnitude, NaN if magnitude is zero.</returns>
         public readonly ComplexF Normalized
         {
             get
@@ -69,7 +69,7 @@ namespace CMath
             }
         }
 
-        /// <summary> Creates a complex number.</summary>
+        /// <summary>Creates a complex number.</summary>
         /// <param name="real">The real component.</param>
         /// <param name="imaginary">The imaginary component.</param>
         public ComplexF(float real, float imaginary)
@@ -125,20 +125,21 @@ namespace CMath
             return HashCode.Combine(Real, Imaginary);
         }
 
-        /// <summary>
-        /// Implicitly converts a real number to a complex number: value + 0*i.
-        /// </summary>
+        /// <summary>Implicitly converts a real number to a complex number: value + 0*i.</summary>
         public static implicit operator ComplexF(float value)
             => new ComplexF(value, 0);
 
+        /// <summary>Component wise addition of two complex numbers.</summary>
         public static ComplexF operator +(ComplexF a, ComplexF b)
             => new ComplexF(a.Real + b.Real, a.Imaginary + b.Imaginary);
+        /// <summary>Component wise subtraction of two complex numbers.</summary>
         public static ComplexF operator -(ComplexF a, ComplexF b)
             => new ComplexF(a.Real - b.Real, a.Imaginary - b.Imaginary);
+        /// <summary>Distributed multiplication of two complex numbers.</summary>
         public static ComplexF operator *(ComplexF a, ComplexF b)
             => new ComplexF(a.Real * b.Real - a.Imaginary * b.Imaginary, a.Real * b.Imaginary + a.Imaginary * b.Real);
         
-        /// <summary> Divides one complex number by another.</summary>
+        /// <summary>Divides one complex number by another.</summary>
         /// <remarks>
         /// Returns <see cref="NaN"/> if the divisor is zero or if either operand contains <see cref="float.NaN"/>.
         /// </remarks>
@@ -158,16 +159,22 @@ namespace CMath
             );
         }
 
+        /// <summary>Component wise unary negation of a complex number.</summary>
         public static ComplexF operator -(ComplexF z)
             => new ComplexF(-z.Real, -z.Imaginary);
 
-        /// <summary> Determines whether two complex numbers are equal.</summary>
+        /// <summary>Determines whether two complex numbers are equal.</summary>
         /// <remarks>
         /// This uses exact component comparison. If either component is <see cref="float.NaN"/>,
         /// the comparison returns false.
         /// </remarks>
         public static bool operator ==(ComplexF a, ComplexF b)
             => a.Real == b.Real && a.Imaginary == b.Imaginary;
+        /// <summary>Determines whether two complex numbers are not equal.</summary>
+        /// <remarks>
+        /// This uses exact component comparison. If either component is <see cref="float.NaN"/>,
+        /// the comparison returns true.
+        /// </remarks>
         public static bool operator !=(ComplexF a, ComplexF b)
             => a.Real != b.Real || a.Imaginary != b.Imaginary;
     }

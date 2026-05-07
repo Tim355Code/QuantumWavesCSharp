@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumWaves
+  commentId: N:QuantumWaves
+  id: QuantumWaves
+  children:
+  - QuantumWaves.SeparableWaveFunction1D
+  - QuantumWaves.SimpeWaveFunction1D
+  - QuantumWaves.WaveFunction1D
+  - QuantumWaves.WeightedWaveFunction1D
+  langs:
+  - csharp
+  - vb
+  name: QuantumWaves
+  nameWithType: QuantumWaves
+  fullName: QuantumWaves
+  type: Namespace
+  assemblies:
+  - QuantumLibrary
+references:
+- uid: QuantumWaves.SeparableWaveFunction1D
+  commentId: T:QuantumWaves.SeparableWaveFunction1D
+  href: QuantumWaves.SeparableWaveFunction1D.html
+  name: SeparableWaveFunction1D
+  nameWithType: SeparableWaveFunction1D
+  fullName: QuantumWaves.SeparableWaveFunction1D
+- uid: QuantumWaves.SimpeWaveFunction1D
+  commentId: T:QuantumWaves.SimpeWaveFunction1D
+  href: QuantumWaves.SimpeWaveFunction1D.html
+  name: SimpeWaveFunction1D
+  nameWithType: SimpeWaveFunction1D
+  fullName: QuantumWaves.SimpeWaveFunction1D
+- uid: QuantumWaves.WaveFunction1D
+  commentId: T:QuantumWaves.WaveFunction1D
+  parent: QuantumWaves
+  href: QuantumWaves.WaveFunction1D.html
+  name: WaveFunction1D
+  nameWithType: WaveFunction1D
+  fullName: QuantumWaves.WaveFunction1D
+- uid: QuantumWaves.WeightedWaveFunction1D
+  commentId: T:QuantumWaves.WeightedWaveFunction1D
+  href: QuantumWaves.WeightedWaveFunction1D.html
+  name: WeightedWaveFunction1D
+  nameWithType: WeightedWaveFunction1D
+  fullName: QuantumWaves.WeightedWaveFunction1D
+- uid: QuantumWaves
+  commentId: N:QuantumWaves
+  href: QuantumWaves.html
+  name: QuantumWaves
+  nameWithType: QuantumWaves
+  fullName: QuantumWaves

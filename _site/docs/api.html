@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>API Reference | QuantumLibraryCSharp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="API Reference | QuantumLibraryCSharp ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="QuantumLibraryCSharp">
+            QuantumLibraryCSharp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="api-reference">API Reference</h1>
+
+<h2 id="core-types">Core Types</h2>
+<h3 id="complexf">ComplexF</h3>
+<p><code>ComplexF</code> is an immutable struct representing a complex number using two <code>float</code> values:
+one real component and one imaginary component.</p>
+<pre><code class="lang-csharp">ComplexF z = new ComplexF(2f, 5f);
+ComplexF w = 2f + ComplexF.I * 5f;
+</code></pre>
+<h4 id="constructors">Constructors</h4>
+<pre><code class="lang-csharp">public ComplexF(float real, float imaginary);
+</code></pre>
+<p>Creates a complex number: <code>real + i * imaginary</code>.</p>
+<h4 id="properties">Properties</h4>
+<pre><code class="lang-csharp">public float Real { get; }
+public float Imaginary { get; }
+</code></pre>
+<p>Returns the real and imaginary components.</p>
+<pre><code class="lang-csharp">public float Magnitude { get; }
+</code></pre>
+<p>Returns the magnitude of <code>z</code>: <code>Abs(a + bi) = sqrt(a^2 + b^2)</code></p>
+<pre><code class="lang-csharp">public float MagnitudeSqr { get; }
+</code></pre>
+<p>Returns the magnitude squared.</p>
+<pre><code class="lang-csharp">public ComplexF Conjugate { get; }
+</code></pre>
+<p>Returns the complex conjugate: <code>Conjugate(a + bi) = a - bi</code></p>
+<pre><code class="lang-csharp">public ComplexF Normalized { get; }
+</code></pre>
+<p>Returns the complex number divided by its own magnitude. Returns NaN if magnitude is zero.</p>
+<pre><code class="lang-csharp">public override string ToString();
+</code></pre>
+<p>Returns a string representation of the complex number: <code>&quot;a + bi&quot;</code></p>
+<pre><code class="lang-csharp">public override bool Equals(object? obj);
+</code></pre>
+<p>Determines whether two object instances are equal.</p>
+<pre><code class="lang-csharp">public override int GetHashCode();
+</code></pre>
+<p>A hash code for the current object.</p>
+<pre><code class="lang-csharp">public bool IsNaN { get; }
+</code></pre>
+<p>Returns whether the current instance is NaN.</p>
+<pre><code class="lang-csharp">public bool IsInfinity { get; }
+</code></pre>
+<p>Returns whether any of the components are an infinity.</p>
+<h4 id="constants">Constants</h4>
+<pre><code class="lang-csharp">public static readonly ComplexF Zero;
+public static readonly ComplexF One;
+public static readonly ComplexF I;
+public static readonly ComplexF NaN;
+public static readonly ComplexF PositiveRealInfinity;
+public static readonly ComplexF NegativeRealInfinity;
+public static readonly ComplexF PositiveImaginaryInfinity;
+public static readonly ComplexF NegativeImaginaryInfinity;
+</code></pre>
+<p>Common complex constants.</p>
+<h4 id="operators">Operators</h4>
+<pre><code class="lang-csharp">public static implicit operator ComplexF(float value);
+</code></pre>
+<p>Implicitly converts a real number to a complex number: <code>value + 0*i</code></p>
+<pre><code class="lang-csharp">public static ComplexF operator +(ComplexF a, ComplexF b);
+public static ComplexF operator -(ComplexF a, ComplexF b);
+public static ComplexF operator *(ComplexF a, ComplexF b);
+public static ComplexF operator /(ComplexF a, ComplexF b);
+</code></pre>
+<p>Standard complex arithmetic.</p>
+<pre><code class="lang-csharp">public static ComplexF operator -(ComplexF z);
+</code></pre>
+<p>Unary negation.</p>
+<pre><code class="lang-csharp">public static bool operator ==(ComplexF a, ComplexF b);
+public static bool operator !=(ComplexF a, ComplexF b);
+</code></pre>
+<p>Exact component-wise equality.</p>
+<h3 id="mathc">MathC</h3>
+<p><code>MathC</code> contains utility functions for complex numbers.</p>
+<h4 id="abs">Abs</h4>
+<pre><code class="lang-csharp">public static float Abs(ComplexF a)
+</code></pre>
+<p>Returns the magnitude.</p>
+<h4 id="abssqr">AbsSqr</h4>
+<pre><code class="lang-csharp">public static float AbsSqr(ComplexF a)
+</code></pre>
+<p>Returns the magnitude squared.</p>
+<h4 id="approximately">Approximately</h4>
+<pre><code class="lang-csharp">public static bool Approximately(ComplexF a, ComplexF b, float tolerance = 1e-5f)
+</code></pre>
+<p>Compares two complex numbers and returns true if they are similar. Tolerance marks the maximal allowed magnitude in deviation. If either has <code>NaN</code> or <code>Infinity</code> components, returns <code>false</code>.</p>
+<h4 id="arg">Arg</h4>
+<pre><code class="lang-csharp">public static float Arg(ComplexF z)
+</code></pre>
+<p>Returns the angle of <code>z</code> in the complex plane in range [-π, π].  <code>arg(0)</code> returns <code>NaN</code>.</p>
+<h4 id="topolar">ToPolar</h4>
+<pre><code class="lang-csharp">public static (float radius, float angle) ToPolar(ComplexF z)
+</code></pre>
+<p>Returns polar coordinates <code>(r, θ)</code> such that: <code>z = r * e^iθ</code> with θ in range [-π, π].  <code>ToPolar(0)</code> return <code>(0, NaN)</code>.</p>
+<h4 id="frompolar">FromPolar</h4>
+<pre><code class="lang-csharp">public static ComplexF FromPolar(float radius, float angle)
+</code></pre>
+<p>Creates a complex number from polar coordinates. <code>FromPolar(r, θ) = r(cosθ + i*sin(θ))</code>.</p>
+<h4 id="exp">Exp</h4>
+<pre><code class="lang-csharp">public static ComplexF Exp(ComplexF z)
+</code></pre>
+<p>Computes <code>e^z</code>.</p>
+<h4 id="pow">Pow</h4>
+<pre><code class="lang-csharp">public static ComplexF Pow(ComplexF baseValue, ComplexF exponent)
+</code></pre>
+<p>Computes complex exponentiation.</p>
+<h4 id="sqrt">Sqrt</h4>
+<pre><code class="lang-csharp">public static ComplexF Sqrt(ComplexF z)
+</code></pre>
+<p>Computes complex square root.</p>
+<h4 id="ln">Ln</h4>
+<pre><code class="lang-csharp">public static ComplexF Ln(ComplexF z)
+</code></pre>
+<p>Computes complex natural logarithm. <code>Ln(0)</code> returns <code>(-Infinity, NaN)</code>.</p>
+<h4 id="log">Log</h4>
+<pre><code class="lang-csharp">public static ComplexF Log(ComplexF z, ComplexF baseValue)
+</code></pre>
+<p>Computes complex logarithm in the base b: <code>log_b(z) = ln(z)/ln(baseValue)</code></p>
+<h4 id="sin">Sin</h4>
+<pre><code class="lang-csharp">public static ComplexF Sin(ComplexF z)
+</code></pre>
+<p>Computes complex sine: <code>sin(z) = (e^iz - e^-iz)/2i</code></p>
+<h4 id="cos">Cos</h4>
+<pre><code class="lang-csharp">public static ComplexF Cos(ComplexF z)
+</code></pre>
+<p>Computes complex cosine: <code>cos(z) = (e^iz + e^-iz)/2</code></p>
+<h4 id="tan">Tan</h4>
+<pre><code class="lang-csharp">public static ComplexF Tan(ComplexF z)
+</code></pre>
+<p>Computes complex tangent: <code>tan(z) = sin(z)/cos(z)</code></p>
+<h4 id="cis">Cis</h4>
+<pre><code class="lang-csharp">public static ComplexF Cis(float angle)
+</code></pre>
+<p>Returns <code>cis(angle) = cos(angle) + isin(angle)</code>.</p>
+<h4 id="lerp">Lerp</h4>
+<pre><code class="lang-csharp">public static ComplexF Lerp(ComplexF a, ComplexF b, float t)
+</code></pre>
+<p>Performs a component-wise linear interpolation between two complex numbers based on the given weight.</p>
+<h2 id="floatrange">FloatRange</h2>
+<pre><code class="lang-csharp">public readonly struct FloatRange
+{
+    public static readonly FloatRange Infinite;
+    
+    public float Min { get; }
+    public float Max { get; }
+    
+    public FloatRange(float min, float max);
+    
+    public bool Contains(float value);
+    
+    public float Length { get; }
+    public bool IsInfinite { get; }
+}
+</code></pre>
+<p>Represents a one dimensional domain.</p>
+<h2 id="wave-functions">Wave Functions</h2>
+<h3 id="wavefunction1d">WaveFunction1D</h3>
+<pre><code class="lang-csharp">public abstract class WaveFunction1D
+{
+    public ComplexF Amplitude { get; set; }
+    public FloatRange Domain { get; protected set; }
+
+    public WaveFunction1D(FloatRange domain, ComplexF amplitude)
+    {
+        Domain = domain;
+        Amplitude = amplitude;
+    }
+
+    /// &lt;summary&gt;
+    /// Returns |ψ(x,t)|^2
+    /// &lt;/summary&gt;
+    public float ProbabilityDensity(float x, float t) =&gt; MathC.AbsSqr(Evaluate(x, t));
+    
+    /// &lt;summary&gt;
+    /// Evaluates the wave function ψ(x, t)
+    /// &lt;/summary&gt;
+    public ComplexF Evaluate(float x, float t) =&gt; Domain.Contains(x) ?
+        (Amplitude * EvaluateRaw(x, t)) : 0;
+
+    protected abstract ComplexF EvaluateRaw(float x, float t);
+}
+</code></pre>
+<h3 id="separablewavefunction1d">SeparableWaveFunction1D</h3>
+<pre><code class="lang-csharp">public sealed class SeparableWaveFunction1D : WaveFunction1D
+{
+    public Func&lt;float, ComplexF&gt; SpacePart { get; }
+    public Func&lt;float, ComplexF&gt; TimePart { get; }
+    
+    public SeparableWaveFunction1D(
+        FloatRange domain,
+        ComplexF amplitude,
+        Func&lt;float, ComplexF&gt; spacePart,
+        Func&lt;float, ComplexF&gt; timePart
+    ) : base(domain, amplitude);
+
+    protected override ComplexF EvaluateRaw(float x, float t) =&gt; SpacePart(x) * TimePart(t);
+}
+</code></pre>
+<p>Represents <code>ψ(x,t) = φ(x) · T(t)</code></p>
+<h3 id="weightedwavefunction1d">WeightedWaveFunction1D</h3>
+<pre><code class="lang-csharp">public sealed class WeightedWaveFunction1D : WaveFunction1D
+{
+    public List&lt;ComplexF&gt; Coefficients { get; }
+    public List&lt;WaveFunction1D&gt; WaveFunctions { get; }
+
+    public WeightedWaveFunction1D(ComplexF[] coefficients, WaveFunction1D[] waveFunctions) 
+        : base(FloatRange.Infinite, ComplexF.One);
+
+    public void Add(ComplexF coefficient, WaveFunction1D waveFunction)
+
+    protected override ComplexF EvaluateRaw(float x, float t)
+    {
+        ComplexF total = ComplexF.Zero;
+        for(int i = 0; i &lt; Coefficients.Count; i++)
+        {
+            total += WaveFunctions[i].Evaluate(x, t) * Coefficients[i];
+        }
+        return total;
+    }
+}
+</code></pre>
+<p>Used for superpositions.</p>
+<h3 id="built-in-systems">Built-in Systems</h3>
+<p>All equations are by default expressed in natural units where <code>ℏ = 1</code>. This may be changed by the user however.</p>
+<h4 id="infinitewell">InfiniteWell</h4>
+<pre><code class="lang-csharp">public static class InfiniteWell
+{
+    /// &lt;summary&gt;
+    /// Returns the nth stationary state in a 1D infinite potential well in the domain [0, L].
+    /// &lt;/summary&gt;
+    public static WaveFunction1D State(
+        int n,
+        float length,
+        float mass,
+        float h_bar = 1
+    );
+}
+</code></pre>
+<h4 id="harmonicoscillator">HarmonicOscillator</h4>
+<pre><code class="lang-csharp">public static class HarmonicOscillator
+{
+    /// &lt;summary&gt;
+    /// Returns the nth stationary state of the harmonic oscillator.
+    /// &lt;/summary&gt;
+    public static WaveFunction1D State(
+        int n,
+        float mass,
+        float omega,
+        float h_bar = 1
+    );
+}
+</code></pre>
+<h3 id="waveutils1d">WaveUtils1D</h3>
+<p><code>WaveUtils1D</code> contains utility functions for one-dimensional wave functions.</p>
+<h4 id="superpose">Superpose</h4>
+<pre><code class="lang-csharp">public static WaveFunction1D Superpose(params (ComplexF coefficient, WaveFunction1D wave)[] terms);
+</code></pre>
+<p>Creates a superposition of wave functions. Note: assumed shared domain. If this is not the case, the functions may not be normalized.</p>
+<h4 id="probability">Probability</h4>
+<pre><code class="lang-csharp">public static float Probability(WaveFunction1D wave, float t, FloatRange range, int steps);
+</code></pre>
+<p>Approximates the probability of finding a particle in [min, max].</p>
+<h4 id="samplepositions">SamplePositions</h4>
+<pre><code class="lang-csharp">public static float[] SamplePositions(WaveFunction1D wave, float t, FloatRange range, int count, int resolution, Random? rng = null);
+</code></pre>
+<p>Samples positions according to <code>|ψ(x,t)|^2</code></p>
+
+</article>
+
+        <div class="contribution d-print-none">
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

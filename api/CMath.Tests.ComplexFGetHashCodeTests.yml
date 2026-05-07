@@ -1,0 +1,427 @@
+### YamlMime:ManagedReference
+items:
+- uid: CMath.Tests.ComplexFGetHashCodeTests
+  commentId: T:CMath.Tests.ComplexFGetHashCodeTests
+  id: ComplexFGetHashCodeTests
+  parent: CMath.Tests
+  children:
+  - CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  - CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode
+  - CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  langs:
+  - csharp
+  - vb
+  name: ComplexFGetHashCodeTests
+  nameWithType: ComplexFGetHashCodeTests
+  fullName: CMath.Tests.ComplexFGetHashCodeTests
+  type: Class
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: ComplexFGetHashCodeTests
+    path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+    startLine: 2
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: public class ComplexFGetHashCodeTests
+    content.vb: Public Class ComplexFGetHashCodeTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode
+  commentId: M:CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode
+  id: GetHashCode_SameValues_ReturnsSameHashCode
+  parent: CMath.Tests.ComplexFGetHashCodeTests
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode_SameValues_ReturnsSameHashCode()
+  nameWithType: ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode()
+  fullName: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: GetHashCode_SameValues_ReturnsSameHashCode
+    path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+    startLine: 4
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void GetHashCode_SameValues_ReturnsSameHashCode()
+    content.vb: >-
+      <Fact>
+
+      Public Sub GetHashCode_SameValues_ReturnsSameHashCode()
+  overload: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  commentId: M:CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  id: GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  parent: CMath.Tests.ComplexFGetHashCodeTests
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode()
+  nameWithType: ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode()
+  fullName: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+    path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+    startLine: 13
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode()
+    content.vb: >-
+      <Fact>
+
+      Public Sub GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode()
+  overload: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  commentId: M:CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  id: GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  parent: CMath.Tests.ComplexFGetHashCodeTests
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode_Zero_EqualsHashCodeOfEquivalentZero()
+  nameWithType: ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero()
+  fullName: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+    path: src/QuantumLibrary.Tests/ComplexFGetHashCodeTests.cs
+    startLine: 22
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void GetHashCode_Zero_EqualsHashCodeOfEquivalentZero()
+    content.vb: >-
+      <Fact>
+
+      Public Sub GetHashCode_Zero_EqualsHashCodeOfEquivalentZero()
+  overload: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+references:
+- uid: CMath.Tests
+  commentId: N:CMath.Tests
+  href: CMath.html
+  name: CMath.Tests
+  nameWithType: CMath.Tests
+  fullName: CMath.Tests
+  spec.csharp:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+  spec.vb:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode*
+  commentId: Overload:CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode
+  href: CMath.Tests.ComplexFGetHashCodeTests.html#CMath_Tests_ComplexFGetHashCodeTests_GetHashCode_SameValues_ReturnsSameHashCode
+  name: GetHashCode_SameValues_ReturnsSameHashCode
+  nameWithType: ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode
+  fullName: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_SameValues_ReturnsSameHashCode
+- uid: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode*
+  commentId: Overload:CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  href: CMath.Tests.ComplexFGetHashCodeTests.html#CMath_Tests_ComplexFGetHashCodeTests_GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  name: GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  nameWithType: ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+  fullName: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_DifferentValues_UsuallyReturnsDifferentHashCode
+- uid: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero*
+  commentId: Overload:CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  href: CMath.Tests.ComplexFGetHashCodeTests.html#CMath_Tests_ComplexFGetHashCodeTests_GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  name: GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  nameWithType: ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero
+  fullName: CMath.Tests.ComplexFGetHashCodeTests.GetHashCode_Zero_EqualsHashCodeOfEquivalentZero

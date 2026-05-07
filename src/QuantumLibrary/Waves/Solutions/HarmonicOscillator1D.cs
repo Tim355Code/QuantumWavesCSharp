@@ -1,0 +1,68 @@
+using System;
+using QuantumWaves.Utils;
+
+namespace QuantumWaves.Solutions
+{
+    /// <summary>
+    /// Provides solutions for the one dimensional quantum harmonic oscillator.
+    /// </summary>
+    public static class HarmonicOscillator1D
+    {
+        /// <summary>
+        /// Creates the nth energy eigenstate.
+        /// </summary>
+        /// <param name="n">Quantum number (must be non-negative).</param>
+        /// <param name="mass">Particle mass (must be greater than zero).</param>
+        /// <param name="omega">Angular frequency (must be greater than zero).</param>
+        /// <param name="h_bar">Reduced Planck constant (must be greater than zero).</param>
+        /// <returns>A separable wave function representing the state.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown if any parameter is invalid.</exception>
+        public static SeparableWaveFunction1D State(int n, float mass, float omega, float h_bar = 1)
+        {
+            if (omega <= float.Epsilon)
+                throw new ArgumentOutOfRangeException(nameof(omega), "must be greater than zero.");
+            if (n < 0)
+                throw new ArgumentOutOfRangeException(nameof(n), "may not be negative.");
+            if (mass <= float.Epsilon)
+                throw new ArgumentOutOfRangeException(nameof(mass), "must be greater than zero.");
+            if (h_bar <= float.Epsilon)
+                throw new ArgumentOutOfRangeException(nameof(h_bar), "must be greater than zero.");
+
+            float alpha = MathF.Sqrt(mass * omega / h_bar);
+            float expTerm = mass * omega / (2 * h_bar);
+
+            float normalizationConstant =
+                MathF.Pow(mass * omega / (h_bar * MathF.PI), 0.25f)
+                / MathF.Sqrt(MathF.Pow(2, n) * MathEx.Factorial(n));
+
+            Func<float, float> hermite = HermitePolynomials.Delegate(n);
+
+            return new SeparableWaveFunction1D(
+                FloatRange.Infinite,
+                x => hermite(alpha * x) * MathF.Exp(-expTerm * x * x),
+                SeparableWaveFunction1D.TimeSolution(Energy(n, omega, h_bar), h_bar),
+                normalizationConstant
+            );
+        }
+
+        /// <summary>
+        /// Computes the energy of the nth harmonic oscillator state.
+        /// </summary>
+        /// <param name="n">Quantum number (must be non-negative).</param>
+        /// <param name="omega">Angular frequency (must be greater than zero).</param>
+        /// <param name="h_bar">Reduced Planck constant (must be greater than zero).</param>
+        /// <returns>The energy value.</returns>
+        /// <exception cref="ArgumentOutOfRangeException">Thrown if any parameter is invalid.</exception>
+        public static float Energy(int n, float omega, float h_bar = 1)
+        {
+            if (omega <= float.Epsilon)
+                throw new ArgumentOutOfRangeException(nameof(omega), "must be greater than zero.");
+            if (n < 0)
+                throw new ArgumentOutOfRangeException(nameof(n), "must be greater than zero.");
+            if (h_bar <= float.Epsilon)
+                throw new ArgumentOutOfRangeException(nameof(h_bar), "must be greater than zero.");
+
+            return h_bar * omega * (0.5f + n);
+        }
+    }
+}

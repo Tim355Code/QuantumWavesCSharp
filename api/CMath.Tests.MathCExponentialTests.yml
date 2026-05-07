@@ -1,0 +1,758 @@
+### YamlMime:ManagedReference
+items:
+- uid: CMath.Tests.MathCExponentialTests
+  commentId: T:CMath.Tests.MathCExponentialTests
+  id: MathCExponentialTests
+  parent: CMath.Tests
+  children:
+  - CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber
+  - CMath.Tests.MathCExponentialTests.Exp_Works(System.Single,System.Single,System.Single,System.Single)
+  - CMath.Tests.MathCExponentialTests.Ln_Works(System.Single,System.Single,System.Single,System.Single)
+  - CMath.Tests.MathCExponentialTests.Log_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  - CMath.Tests.MathCExponentialTests.Pow_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  - CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal
+  - CMath.Tests.MathCExponentialTests.Sqrt_Works(System.Single,System.Single,System.Single,System.Single)
+  langs:
+  - csharp
+  - vb
+  name: MathCExponentialTests
+  nameWithType: MathCExponentialTests
+  fullName: CMath.Tests.MathCExponentialTests
+  type: Class
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: MathCExponentialTests
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 2
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: public class MathCExponentialTests
+    content.vb: Public Class MathCExponentialTests
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: CMath.Tests.MathCExponentialTests.Exp_Works(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:CMath.Tests.MathCExponentialTests.Exp_Works(System.Single,System.Single,System.Single,System.Single)
+  id: Exp_Works(System.Single,System.Single,System.Single,System.Single)
+  parent: CMath.Tests.MathCExponentialTests
+  langs:
+  - csharp
+  - vb
+  name: Exp_Works(float, float, float, float)
+  nameWithType: MathCExponentialTests.Exp_Works(float, float, float, float)
+  fullName: CMath.Tests.MathCExponentialTests.Exp_Works(float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Exp_Works
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 4
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Theory]
+
+      [InlineData(new object[] { 0, 0, 1, 0 })]
+
+      [InlineData(new object[] { 1, 0, 2.718282, 0 })]
+
+      [InlineData(new object[] { 0, 3.1415927, -1, 0 })]
+
+      [InlineData(new object[] { 1, 3.1415927, -2.718282, 0 })]
+
+      public void Exp_Works(float real, float imaginary, float expectedReal, float expectedImaginary)
+    parameters:
+    - id: real
+      type: System.Single
+    - id: imaginary
+      type: System.Single
+    - id: expectedReal
+      type: System.Single
+    - id: expectedImaginary
+      type: System.Single
+    content.vb: >-
+      <Theory>
+
+      <InlineData(New Object() { 0, 0, 1, 0 })>
+
+      <InlineData(New Object() { 1, 0, 2.718282, 0 })>
+
+      <InlineData(New Object() { 0, 3.1415927, -1, 0 })>
+
+      <InlineData(New Object() { 1, 3.1415927, -2.718282, 0 })>
+
+      Public Sub Exp_Works(real As Single, imaginary As Single, expectedReal As Single, expectedImaginary As Single)
+  overload: CMath.Tests.MathCExponentialTests.Exp_Works*
+  attributes:
+  - type: Xunit.TheoryAttribute
+    ctor: Xunit.TheoryAttribute.#ctor
+    arguments: []
+  nameWithType.vb: MathCExponentialTests.Exp_Works(Single, Single, Single, Single)
+  fullName.vb: CMath.Tests.MathCExponentialTests.Exp_Works(Single, Single, Single, Single)
+  name.vb: Exp_Works(Single, Single, Single, Single)
+- uid: CMath.Tests.MathCExponentialTests.Ln_Works(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:CMath.Tests.MathCExponentialTests.Ln_Works(System.Single,System.Single,System.Single,System.Single)
+  id: Ln_Works(System.Single,System.Single,System.Single,System.Single)
+  parent: CMath.Tests.MathCExponentialTests
+  langs:
+  - csharp
+  - vb
+  name: Ln_Works(float, float, float, float)
+  nameWithType: MathCExponentialTests.Ln_Works(float, float, float, float)
+  fullName: CMath.Tests.MathCExponentialTests.Ln_Works(float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Ln_Works
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 17
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Theory]
+
+      [InlineData(new object[] { 1, 0, 0, 0 })]
+
+      [InlineData(new object[] { 2.7182817, 0, 1, 0 })]
+
+      [InlineData(new object[] { -1, 0, 0, 3.1415927 })]
+
+      [InlineData(new object[] { 0, 1, 0, 1.5707964 })]
+
+      [InlineData(new object[] { 3, 4, 1.609438, 0.927295 })]
+
+      public void Ln_Works(float real, float imaginary, float expectedReal, float expectedImaginary)
+    parameters:
+    - id: real
+      type: System.Single
+    - id: imaginary
+      type: System.Single
+    - id: expectedReal
+      type: System.Single
+    - id: expectedImaginary
+      type: System.Single
+    content.vb: >-
+      <Theory>
+
+      <InlineData(New Object() { 1, 0, 0, 0 })>
+
+      <InlineData(New Object() { 2.7182817, 0, 1, 0 })>
+
+      <InlineData(New Object() { -1, 0, 0, 3.1415927 })>
+
+      <InlineData(New Object() { 0, 1, 0, 1.5707964 })>
+
+      <InlineData(New Object() { 3, 4, 1.609438, 0.927295 })>
+
+      Public Sub Ln_Works(real As Single, imaginary As Single, expectedReal As Single, expectedImaginary As Single)
+  overload: CMath.Tests.MathCExponentialTests.Ln_Works*
+  attributes:
+  - type: Xunit.TheoryAttribute
+    ctor: Xunit.TheoryAttribute.#ctor
+    arguments: []
+  nameWithType.vb: MathCExponentialTests.Ln_Works(Single, Single, Single, Single)
+  fullName.vb: CMath.Tests.MathCExponentialTests.Ln_Works(Single, Single, Single, Single)
+  name.vb: Ln_Works(Single, Single, Single, Single)
+- uid: CMath.Tests.MathCExponentialTests.Log_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:CMath.Tests.MathCExponentialTests.Log_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: Log_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  parent: CMath.Tests.MathCExponentialTests
+  langs:
+  - csharp
+  - vb
+  name: Log_Works(float, float, float, float, float, float)
+  nameWithType: MathCExponentialTests.Log_Works(float, float, float, float, float, float)
+  fullName: CMath.Tests.MathCExponentialTests.Log_Works(float, float, float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Log_Works
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 31
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Theory]
+
+      [InlineData(new object[] { 8, 0, 2, 0, 3, 0 })]
+
+      [InlineData(new object[] { 100, 0, 10, 0, 2, 0 })]
+
+      [InlineData(new object[] { 1, 0, 10, 0, 0, 0 })]
+
+      public void Log_Works(float valueReal, float valueImaginary, float baseReal, float baseImaginary, float expectedReal, float expectedImaginary)
+    parameters:
+    - id: valueReal
+      type: System.Single
+    - id: valueImaginary
+      type: System.Single
+    - id: baseReal
+      type: System.Single
+    - id: baseImaginary
+      type: System.Single
+    - id: expectedReal
+      type: System.Single
+    - id: expectedImaginary
+      type: System.Single
+    content.vb: >-
+      <Theory>
+
+      <InlineData(New Object() { 8, 0, 2, 0, 3, 0 })>
+
+      <InlineData(New Object() { 100, 0, 10, 0, 2, 0 })>
+
+      <InlineData(New Object() { 1, 0, 10, 0, 0, 0 })>
+
+      Public Sub Log_Works(valueReal As Single, valueImaginary As Single, baseReal As Single, baseImaginary As Single, expectedReal As Single, expectedImaginary As Single)
+  overload: CMath.Tests.MathCExponentialTests.Log_Works*
+  attributes:
+  - type: Xunit.TheoryAttribute
+    ctor: Xunit.TheoryAttribute.#ctor
+    arguments: []
+  nameWithType.vb: MathCExponentialTests.Log_Works(Single, Single, Single, Single, Single, Single)
+  fullName.vb: CMath.Tests.MathCExponentialTests.Log_Works(Single, Single, Single, Single, Single, Single)
+  name.vb: Log_Works(Single, Single, Single, Single, Single, Single)
+- uid: CMath.Tests.MathCExponentialTests.Pow_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  commentId: M:CMath.Tests.MathCExponentialTests.Pow_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  id: Pow_Works(System.Single,System.Single,System.Single,System.Single,System.Single,System.Single)
+  parent: CMath.Tests.MathCExponentialTests
+  langs:
+  - csharp
+  - vb
+  name: Pow_Works(float, float, float, float, float, float)
+  nameWithType: MathCExponentialTests.Pow_Works(float, float, float, float, float, float)
+  fullName: CMath.Tests.MathCExponentialTests.Pow_Works(float, float, float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Pow_Works
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 45
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Theory]
+
+      [InlineData(new object[] { 2, 0, 3, 0, 8, 0 })]
+
+      [InlineData(new object[] { 4, 0, 0.5, 0, 2, 0 })]
+
+      [InlineData(new object[] { -1, 0, 2, 0, 1, 0 })]
+
+      [InlineData(new object[] { 2.7182817, 0, 0, 3.1415927, -1, 0 })]
+
+      public void Pow_Works(float baseReal, float baseImaginary, float exponentReal, float exponentImaginary, float expectedReal, float expectedImaginary)
+    parameters:
+    - id: baseReal
+      type: System.Single
+    - id: baseImaginary
+      type: System.Single
+    - id: exponentReal
+      type: System.Single
+    - id: exponentImaginary
+      type: System.Single
+    - id: expectedReal
+      type: System.Single
+    - id: expectedImaginary
+      type: System.Single
+    content.vb: >-
+      <Theory>
+
+      <InlineData(New Object() { 2, 0, 3, 0, 8, 0 })>
+
+      <InlineData(New Object() { 4, 0, 0.5, 0, 2, 0 })>
+
+      <InlineData(New Object() { -1, 0, 2, 0, 1, 0 })>
+
+      <InlineData(New Object() { 2.7182817, 0, 0, 3.1415927, -1, 0 })>
+
+      Public Sub Pow_Works(baseReal As Single, baseImaginary As Single, exponentReal As Single, exponentImaginary As Single, expectedReal As Single, expectedImaginary As Single)
+  overload: CMath.Tests.MathCExponentialTests.Pow_Works*
+  attributes:
+  - type: Xunit.TheoryAttribute
+    ctor: Xunit.TheoryAttribute.#ctor
+    arguments: []
+  nameWithType.vb: MathCExponentialTests.Pow_Works(Single, Single, Single, Single, Single, Single)
+  fullName.vb: CMath.Tests.MathCExponentialTests.Pow_Works(Single, Single, Single, Single, Single, Single)
+  name.vb: Pow_Works(Single, Single, Single, Single, Single, Single)
+- uid: CMath.Tests.MathCExponentialTests.Sqrt_Works(System.Single,System.Single,System.Single,System.Single)
+  commentId: M:CMath.Tests.MathCExponentialTests.Sqrt_Works(System.Single,System.Single,System.Single,System.Single)
+  id: Sqrt_Works(System.Single,System.Single,System.Single,System.Single)
+  parent: CMath.Tests.MathCExponentialTests
+  langs:
+  - csharp
+  - vb
+  name: Sqrt_Works(float, float, float, float)
+  nameWithType: MathCExponentialTests.Sqrt_Works(float, float, float, float)
+  fullName: CMath.Tests.MathCExponentialTests.Sqrt_Works(float, float, float, float)
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Sqrt_Works
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 60
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Theory]
+
+      [InlineData(new object[] { 4, 0, 2, 0 })]
+
+      [InlineData(new object[] { 0, 4, 1.414214, 1.414214 })]
+
+      [InlineData(new object[] { -4, 0, 0, 2 })]
+
+      [InlineData(new object[] { 3, 4, 2, 1 })]
+
+      public void Sqrt_Works(float real, float imaginary, float expectedReal, float expectedImaginary)
+    parameters:
+    - id: real
+      type: System.Single
+    - id: imaginary
+      type: System.Single
+    - id: expectedReal
+      type: System.Single
+    - id: expectedImaginary
+      type: System.Single
+    content.vb: >-
+      <Theory>
+
+      <InlineData(New Object() { 4, 0, 2, 0 })>
+
+      <InlineData(New Object() { 0, 4, 1.414214, 1.414214 })>
+
+      <InlineData(New Object() { -4, 0, 0, 2 })>
+
+      <InlineData(New Object() { 3, 4, 2, 1 })>
+
+      Public Sub Sqrt_Works(real As Single, imaginary As Single, expectedReal As Single, expectedImaginary As Single)
+  overload: CMath.Tests.MathCExponentialTests.Sqrt_Works*
+  attributes:
+  - type: Xunit.TheoryAttribute
+    ctor: Xunit.TheoryAttribute.#ctor
+    arguments: []
+  nameWithType.vb: MathCExponentialTests.Sqrt_Works(Single, Single, Single, Single)
+  fullName.vb: CMath.Tests.MathCExponentialTests.Sqrt_Works(Single, Single, Single, Single)
+  name.vb: Sqrt_Works(Single, Single, Single, Single)
+- uid: CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber
+  commentId: M:CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber
+  id: ExpAndLn_AreInverses_ForPositiveRealNumber
+  parent: CMath.Tests.MathCExponentialTests
+  langs:
+  - csharp
+  - vb
+  name: ExpAndLn_AreInverses_ForPositiveRealNumber()
+  nameWithType: MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber()
+  fullName: CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: ExpAndLn_AreInverses_ForPositiveRealNumber
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 73
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void ExpAndLn_AreInverses_ForPositiveRealNumber()
+    content.vb: >-
+      <Fact>
+
+      Public Sub ExpAndLn_AreInverses_ForPositiveRealNumber()
+  overload: CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+- uid: CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal
+  commentId: M:CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal
+  id: Sqrt_ResultSquared_EqualsOriginal
+  parent: CMath.Tests.MathCExponentialTests
+  langs:
+  - csharp
+  - vb
+  name: Sqrt_ResultSquared_EqualsOriginal()
+  nameWithType: MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal()
+  fullName: CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal()
+  type: Method
+  source:
+    remote:
+      path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+      branch: main
+      repo: git@gits-15.sys.kth.se:grudat26/merko-ovn7.git
+    id: Sqrt_ResultSquared_EqualsOriginal
+    path: src/QuantumLibrary.Tests/MathCExponentialTests.cs
+    startLine: 81
+  assemblies:
+  - QuantumLibrary.Tests
+  namespace: CMath.Tests
+  syntax:
+    content: >-
+      [Fact]
+
+      public void Sqrt_ResultSquared_EqualsOriginal()
+    content.vb: >-
+      <Fact>
+
+      Public Sub Sqrt_ResultSquared_EqualsOriginal()
+  overload: CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal*
+  attributes:
+  - type: Xunit.FactAttribute
+    ctor: Xunit.FactAttribute.#ctor
+    arguments: []
+references:
+- uid: CMath.Tests
+  commentId: N:CMath.Tests
+  href: CMath.html
+  name: CMath.Tests
+  nameWithType: CMath.Tests
+  fullName: CMath.Tests
+  spec.csharp:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+  spec.vb:
+  - uid: CMath
+    name: CMath
+    href: CMath.html
+  - name: .
+  - uid: CMath.Tests
+    name: Tests
+    href: CMath.Tests.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: CMath.Tests.MathCExponentialTests.Exp_Works*
+  commentId: Overload:CMath.Tests.MathCExponentialTests.Exp_Works
+  href: CMath.Tests.MathCExponentialTests.html#CMath_Tests_MathCExponentialTests_Exp_Works_System_Single_System_Single_System_Single_System_Single_
+  name: Exp_Works
+  nameWithType: MathCExponentialTests.Exp_Works
+  fullName: CMath.Tests.MathCExponentialTests.Exp_Works
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: CMath.Tests.MathCExponentialTests.Ln_Works*
+  commentId: Overload:CMath.Tests.MathCExponentialTests.Ln_Works
+  href: CMath.Tests.MathCExponentialTests.html#CMath_Tests_MathCExponentialTests_Ln_Works_System_Single_System_Single_System_Single_System_Single_
+  name: Ln_Works
+  nameWithType: MathCExponentialTests.Ln_Works
+  fullName: CMath.Tests.MathCExponentialTests.Ln_Works
+- uid: CMath.Tests.MathCExponentialTests.Log_Works*
+  commentId: Overload:CMath.Tests.MathCExponentialTests.Log_Works
+  href: CMath.Tests.MathCExponentialTests.html#CMath_Tests_MathCExponentialTests_Log_Works_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: Log_Works
+  nameWithType: MathCExponentialTests.Log_Works
+  fullName: CMath.Tests.MathCExponentialTests.Log_Works
+- uid: CMath.Tests.MathCExponentialTests.Pow_Works*
+  commentId: Overload:CMath.Tests.MathCExponentialTests.Pow_Works
+  href: CMath.Tests.MathCExponentialTests.html#CMath_Tests_MathCExponentialTests_Pow_Works_System_Single_System_Single_System_Single_System_Single_System_Single_System_Single_
+  name: Pow_Works
+  nameWithType: MathCExponentialTests.Pow_Works
+  fullName: CMath.Tests.MathCExponentialTests.Pow_Works
+- uid: CMath.Tests.MathCExponentialTests.Sqrt_Works*
+  commentId: Overload:CMath.Tests.MathCExponentialTests.Sqrt_Works
+  href: CMath.Tests.MathCExponentialTests.html#CMath_Tests_MathCExponentialTests_Sqrt_Works_System_Single_System_Single_System_Single_System_Single_
+  name: Sqrt_Works
+  nameWithType: MathCExponentialTests.Sqrt_Works
+  fullName: CMath.Tests.MathCExponentialTests.Sqrt_Works
+- uid: CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber*
+  commentId: Overload:CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber
+  href: CMath.Tests.MathCExponentialTests.html#CMath_Tests_MathCExponentialTests_ExpAndLn_AreInverses_ForPositiveRealNumber
+  name: ExpAndLn_AreInverses_ForPositiveRealNumber
+  nameWithType: MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber
+  fullName: CMath.Tests.MathCExponentialTests.ExpAndLn_AreInverses_ForPositiveRealNumber
+- uid: CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal*
+  commentId: Overload:CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal
+  href: CMath.Tests.MathCExponentialTests.html#CMath_Tests_MathCExponentialTests_Sqrt_ResultSquared_EqualsOriginal
+  name: Sqrt_ResultSquared_EqualsOriginal
+  nameWithType: MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal
+  fullName: CMath.Tests.MathCExponentialTests.Sqrt_ResultSquared_EqualsOriginal

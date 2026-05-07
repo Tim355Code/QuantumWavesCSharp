@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: QuantumWaves.Solutions
+  commentId: N:QuantumWaves.Solutions
+  id: QuantumWaves.Solutions
+  children:
+  - QuantumWaves.Solutions.FreeParticle1D
+  - QuantumWaves.Solutions.HarmonicOscillator1D
+  - QuantumWaves.Solutions.InfiniteWell1D
+  langs:
+  - csharp
+  - vb
+  name: QuantumWaves.Solutions
+  nameWithType: QuantumWaves.Solutions
+  fullName: QuantumWaves.Solutions
+  type: Namespace
+  assemblies:
+  - QuantumLibrary
+references:
+- uid: QuantumWaves.Solutions.FreeParticle1D
+  commentId: T:QuantumWaves.Solutions.FreeParticle1D
+  href: QuantumWaves.Solutions.FreeParticle1D.html
+  name: FreeParticle1D
+  nameWithType: FreeParticle1D
+  fullName: QuantumWaves.Solutions.FreeParticle1D
+- uid: QuantumWaves.Solutions.HarmonicOscillator1D
+  commentId: T:QuantumWaves.Solutions.HarmonicOscillator1D
+  href: QuantumWaves.Solutions.HarmonicOscillator1D.html
+  name: HarmonicOscillator1D
+  nameWithType: HarmonicOscillator1D
+  fullName: QuantumWaves.Solutions.HarmonicOscillator1D
+- uid: QuantumWaves.Solutions.InfiniteWell1D
+  commentId: T:QuantumWaves.Solutions.InfiniteWell1D
+  href: QuantumWaves.Solutions.InfiniteWell1D.html
+  name: InfiniteWell1D
+  nameWithType: InfiniteWell1D
+  fullName: QuantumWaves.Solutions.InfiniteWell1D
